@@ -1,37 +1,21 @@
-import { Link, useParams } from "react-router";
-import schemes from "../data/schemes.json";
+import { ArrowLeft, ArrowUpRight, Bookmark, Check, GitCompareArrows, Printer } from "lucide-react";
+import { Link, useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
+import { useApp } from "../context/AppContext.jsx";
+import { translations } from "../i18n/translations.js";
+import { getSchemeById, getSchemes, localizeScheme } from "../services/schemeService.js";
+import VerificationBanner from "../components/VerificationBanner.jsx";
+import SchemeCard from "../components/SchemeCard.jsx";
 
-export default function SchemeDetailsPage({ language, t }) {
-  const { schemeId } = useParams();
-  const scheme = schemes.find((item) => item.id === schemeId);
+export default function SchemeDetailsPage() {
+  const { schemeId } = useParams(); const navigate = useNavigate(); const { language, savedIds, toggleSaved, compareIds, toggleCompare, addRecent } = useApp(); const t = translations[language]; const scheme = getSchemeById(schemeId); const text = localizeScheme(scheme, language);
+  useEffect(() => { if (scheme) addRecent(scheme.id); }, [scheme?.id]);
+  if (!scheme) return <section className="page-width details-page"><div className="empty-state"><h2>{t.schemeNotFound}</h2><p>{t.schemeNotFoundBody}</p><Link className="button button-primary" to="/schemes">{t.returnHome}<ArrowUpRight size={16} /></Link></div></section>;
+  const isSaved = savedIds.includes(scheme.id); const isCompared = compareIds.includes(scheme.id); const related = getSchemes().filter((item) => item.category.id === scheme.category.id && item.id !== scheme.id).slice(0, 3);
+  return <><section className="page-width details-page"><Link className="back-link" to="/schemes"><ArrowLeft size={15} />{t.back}</Link><div className="detail-layout"><article className="details-card"><div className="detail-hero"><span className="category-label">{text.displayCategory}</span><div className="detail-actions"><button className={isSaved ? "icon-button active" : "icon-button"} type="button" onClick={() => toggleSaved(scheme.id)} aria-label={isSaved ? t.saved : t.save}><Bookmark size={17} fill={isSaved ? "currentColor" : "none"} /></button><button className={isCompared ? "icon-button active" : "icon-button"} type="button" onClick={() => toggleCompare(scheme.id)} aria-label={t.compare}><GitCompareArrows size={17} />{isCompared && <Check size={12} />}</button><button className="icon-button" type="button" onClick={() => window.print()} aria-label={t.print}><Printer size={17} /></button></div></div><p className="section-kicker">{t.details || t.nav.schemes}</p><h1>{text.displayName}</h1><p className="details-summary">{text.displayDescription}</p><div className="detail-audience"><strong>{t.beneficiaries}</strong>{text.displayBeneficiaries.map((item) => <span key={item}>{item}</span>)}</div><VerificationBanner compact /><DetailList title={t.benefits} items={text.displayBenefits} /><DetailList title={t.eligibilityTitle} items={text.displayEligibility} /><DetailList title={t.documents} items={text.displayDocuments} /><DetailList title={t.application} items={text.displaySteps} ordered /><div className="details-notice">{t.sampleLong}</div>{scheme.officialUrl ? <a className="button button-primary" href={scheme.officialUrl} target="_blank" rel="noreferrer">{t.officialDetails}<ArrowUpRight size={16} /></a> : <span className="muted-note">{t.verify}</span>}</article><aside className="detail-aside"><div className="side-card"><span className="side-label">{t.category}</span><strong>{text.displayCategory}</strong><Link to={`/categories/${scheme.category.id}`}>{t.viewAll}<ArrowUpRight size={14} /></Link></div><div className="side-card authority-card"><span className="side-label">{t.verificationStatus || t.sample}</span><p>{scheme.verificationStatus}</p><a href={scheme.officialUrl} target="_blank" rel="noreferrer">{t.verify}<ArrowUpRight size={14} /></a></div></aside></div></section>{related.length > 0 && <section className="page-width related-section"><div className="section-heading-row"><div><p className="section-kicker">{t.related}</p><h2>{t.related}</h2></div></div><div className="scheme-grid">{related.map((item) => <SchemeCard key={item.id} scheme={item} />)}</div></section>}</>;
+}
 
-  if (!scheme) {
-    return (
-      <section className="page-width details-page">
-        <div className="empty-state"><h1>{t.notFoundTitle}</h1><p>{t.notFoundBody}</p><Link className="button button-primary" to="/">{t.backToSchemes}</Link></div>
-      </section>
-    );
-  }
-
-  const text = language === "hi"
-    ? { title: scheme.titleHi, category: scheme.categoryHi, summary: scheme.summaryHi, benefit: scheme.benefitHi, eligibility: scheme.eligibilityHi }
-    : { title: scheme.titleEn, category: scheme.categoryEn, summary: scheme.summaryEn, benefit: scheme.benefitEn, eligibility: scheme.eligibilityEn };
-
-  return (
-    <section className="page-width details-page">
-      <Link className="back-link" to="/">← {t.backToSchemes}</Link>
-      <article className="details-card">
-        <p className="eyebrow"><span />{t.detailsEyebrow}</p>
-        <span className="category-label">{text.category}</span>
-        <h1>{text.title}</h1>
-        <p className="details-summary">{text.summary}</p>
-        <div className="detail-grid">
-          <section><h2>{t.benefit}</h2><p>{text.benefit}</p></section>
-          <section><h2>{t.eligibility}</h2><p>{text.eligibility}</p></section>
-        </div>
-        <p className="details-notice">ⓘ {t.detailsNotice}</p>
-        <a className="button button-primary" href={scheme.officialUrl} target="_blank" rel="noreferrer">{t.officialSource} ↗</a>
-      </article>
-    </section>
-  );
+function DetailList({ title, items, ordered = false }) {
+  const Tag = ordered ? "ol" : "ul";
+  return <section className="detail-block"><h2>{title}</h2><Tag>{items.map((item) => <li key={item}>{item}</li>)}</Tag></section>;
 }

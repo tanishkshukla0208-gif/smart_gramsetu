@@ -1,0 +1,14 @@
+import { Check, ClipboardCheck, Info } from "lucide-react";
+import { useMemo, useState } from "react";
+import PageHeader from "../components/PageHeader.jsx";
+import VerificationBanner from "../components/VerificationBanner.jsx";
+import { useApp } from "../context/AppContext.jsx";
+import { translations } from "../i18n/translations.js";
+import { getSchemes, localizeScheme } from "../services/schemeService.js";
+
+const common = ["Identity proof", "Address proof", "Income certificate", "Educational documents", "Bank account details", "Category or disability certificate"];
+
+export default function Documents() {
+  const { language, checkedDocuments, toggleDocument } = useApp(); const t = translations[language]; const schemes = getSchemes(); const [selectedId, setSelectedId] = useState(""); const selected = selectedId ? schemes.find((scheme) => scheme.id === selectedId) : null; const text = localizeScheme(selected, language); const items = text?.displayDocuments || common; const completed = items.filter((item) => checkedDocuments.includes(`${selectedId || "general"}:${item}`)).length;
+  return <><PageHeader eyebrow={t.nav.documents} title="Prepare with clarity" body="Create a practical checklist before you approach the responsible authority." /><section className="page-width documents-page"><VerificationBanner /><div className="document-toolbar"><label><span>{t.nav.schemes}</span><select value={selectedId} onChange={(event) => setSelectedId(event.target.value)}><option value="">Common starting checklist</option>{schemes.map((scheme) => <option key={scheme.id} value={scheme.id}>{language === "hi" ? scheme.nameHi : scheme.name}</option>)}</select></label><div className="check-progress"><strong>{completed}/{items.length}</strong><span>checked locally</span></div></div><div className="document-layout"><section className="document-list"><div className="panel-heading"><div><span className="section-kicker">{selected ? text.displayName : "Before you apply"}</span><h2>Checklist</h2></div><ClipboardCheck size={22} /></div>{items.map((item) => { const key = `${selectedId || "general"}:${item}`; const checked = checkedDocuments.includes(key); return <button className={checked ? "document-item checked" : "document-item"} type="button" key={item} onClick={() => toggleDocument(key)}><span>{checked ? <Check size={15} /> : <span className="empty-checkbox" />}</span><strong>{item}</strong></button>; })}</section><aside className="document-aside"><Info size={20} /><h2>Use the list as a prompt</h2><p>Actual requirements depend on the scheme, the current rules, and the responsible authority. A document on this list may not be needed for every scheme.</p><p>Do not share sensitive documents with GramSetu. Use only the authorised application channel.</p></aside></div></section></>;
+}

@@ -1,0 +1,12 @@
+import { ArrowRight, Globe2, HeartHandshake, LockKeyhole, Network, ShieldCheck } from "lucide-react";
+import { Link } from "react-router";
+import PageHeader from "../components/PageHeader.jsx";
+import { useApp } from "../context/AppContext.jsx";
+import { translations } from "../i18n/translations.js";
+
+export default function About() {
+  const { language } = useApp(); const t = translations[language];
+  return <><PageHeader eyebrow={t.about} title="A bridge to better public-service discovery" body="GramSetu is a university-project demonstration of how clearer information architecture can make public support easier to navigate." /><section className="page-width about-page"><div className="about-hero-grid"><div className="about-statement"><span className="section-kicker">Why GramSetu</span><h2>Clarity is a form of access.</h2><p>Government programmes can be meaningful and still feel difficult to find. GramSetu brings discovery, plain-language context, and a careful handoff to official sources into one calm experience.</p><Link className="subtle-link" to="/schemes">Explore the directory<ArrowRight size={15} /></Link></div><div className="about-signal"><Network size={30} /><span>01</span><strong>One clear starting point</strong><p>Search broadly, narrow thoughtfully, verify before acting.</p></div></div><div className="principles-grid"><Principle icon={Globe2} title="Inclusive by design" body="English and Hindi interface foundations, responsive layouts, and readable content patterns." /><Principle icon={ShieldCheck} title="Honest by default" body="Demonstration records are labelled. Potential matches are never presented as a guarantee." /><Principle icon={LockKeyhole} title="Privacy-aware" body="The demo asks for broad context only and keeps bookmarks locally on your device." /><Principle icon={HeartHandshake} title="Human handoff" body="The final answer always belongs with the responsible authority and its current official channel." /></div><div className="about-note"><span>Built for the next conversation</span><h2>From a confusing search to a confident next step.</h2><p>GramSetu can later connect to verified APIs, state-level datasets, and citizen accounts without changing its core promise: make the first step feel possible.</p></div></section></>;
+}
+
+function Principle({ icon: Icon, title, body }) { return <article className="principle-card"><Icon size={21} /><h3>{title}</h3><p>{body}</p></article>; }
