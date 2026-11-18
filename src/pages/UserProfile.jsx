@@ -67,7 +67,7 @@ export default function UserProfile() {
           </div>
         </div>
         {/* Details grid */}
-        <dl className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
+        <dl className="profile-facts grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
           <div className="flex">
             <dt className="w-40 font-medium text-gray-500">Full Name</dt>
             <dd className="ml-2">{user.fullName}</dd>
@@ -94,7 +94,7 @@ export default function UserProfile() {
           </div>
         </dl>
         {/* Action Buttons */}
-        <div className="mt-8 flex gap-4">
+        <div className="profile-actions mt-8 flex gap-4">
           <Link
             to="/account/settings"
             className="px-4 py-2 bg-mint-600 text-white rounded-xl hover:bg-mint-700 transition"

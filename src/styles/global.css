@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -378,11 +378,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   }
 }
 
-/* Temporary test outline */
-.app-shell { outline: 5px solid red !important; }
-
-/* Verification outline – higher specificity */
-html .app-shell { outline: 5px solid red !important; }
+/* Shell container */
+.app-shell {
+  position: relative;
+}
 /* ==== Typography scaling adjustments ==== */
 /* Base body text */
 body { font-size: 16px; line-height: 1.5; }

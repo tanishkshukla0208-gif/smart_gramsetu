@@ -1,0 +1,1607 @@
+/* ==========================================================================
+   GRAM SETU — COMPLETE PROFESSIONAL TYPOGRAPHY SYSTEM
+   World-class typography inspired by Apple, Stripe, Linear & modern SaaS
+   ========================================================================== */
+
+/* ───── 1. Typography Tokens & Variables ───── */
+:root {
+  /* Font Family Definitions */
+  --font-heading: "Manrope", "Noto Sans Devanagari", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-body: "Inter", "Noto Sans Devanagari", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Typography Scale Tokens (Responsive clamp) */
+  --text-hero: clamp(42px, 6vw, 64px);
+  --text-page: clamp(32px, 4.4vw, 44px);
+  --text-section: clamp(26px, 3.2vw, 34px);
+  --text-card: clamp(19px, 2vw, 22px);
+  --text-subheading: clamp(16px, 1.6vw, 19px);
+  --text-body: clamp(15px, 1.1vw, 16.5px);
+  --text-secondary: clamp(14px, 1vw, 15px);
+  --text-nav: 15px;
+  --text-button: 15px;
+  --text-meta: 12.5px;
+  --text-kicker: 11.5px;
+
+  /* Line Heights */
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.45;
+  --leading-relaxed: 1.68;
+  --leading-loose: 1.8;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.03em;
+  --tracking-snug: -0.02em;
+  --tracking-normal: -0.01em;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+
+  /* Colors */
+  --heading: #1F432D;
+  --body: #34483A;
+  --muted: #566D60;
+  --muted-2: #7D9285;
+  --cyan: #3F8F58;
+  --cyan-hover: #317A46;
+  --teal: #245B3A;
+  --saffron: #D9822B;
+  --border-light: #DCE9DC;
+}
+
+/* ───── 2. Multilingual Script Adaptations (All 22 Scheduled Indian Languages) ───── */
+
+/* Devanagari Script: Hindi, Marathi, Maithili, Sanskrit, Konkani, Nepali, Bodo, Santali */
+html[lang="hi"], html[lang="mr"], html[lang="mai"], html[lang="sa"],
+html[lang="kok"], html[lang="ne"], html[lang="brx"], html[lang="sat"] {
+  --font-heading: "Noto Sans Devanagari", "Manrope", sans-serif;
+  --font-body: "Noto Sans Devanagari", "Inter", sans-serif;
+}
+
+/* Bengali Script: Bengali, Assamese, Manipuri */
+html[lang="bn"], html[lang="as"], html[lang="mni"] {
+  --font-heading: "Noto Sans Bengali", "Manrope", sans-serif;
+  --font-body: "Noto Sans Bengali", "Inter", sans-serif;
+}
+
+/* Telugu Script */
+html[lang="te"] {
+  --font-heading: "Noto Sans Telugu", "Manrope", sans-serif;
+  --font-body: "Noto Sans Telugu", "Inter", sans-serif;
+}
+
+/* Tamil Script */
+html[lang="ta"] {
+  --font-heading: "Noto Sans Tamil", "Manrope", sans-serif;
+  --font-body: "Noto Sans Tamil", "Inter", sans-serif;
+}
+
+/* Gujarati Script */
+html[lang="gu"] {
+  --font-heading: "Noto Sans Gujarati", "Manrope", sans-serif;
+  --font-body: "Noto Sans Gujarati", "Inter", sans-serif;
+}
+
+/* Kannada Script */
+html[lang="kn"] {
+  --font-heading: "Noto Sans Kannada", "Manrope", sans-serif;
+  --font-body: "Noto Sans Kannada", "Inter", sans-serif;
+}
+
+/* Malayalam Script */
+html[lang="ml"] {
+  --font-heading: "Noto Sans Malayalam", "Manrope", sans-serif;
+  --font-body: "Noto Sans Malayalam", "Inter", sans-serif;
+}
+
+/* Odia Script */
+html[lang="or"] {
+  --font-heading: "Noto Sans Oriya", "Manrope", sans-serif;
+  --font-body: "Noto Sans Oriya", "Inter", sans-serif;
+}
+
+/* Gurmukhi Script: Punjabi */
+html[lang="pa"] {
+  --font-heading: "Noto Sans Gurmukhi", "Manrope", sans-serif;
+  --font-body: "Noto Sans Gurmukhi", "Inter", sans-serif;
+}
+
+/* Perso-Arabic Script: Urdu, Kashmiri, Sindhi (RTL) */
+html[lang="ur"], html[lang="ks"], html[lang="sd"] {
+  --font-heading: "Noto Sans Arabic", "Inter", sans-serif;
+  --font-body: "Noto Sans Arabic", "Inter", sans-serif;
+}
+
+/* Indian Script Line-height & Spacing Harmonization */
+html:not([lang="en"]) body {
+  line-height: 1.72;
+}
+
+html:not([lang="en"]) h1,
+html:not([lang="en"]) h2,
+html:not([lang="en"]) h3,
+html:not([lang="en"]) h4 {
+  line-height: 1.32;
+  letter-spacing: normal;
+}
+
+html:not([lang="en"]) .nav-link,
+html:not([lang="en"]) .button,
+html:not([lang="en"]) .category-label,
+html:not([lang="en"]) .scheme-tab-bar > button {
+  letter-spacing: normal;
+}
+
+/* RTL Layout Adaptations */
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .search-icon {
+  right: auto;
+  left: 14px;
+}
+
+/* Native Script Utility Classes for Language Cards */
+.script-Devanagari { font-family: "Noto Sans Devanagari", sans-serif !important; }
+.script-Bengali { font-family: "Noto Sans Bengali", sans-serif !important; }
+.script-Telugu { font-family: "Noto Sans Telugu", sans-serif !important; }
+.script-Tamil { font-family: "Noto Sans Tamil", sans-serif !important; }
+.script-Gujarati { font-family: "Noto Sans Gujarati", sans-serif !important; }
+.script-Kannada { font-family: "Noto Sans Kannada", sans-serif !important; }
+.script-Malayalam { font-family: "Noto Sans Malayalam", sans-serif !important; }
+.script-Odia { font-family: "Noto Sans Oriya", sans-serif !important; }
+.script-Gurmukhi { font-family: "Noto Sans Gurmukhi", sans-serif !important; }
+.script-Perso-Arabic { font-family: "Noto Sans Arabic", sans-serif !important; }
+.script-Latin { font-family: "Manrope", "Inter", sans-serif !important; }
+
+/* ───── 3. Universal Base Typography & Text Spacing ───── */
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-body) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: var(--body) !important;
+}
+
+/* Headings with Manrope */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--heading) !important;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+h1 {
+  font-size: var(--text-page) !important;
+  font-weight: 800 !important;
+  line-height: var(--leading-tight) !important;
+  letter-spacing: var(--tracking-tight) !important;
+}
+
+h2 {
+  font-size: var(--text-section) !important;
+  font-weight: 700 !important;
+  line-height: var(--leading-snug) !important;
+  letter-spacing: var(--tracking-tight) !important;
+}
+
+h3 {
+  font-size: var(--text-card) !important;
+  font-weight: 700 !important;
+  line-height: var(--leading-snug) !important;
+  letter-spacing: var(--tracking-snug) !important;
+}
+
+h4 {
+  font-size: var(--text-subheading) !important;
+  font-weight: 600 !important;
+  line-height: var(--leading-normal) !important;
+  letter-spacing: var(--tracking-normal) !important;
+}
+
+p {
+  line-height: var(--leading-relaxed);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Natural paragraph stacking */
+article p + p,
+.detail-block p + p,
+.about-statement p + p {
+  margin-top: 1em;
+}
+
+/* Form controls and buttons inherit Inter */
+button, input, select, textarea {
+  font-family: var(--font-body) !important;
+}
+
+/* ───── 4. Navbar & Navigation Menus ───── */
+.site-header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(63, 143, 88, 0.15) !important;
+}
+
+.brand {
+  font-family: var(--font-heading) !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.04em !important;
+  color: var(--heading) !important;
+}
+
+.brand-accent {
+  color: var(--cyan) !important;
+}
+
+.desktop-nav {
+  gap: 4px !important;
+}
+
+.nav-link {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-nav) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  color: #385041 !important;
+  padding: 8px 14px !important;
+  border-radius: 10px !important;
+  letter-spacing: -0.01em !important;
+  transition: all 0.18s ease !important;
+}
+
+.nav-link:hover {
+  color: var(--heading) !important;
+  background: rgba(63, 143, 88, 0.08) !important;
+}
+
+.nav-link.active {
+  color: var(--heading) !important;
+  background: rgba(63, 143, 88, 0.12) !important;
+  box-shadow: inset 0 -2px var(--cyan) !important;
+}
+
+.header-cta {
+  font-family: var(--font-body) !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  padding: 9px 16px !important;
+  border-radius: 11px !important;
+  background: var(--cyan) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(63, 143, 88, 0.25) !important;
+  transition: all 0.2s ease !important;
+}
+
+.header-cta:hover {
+  background: var(--teal) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(63, 143, 88, 0.32) !important;
+}
+
+.language-toggle {
+  padding: 3px !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.language-option {
+  font-family: var(--font-body) !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  padding: 6px 12px !important;
+  color: var(--muted) !important;
+  border-radius: 999px !important;
+  transition: all 0.15s ease !important;
+}
+
+.language-option.active {
+  background: var(--cyan) !important;
+  color: #FFFFFF !important;
+}
+
+/* ───── Language Selector Trigger & Modal ───── */
+.lang-selector-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid var(--border-light);
+  border-radius: 999px;
+  color: var(--heading);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.lang-selector-trigger:hover {
+  background: #FFFFFF;
+  border-color: var(--cyan);
+  box-shadow: 0 3px 10px rgba(63, 143, 88, 0.12);
+  transform: translateY(-1px);
+}
+
+.lang-selector-trigger:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.lang-trigger-globe {
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+
+.lang-trigger-text {
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.lang-trigger-en-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  background: #E5F4E8;
+  color: #1F432D;
+  padding: 1px 5px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.lang-trigger-chevron {
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.lang-trigger-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Quick Reset to English Button in Header */
+.quick-reset-en-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #E5F4E8;
+  color: #1F432D;
+  border: 1.5px solid #3F8F58;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(63, 143, 88, 0.15);
+  white-space: nowrap;
+}
+
+.quick-reset-en-btn:hover {
+  background: #3F8F58;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(63, 143, 88, 0.25);
+}
+
+.quick-reset-en-btn:focus-visible {
+  outline: 2px solid #3F8F58;
+  outline-offset: 2px;
+}
+
+/* Permanently Pinned English Selection Card inside Modal */
+.lang-pinned-english {
+  margin: 12px 24px 0;
+  padding: 12px 16px;
+  background: #F0FDF4;
+  border: 1.5px solid #3F8F58;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(63, 143, 88, 0.08);
+}
+
+.lang-pinned-english:hover {
+  background: #E5F4E8;
+  box-shadow: 0 4px 14px rgba(63, 143, 88, 0.16);
+  transform: translateY(-1px);
+}
+
+.lang-pinned-english.is-active {
+  background: #FFFFFF;
+  border-color: var(--border-light);
+  box-shadow: none;
+}
+
+.lang-pinned-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-pinned-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #E5F4E8;
+  color: #1F432D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lang-pinned-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-pinned-title {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--heading);
+  font-family: var(--font-heading);
+}
+
+.lang-pinned-sub {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.lang-pinned-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #3F8F58;
+  color: #FFFFFF;
+  font-size: 12.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.lang-pinned-action-btn:hover {
+  background: #245B3A;
+}
+
+.lang-pinned-active-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #E5F4E8;
+  color: #1F432D;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.lang-modal-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1.5px solid #3F8F58;
+  background: #E5F4E8;
+  color: #1F432D;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.lang-modal-reset-btn:hover {
+  background: #3F8F58;
+  color: #FFFFFF;
+}
+
+/* Modal Backdrop */
+.lang-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 34, 23, 0.48);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Modal Dialog */
+.lang-modal-card {
+  background: #FFFFFF;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(15, 34, 23, 0.22), 0 0 0 1px rgba(63, 143, 88, 0.15);
+  width: 100%;
+  max-width: 680px;
+  max-height: min(84vh, 700px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  animation: langModalIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes langModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.lang-modal-header {
+  padding: 22px 24px 16px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  background: #FDFEFC;
+}
+
+.lang-modal-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lang-modal-title {
+  font-family: var(--font-heading) !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: var(--heading) !important;
+  margin: 0 !important;
+  letter-spacing: -0.02em !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-modal-title-icon {
+  color: var(--cyan);
+}
+
+.lang-modal-subtitle {
+  font-size: 13px !important;
+  color: var(--muted) !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.lang-modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.lang-modal-close:hover {
+  background: #F0F5F0;
+  color: var(--heading);
+  border-color: #BACDBA;
+  transform: rotate(90deg);
+}
+
+/* Modal Search */
+.lang-modal-search-area {
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border-light);
+  background: #FFFFFF;
+}
+
+.lang-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  background: #F6F9F6;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.lang-search-bar:focus-within {
+  background: #FFFFFF;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(63, 143, 88, 0.12);
+}
+
+.lang-search-icon {
+  color: var(--muted-2);
+  flex-shrink: 0;
+}
+
+.lang-search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--heading);
+  outline: none;
+}
+
+.lang-search-input::placeholder {
+  color: var(--muted-2);
+}
+
+.lang-search-clear {
+  border: none;
+  background: transparent;
+  color: var(--muted-2);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.lang-search-clear:hover {
+  color: var(--heading);
+}
+
+/* Modal Body / Language Grid */
+.lang-modal-body {
+  padding: 18px 24px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  flex: 1;
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap: 10px;
+}
+
+.lang-item-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border-light);
+  border-radius: 13px;
+  background: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  min-height: 74px;
+}
+
+.lang-item-btn:hover {
+  border-color: var(--cyan);
+  background: rgba(229, 244, 232, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(63, 143, 88, 0.1);
+}
+
+.lang-item-btn:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 1px;
+}
+
+.lang-item-btn.selected {
+  border-color: var(--cyan);
+  background: #E5F4E8;
+  box-shadow: 0 0 0 1px var(--cyan), 0 4px 12px rgba(63, 143, 88, 0.12);
+}
+
+.lang-native-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--heading);
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+
+.lang-sub-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.lang-english-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.lang-region-badge {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--muted-2);
+  background: rgba(0, 0, 0, 0.04);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.lang-check-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--cyan);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(63, 143, 88, 0.3);
+}
+
+.lang-no-results {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+/* Modal Footer */
+.lang-modal-footer {
+  padding: 12px 24px;
+  border-top: 1px solid var(--border-light);
+  background: #FDFEFC;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.lang-footer-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-footer-kbd {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 600px) {
+  .lang-modal-card {
+    max-height: 90vh;
+    border-radius: 18px 18px 0 0;
+    margin-top: auto;
+  }
+  .lang-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .lang-item-btn {
+    padding: 10px 12px;
+    min-height: 68px;
+  }
+  .lang-native-text {
+    font-size: 15.5px;
+  }
+}
+
+/* ───── 5. Hero Section Typography ───── */
+.hero-content h1,
+.hero-section h1 {
+  font-family: var(--font-heading) !important;
+  font-size: var(--text-hero) !important;
+  font-weight: 800 !important;
+  line-height: var(--leading-tight) !important;
+  letter-spacing: -0.04em !important;
+  color: var(--heading) !important;
+  max-width: 860px !important;
+  margin: 18px auto 0 !important;
+}
+
+.hero-copy {
+  font-family: var(--font-body) !important;
+  font-size: clamp(16px, 1.3vw, 18px) !important;
+  line-height: 1.75 !important;
+  color: var(--muted) !important;
+  max-width: 660px !important;
+  margin: 20px auto 0 !important;
+}
+
+.hero-kicker,
+.section-kicker,
+.eyebrow {
+  font-family: var(--font-mono) !important;
+  font-size: var(--text-kicker) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--cyan) !important;
+}
+
+.hero-search-wrap .search-field {
+  min-height: 58px !important;
+  border-radius: 14px !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(63, 143, 88, 0.28) !important;
+  box-shadow: 0 8px 26px rgba(31, 67, 45, 0.08) !important;
+}
+
+.hero-search-wrap input {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  color: var(--heading) !important;
+}
+
+.hero-search-wrap input::placeholder {
+  font-family: var(--font-body) !important;
+  font-size: 14.5px !important;
+  color: var(--muted-2) !important;
+}
+
+.search-submit {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  background: var(--cyan) !important;
+  color: #FFFFFF !important;
+  padding: 0 18px !important;
+}
+
+.search-submit:hover {
+  background: var(--cyan-hover) !important;
+}
+
+.hero-search-hint {
+  font-family: var(--font-mono) !important;
+  font-size: 12px !important;
+  color: var(--muted-2) !important;
+}
+
+.hero-proof {
+  font-family: var(--font-body) !important;
+  font-size: 13.5px !important;
+  color: var(--muted) !important;
+}
+
+/* ───── 6. Buttons & Interactive Elements ───── */
+.button {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-button) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  min-height: 46px !important;
+  padding: 0 20px !important;
+  border-radius: 12px !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-decoration: none !important;
+}
+
+.button-primary,
+.button-glow {
+  background: var(--cyan) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(63, 143, 88, 0.25) !important;
+}
+
+.button-primary:hover:not(:disabled),
+.button-glow:hover:not(:disabled) {
+  background: var(--cyan-hover) !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 8px 22px rgba(63, 143, 88, 0.32) !important;
+}
+
+.button-ghost {
+  border: 1.5px solid rgba(63, 143, 88, 0.35) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  color: var(--heading) !important;
+}
+
+.button-ghost:hover {
+  background: rgba(63, 143, 88, 0.08) !important;
+  border-color: var(--cyan) !important;
+  color: var(--heading) !important;
+}
+
+.button-ghost.dark {
+  border-color: rgba(31, 67, 45, 0.25) !important;
+  color: var(--heading) !important;
+}
+
+.back-link,
+.subtle-link {
+  font-family: var(--font-body) !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: var(--cyan) !important;
+}
+
+.subtle-link:hover,
+.back-link:hover {
+  color: var(--teal) !important;
+}
+
+/* ───── 7. Metrics Strip Typography ───── */
+.metrics-strip {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 10px 30px rgba(31, 67, 45, 0.07) !important;
+}
+
+.metric-card {
+  padding: 22px !important;
+  background: #FFFFFF !important;
+}
+
+.metric-card strong {
+  font-family: var(--font-heading) !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.04em !important;
+  color: var(--heading) !important;
+}
+
+.metric-card span {
+  font-family: var(--font-body) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: var(--muted) !important;
+}
+
+/* ───── 8. Scheme Cards & Category Cards ───── */
+.section-heading-row h2 {
+  font-family: var(--font-heading) !important;
+  font-size: var(--text-section) !important;
+  font-weight: 700 !important;
+  line-height: var(--leading-snug) !important;
+  letter-spacing: -0.03em !important;
+  color: var(--heading) !important;
+}
+
+.section-heading-row > div > p:last-child {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  color: var(--muted) !important;
+}
+
+.scheme-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 18px !important;
+  padding: 24px !important;
+  box-shadow: 0 2px 10px rgba(31, 67, 45, 0.05) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease !important;
+}
+
+.scheme-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: #B5DAC0 !important;
+  box-shadow: 0 14px 34px rgba(31, 67, 45, 0.1) !important;
+}
+
+.scheme-card h3 {
+  font-family: var(--font-heading) !important;
+  font-size: var(--text-card) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--heading) !important;
+  margin: 14px 0 8px !important;
+}
+
+.scheme-card > p {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-secondary) !important;
+  line-height: 1.65 !important;
+  color: var(--muted) !important;
+}
+
+.category-label {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-meta) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  padding: 6px 11px !important;
+  border-radius: 999px !important;
+  background: #EAF5EC !important;
+  color: #1E6637 !important;
+}
+
+.featured-label {
+  font-family: var(--font-mono) !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  color: #B36814 !important;
+  background: #FEF7EE !important;
+}
+
+.audience-row span {
+  font-family: var(--font-body) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 5px 9px !important;
+  border-radius: 6px !important;
+  background: #F1F6F2 !important;
+  color: #4A6355 !important;
+}
+
+.text-link {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--cyan) !important;
+}
+
+.text-link:hover {
+  color: var(--teal) !important;
+}
+
+.category-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 15px !important;
+  padding: 18px !important;
+  box-shadow: 0 2px 10px rgba(31, 67, 45, 0.04) !important;
+}
+
+.category-card:hover {
+  border-color: #B5DAC0 !important;
+  box-shadow: 0 10px 24px rgba(31, 67, 45, 0.08) !important;
+}
+
+.category-card strong {
+  font-family: var(--font-heading) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+}
+
+.category-card small {
+  font-family: var(--font-body) !important;
+  font-size: 13.5px !important;
+  line-height: 1.5 !important;
+  color: var(--muted) !important;
+}
+
+.category-card em {
+  font-family: var(--font-mono) !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: var(--cyan) !important;
+}
+
+/* ───── 9. SCHEME DETAILS PAGE OVERHAUL (User Point 5 Polish) ───── */
+.details-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 24px !important;
+  padding: clamp(24px, 4vw, 44px) !important;
+  box-shadow: 0 8px 30px rgba(31, 67, 45, 0.06) !important;
+}
+
+.details-card h1 {
+  font-family: var(--font-heading) !important;
+  font-size: var(--text-page) !important;
+  font-weight: 800 !important;
+  line-height: var(--leading-tight) !important;
+  letter-spacing: -0.035em !important;
+  color: var(--heading) !important;
+  margin-bottom: 14px !important;
+}
+
+.details-summary {
+  font-family: var(--font-body) !important;
+  font-size: clamp(16px, 1.2vw, 18px) !important;
+  line-height: 1.75 !important;
+  color: #2C4636 !important;
+  max-width: 72ch !important;
+  margin-bottom: 20px !important;
+}
+
+.detail-audience strong {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+}
+
+.detail-audience span {
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  background: #EAF5EC !important;
+  color: #1E6637 !important;
+}
+
+.detail-block {
+  padding: 28px 0 !important;
+  border-top: 1px solid #E5EFE7 !important;
+}
+
+.detail-block h2 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(21px, 2.3vw, 26px) !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--heading) !important;
+  margin-bottom: 14px !important;
+}
+
+.detail-block p,
+.detail-block li {
+  font-family: var(--font-body) !important;
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+  color: var(--body) !important;
+}
+
+.detail-block ul,
+.detail-block ol {
+  display: grid;
+  gap: 10px;
+}
+
+.details-notice {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  border-radius: 12px !important;
+}
+
+/* Information Tabs System — Professional Redesign */
+.scheme-info {
+  margin: 32px 0 16px !important;
+}
+
+.scheme-tab-intro span {
+  font-family: var(--font-mono) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
+}
+
+.scheme-tab-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px !important;
+  border-radius: 18px !important;
+  background: #EEF7F0 !important;
+  border: 1px solid rgba(63, 143, 88, 0.2) !important;
+}
+
+.scheme-tab-bar > button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 18px !important;
+  border-radius: 12px !important;
+  font-family: var(--font-body) !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  border: 1px solid transparent !important;
+  cursor: pointer !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+.scheme-tab-bar > button:hover {
+  transform: translateY(-1px) !important;
+}
+
+.scheme-tab-panel {
+  margin-top: 24px !important;
+}
+
+.scheme-tab-panel h2 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(20px, 2.2vw, 25px) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--heading) !important;
+  margin-bottom: 12px !important;
+}
+
+.scheme-tab-panel p {
+  font-family: var(--font-body) !important;
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+  color: var(--body) !important;
+}
+
+.scheme-tab-panel li {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+
+.side-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  box-shadow: 0 2px 10px rgba(31, 67, 45, 0.04) !important;
+}
+
+.side-label {
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
+}
+
+.side-card strong {
+  font-family: var(--font-heading) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+}
+
+.side-card a {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--cyan) !important;
+}
+
+.authority-card p {
+  font-family: var(--font-body) !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  color: var(--muted) !important;
+}
+
+/* ───── 10. Interior Page Typography ───── */
+.page-header h1 {
+  font-family: var(--font-heading) !important;
+  font-size: var(--text-page) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.035em !important;
+  color: var(--heading) !important;
+}
+
+.page-header > p:not(.eyebrow) {
+  font-family: var(--font-body) !important;
+  font-size: clamp(15px, 1.2vw, 17px) !important;
+  line-height: 1.7 !important;
+  color: var(--muted) !important;
+}
+
+/* Eligibility Questionnaires */
+.eligibility-shell {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 30px rgba(31, 67, 45, 0.08) !important;
+}
+
+.question-panel h2 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(24px, 3.5vw, 36px) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--heading) !important;
+}
+
+.option-card {
+  font-family: var(--font-body) !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  min-height: 54px !important;
+  border: 1.5px solid var(--border-light) !important;
+  border-radius: 12px !important;
+  background: #F8FCF9 !important;
+  color: var(--body) !important;
+  transition: all 0.18s ease !important;
+}
+
+.option-card:hover,
+.option-card.selected {
+  border-color: var(--cyan) !important;
+  background: #EAF5EC !important;
+  color: var(--heading) !important;
+}
+
+/* Dashboard */
+.dashboard-welcome {
+  background: linear-gradient(135deg, #EAF5EC, #FFFFFF) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px !important;
+}
+
+.dashboard-welcome h2 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(24px, 3vw, 34px) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--heading) !important;
+}
+
+.dashboard-stat {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 16px !important;
+}
+
+.dashboard-stat strong {
+  font-family: var(--font-heading) !important;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: var(--heading) !important;
+}
+
+.dashboard-stat small {
+  font-family: var(--font-body) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: var(--muted) !important;
+}
+
+.panel-heading h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+}
+
+/* Documents & Toolbars */
+.document-item {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  color: var(--body) !important;
+  border-bottom: 1px solid #E5EFE7 !important;
+}
+
+.document-item strong {
+  font-size: 14.5px !important;
+}
+
+.filter-panel label,
+.document-toolbar label {
+  font-family: var(--font-mono) !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
+}
+
+.filter-panel select,
+.document-toolbar select {
+  font-family: var(--font-body) !important;
+  font-size: 14.5px !important;
+  color: var(--heading) !important;
+  border: 1.5px solid var(--border-light) !important;
+  border-radius: 10px !important;
+  background: #FFFFFF !important;
+}
+
+/* Compare Table */
+.comparison-wrap {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 18px !important;
+}
+
+.comparison-header strong {
+  font-family: var(--font-heading) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+}
+
+.comparison-title a {
+  font-family: var(--font-heading) !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+}
+
+.compare-cell {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--body) !important;
+}
+
+/* Application Guide */
+.guide-step h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+}
+
+.guide-step p {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  line-height: 1.68 !important;
+  color: var(--muted) !important;
+}
+
+/* About Page */
+.about-statement,
+.about-signal,
+.principle-card,
+.about-note {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 18px !important;
+}
+
+.about-statement h2 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(28px, 4.2vw, 44px) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.035em !important;
+  color: var(--heading) !important;
+}
+
+.about-statement p {
+  font-family: var(--font-body) !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  color: var(--muted) !important;
+}
+
+.principle-card h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 16.5px !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+}
+
+.principle-card p {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--muted) !important;
+}
+
+/* FAQ */
+.faq-item button {
+  font-family: var(--font-body) !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--heading) !important;
+  padding: 20px 4px !important;
+}
+
+.faq-item p {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  line-height: 1.72 !important;
+  color: var(--muted) !important;
+}
+
+/* ───── 11. Site Footer Typography ───── */
+.site-footer {
+  font-family: var(--font-body) !important;
+  background: #0E2519 !important;
+  color: #D3E2D8 !important;
+  border-top: 1px solid rgba(63, 143, 88, 0.2) !important;
+}
+
+.footer-brand p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: #A3BCAE !important;
+}
+
+.footer-links b {
+  font-family: var(--font-mono) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #8CE8A8 !important;
+}
+
+.footer-links a {
+  font-size: 14.5px !important;
+  color: #C0D6C8 !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease !important;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF !important;
+}
+
+.footer-bottom {
+  font-size: 13px !important;
+  color: #85A391 !important;
+}
+
+/* ───── 12. Responsive Scale & Accessibility Controls ───── */
+@media (max-width: 980px) {
+  .site-header { min-height: 64px; }
+  .nav-link { font-size: 14px !important; padding: 7px 11px !important; }
+}
+
+@media (max-width: 700px) {
+  body { font-size: 15px; }
+  .page-header h1 { font-size: clamp(28px, 8vw, 38px) !important; }
+  .hero-content h1 { font-size: clamp(34px, 9vw, 48px) !important; }
+  .hero-copy { font-size: 15px !important; }
+  .scheme-tab-bar > button { font-size: 13.5px !important; padding: 8px 14px !important; }
+  .details-card { padding: 20px !important; }
+  .details-summary { font-size: 15px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

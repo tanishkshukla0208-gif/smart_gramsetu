@@ -60,7 +60,32 @@ export default function HomePage() {
 </section>
       {recent.length > 0 && <section className="page-width home-section recent-section"><div className="section-heading-row"><div><p className="section-kicker">05 / {t.recent}</p><h2>{t.recent}</h2></div><Link className="subtle-link" to="/dashboard">{t.nav.dashboard}<ArrowRight size={15} /></Link></div><div className="scheme-grid">{recent.map((scheme) => <SchemeCard key={scheme.id} scheme={scheme} />)}</div></section>}
       <section className="page-width faq-promo"><div><p className="section-kicker">06 / {t.faqTitle}</p><h2>{t.faqTitle}</h2><p>{t.faqBody}</p></div><Link className="button button-ghost dark" to="/faq">{t.readFaq}<ArrowRight size={16} /></Link></section>
-      <section className="final-cta"><div className="page-width"><span className="cta-star">✦</span><h2>{t.finalTitle}</h2><p>{t.finalBody}</p><div className="hero-actions"><Link className="button button-glow" to="/schemes">{t.explore}<ArrowRight size={16} /></Link><Link className="button button-ghost" to="/about">{t.more}</Link></div></div></section>
+      <section className="page-width my-16">
+        <div className="bg-emerald-50/70 border border-emerald-100 rounded-3xl p-8 sm:p-14 text-center shadow-xs">
+          <span className="inline-block text-emerald-600 text-3xl mb-3">✦</span>
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight max-w-2xl mx-auto mb-3">
+            {t.finalTitle}
+          </h2>
+          <p className="text-slate-600 text-base sm:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
+            {t.finalBody}
+          </p>
+          <div className="flex items-center justify-center flex-wrap gap-4">
+            <Link
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-700 transition shadow-sm"
+              to="/schemes"
+            >
+              <span>{t.explore}</span>
+              <ArrowRight size={16} />
+            </Link>
+            <Link
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-slate-800 border border-slate-300 font-bold text-sm hover:bg-slate-50 transition shadow-xs"
+              to="/about"
+            >
+              <span>{t.more}</span>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   </>;
 }
