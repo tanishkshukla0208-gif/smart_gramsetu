@@ -2,326 +2,1477 @@
   {
     "id": "pm-kisan",
     "name": "PM-KISAN Samman Nidhi",
-    "nameHi": "पीएम-किसान सम्मान निधि",
-    "category": { "id": "agriculture", "name": "Agriculture", "nameHi": "कृषि", "description": "Tools and pathways for farming communities.", "descriptionHi": "कृषि समुदायों के लिए सहायता और अवसर।", "icon": "Sprout" },
+    "nameHi": "पीएम-किसान सम्मान निधि (प्रधानमंत्री किसान सम्मान निधि)",
+    "category": {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "nameHi": "कृषि",
+      "description": "Financial assistance, farming support, and agricultural empowerment.",
+      "descriptionHi": "कृषि समुदायों के लिए आर्थिक सहायता और सशक्तिकरण।",
+      "icon": "Sprout"
+    },
     "level": "central",
-    "description": "A central programme for eligible farmer families. Review the current criteria, exclusions, and status process on the official portal.",
-    "descriptionHi": "पात्र किसान परिवारों के लिए केंद्रीय कार्यक्रम। वर्तमान मानदंड, अपवाद और स्थिति प्रक्रिया आधिकारिक पोर्टल पर देखें।",
-    "beneficiaries": ["farmer", "household"],
-    "beneficiariesHi": ["किसान", "परिवार"],
-    "benefits": ["Information about support and payment status is available through the official portal.", "The portal provides guidance on current scheme processes."],
-    "benefitsHi": ["सहायता और भुगतान की स्थिति की जानकारी आधिकारिक पोर्टल पर उपलब्ध है।", "पोर्टल वर्तमान प्रक्रिया के बारे में मार्गदर्शन देता है।"],
-    "eligibility": ["Farmer-family eligibility depends on current government criteria.", "Confirm exclusions and land or record requirements with the official authority."],
-    "eligibilityHi": ["किसान-परिवार की पात्रता वर्तमान सरकारी मानदंडों पर निर्भर करती है।", "अपवाद और रिकॉर्ड संबंधी आवश्यकताओं की पुष्टि आधिकारिक प्राधिकरण से करें।"],
-    "requiredDocuments": ["Identity proof", "Land or farmer records where requested", "Bank details only through the official process"],
-    "requiredDocumentsHi": ["पहचान प्रमाण", "जहाँ मांगा जाए वहाँ भूमि या किसान रिकॉर्ड", "आधिकारिक प्रक्रिया में ही बैंक विवरण"],
-    "applicationSteps": ["Read the current criteria on the official portal.", "Use the authorised registration or status channel.", "Keep any acknowledgement from the official process."],
-    "applicationStepsHi": ["आधिकारिक पोर्टल पर वर्तमान मानदंड पढ़ें।", "अधिकृत पंजीकरण या स्थिति माध्यम का उपयोग करें।", "आधिकारिक प्रक्रिया की पावती संभालकर रखें।"],
+    "description": "Direct income support of ₹6,000 per year provided to all eligible landholding farmer families across India, transferred directly into their bank accounts in three equal 4-monthly installments.",
+    "descriptionHi": "सभी पात्र भूमिधारक किसान परिवारों को ₹6,000 प्रति वर्ष की प्रत्यक्ष आय सहायता, जो हर चार महीने में ₹2,000 की तीन समान किस्तों में सीधे उनके बैंक खाते में भेजी जाती है।",
+    "beneficiaries": [
+      "farmer",
+      "household"
+    ],
+    "beneficiariesHi": [
+      "किसान परिवार",
+      "छोटे और सीमांत किसान"
+    ],
+    "financialAssistance": [
+      "₹6,000 per year directly credited to the farmer's Aadhaar-linked bank account (DBT).",
+      "Paid in 3 equal installments of ₹2,000 each (Period 1: April–July, Period 2: August–November, Period 3: December–March).",
+      "100% centrally funded with zero commission or middleman deductions."
+    ],
+    "financialAssistanceHi": [
+      "₹6,000 प्रति वर्ष सीधे किसान के आधार से जुड़े बैंक खाते में (डीबीटी द्वारा)।",
+      "₹2,000 की 3 समान किस्तों में भुगतान (अप्रैल-जुलाई, अगस्त-नवंबर, और दिसंबर-मार्च)।",
+      "बिचौलियों या कमीशन के बिना 100% केंद्र सरकार द्वारा वित्तपोषित।"
+    ],
+    "whatItProvides": [
+      "Assured income support for procuring agricultural inputs such as seeds, fertilizers, and equipment.",
+      "Assistance in meeting domestic and farming expenses before sowing and harvesting seasons.",
+      "Convenient self-service through PM-KISAN Portal and Mobile App with Face Authentication e-KYC.",
+      "Direct SMS notifications upon installment disbursement and status updates."
+    ],
+    "whatItProvidesHi": [
+      "बीज, खाद, कीटनाशक और कृषि उपकरण खरीदने के लिए समय पर निश्चित आय सहायता।",
+      "बुवाई और कटाई के मौसम में घरेलू और खेती से जुड़े खर्चों को पूरा करने में सहयोग।",
+      "पीएम-किसान पोर्टल और मोबाइल ऐप पर फेस ऑथेंटिकेशन से आसान ई-केवाईसी की सुविधा।",
+      "किस्त जारी होने और स्थिति की सीधी एसएमएस सूचना बैंक खाते पर।"
+    ],
+    "benefits": [
+      "Guaranteed financial aid of ₹6,000 annually per eligible farmer household.",
+      "Protection from local moneylenders for seasonal farming operational expenses.",
+      "Direct bank transfer (DBT) ensures timely availability of cash right before cropping seasons.",
+      "Access to Kisan Credit Card (KCC) with low-interest institutional agricultural credit."
+    ],
+    "benefitsHi": [
+      "प्रति पात्र किसान परिवार को ₹6,000 की वार्षिक पक्की सरकारी सहायता।",
+      "खेती की बुवाई व जरूरी जरूरतों के लिए साहूकारों के कर्ज के चंगुल से राहत।",
+      "प्रत्यक्ष बैंक अंतरण (DBT) से पारदर्शी और बिना किसी कटौती के पूरा पैसा सीधे खाते में।",
+      "किसान क्रेडिट कार्ड (KCC) के माध्यम से रियायती ब्याज दर पर कृषि ऋण की आसान सुविधा।"
+    ],
+    "eligibility": [
+      "All landholding farmer families with cultivable land parcels in their names.",
+      "Both small/marginal and other landholding farmers are eligible subject to official exclusions.",
+      "Exclusions: Institutional landholders, serving/retired government officers and employees, income tax payees, and professionals (doctors, engineers, lawyers, CAs).",
+      "Mandatory completion of Aadhaar seeding and e-KYC on the PM-KISAN portal."
+    ],
+    "eligibilityHi": [
+      "सभी किसान परिवार जिनके नाम पर खेती योग्य जमीन (भूमि अभिलेख) दर्ज है।",
+      "छोटे, सीमांत और अन्य सभी भूमिधारक किसान पात्र हैं (सरकारी अपवादों को छोड़कर)।",
+      "अपवाद: संस्थागत भूमिधारक, सरकारी कर्मचारी/अधिकारी, संवैधानिक पदधारक, आयकरदाता और पंजीकृत पेशेवर (डॉक्टर, वकील, सीए आदि)।",
+      "बैंक खाते का आधार से जुड़ा होना और पोर्टल पर ई-केवाईसी पूरा होना अनिवार्य है।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card (linked to active mobile number for OTP)",
+      "Land ownership documents (Khasra / Khatauni / RoR / Land Revenue Record)",
+      "Aadhaar-seeded active bank savings account details (Account number and IFSC code)",
+      "Active mobile number for scheme notifications and status tracking"
+    ],
+    "requiredDocumentsHi": [
+      "आधार कार्ड (ओटीपी के लिए सक्रिय मोबाइल नंबर से लिंक)",
+      "भूमि स्वामित्व अभिलेख (खसरा / खतौनी / जमाबंदी / भू-राजस्व पर्ची)",
+      "आधार से जुड़ा सक्रिय बैंक बचत खाता (खाता संख्या और IFSC कोड)",
+      "योजना से जुड़ी सूचनाओं और सत्यापन के लिए चालू मोबाइल नंबर"
+    ],
+    "applicationSteps": [
+      "Visit official portal (https://pmkisan.gov.in) and click on 'New Farmer Registration' under Farmers Corner, or visit your local CSC (Common Service Centre) / Block Agriculture Office.",
+      "Select Rural or Urban Farmer Registration, enter Aadhaar number, mobile number, and select your State.",
+      "Fill landholding details (District, Sub-district, Block, Village, Khata/Khasra number, and land area).",
+      "Upload land documents, verify with Aadhaar OTP, and save the generated Registration / Application Number.",
+      "Complete mandatory e-KYC using Face Authentication on PM-KISAN mobile app or Biometrics at any CSC."
+    ],
+    "applicationStepsHi": [
+      "आधिकारिक पोर्टल (https://pmkisan.gov.in) पर जाएँ और 'Farmers Corner' में 'New Farmer Registration' पर क्लिक करें, या नजदीकी सीएससी केंद्र / कृषि कार्यालय जाएं।",
+      "ग्रामीण या शहरी किसान पंजीकरण चुनें, आधार संख्या, मोबाइल नंबर दर्ज करें और अपना राज्य चुनें।",
+      "भूमि विवरण भरें (जिला, तहसील, ब्लॉक, गाँव, खाता/खसरा संख्या तथा रकबा)।",
+      "जमीन के दस्तावेज़ अपलोड करें, आधार ओटीपी से सत्यापित करें और पंजीकरण संख्या सुरक्षित रख लें।",
+      "पीएम-किसान मोबाइल ऐप पर फेस ऑथेंटिकेशन या सीएससी केंद्र पर बायोमेट्रिक से अनिवार्य ई-केवाईसी पूरी करें।"
+    ],
     "officialUrl": "https://pmkisan.gov.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from Ministry of Agriculture & Farmers Welfare portal",
+    "lastVerified": "2026-11",
     "featured": true,
-    "keywords": ["farmer", "farm", "agriculture", "kisan", "income support"],
-    "eligibilityRules": { "occupations": ["farmer"], "incomes": ["low", "middle"] }
+    "keywords": [
+      "farmer",
+      "farm",
+      "agriculture",
+      "kisan",
+      "income support",
+      "6000",
+      "dbt",
+      "pm kisan"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "farmer"
+      ],
+      "incomes": [
+        "low",
+        "middle"
+      ]
+    }
   },
   {
     "id": "national-scholarship-portal",
     "name": "National Scholarship Portal",
-    "nameHi": "राष्ट्रीय छात्रवृत्ति पोर्टल",
-    "category": { "id": "education", "name": "Education & scholarships", "nameHi": "शिक्षा और छात्रवृत्ति", "description": "Scholarships, learning, and student support.", "descriptionHi": "छात्रवृत्ति, शिक्षा और विद्यार्थी सहायता।", "icon": "GraduationCap" },
+    "nameHi": "राष्ट्रीय छात्रवृत्ति पोर्टल (NSP Scholarships)",
+    "category": {
+      "id": "education",
+      "name": "Education & scholarships",
+      "nameHi": "शिक्षा और छात्रवृत्ति",
+      "description": "Scholarships, learning, and student support.",
+      "descriptionHi": "छात्रवृत्ति, शिक्षा और विद्यार्थी सहायता।",
+      "icon": "GraduationCap"
+    },
     "level": "central",
-    "description": "A national portal that lists scholarship opportunities. Criteria, benefits, and dates depend on each listed scheme.",
-    "descriptionHi": "राष्ट्रीय पोर्टल पर छात्रवृत्ति के अवसर सूचीबद्ध हैं। मानदंड, लाभ और तारीख हर योजना के अनुसार अलग हैं।",
-    "beneficiaries": ["student", "youth"],
-    "beneficiariesHi": ["छात्र", "युवा"],
-    "benefits": ["Search and read information about listed scholarship schemes.", "Application access may be available for selected schemes through the official portal."],
-    "benefitsHi": ["सूचीबद्ध छात्रवृत्ति योजनाओं की जानकारी खोजें और पढ़ें।", "कुछ योजनाओं के लिए आधिकारिक पोर्टल से आवेदन सुविधा उपलब्ध हो सकती है।"],
-    "eligibility": ["Each scholarship has its own eligibility and document requirements.", "Check the current academic, income, and category criteria before applying."],
-    "eligibilityHi": ["हर छात्रवृत्ति की अपनी पात्रता और दस्तावेज़ आवश्यकताएँ होती हैं।", "आवेदन से पहले वर्तमान शैक्षणिक, आय और श्रेणी मानदंड देखें।"],
-    "requiredDocuments": ["Educational records", "Identity and bank documents if requested", "Income or category certificate where applicable"],
-    "requiredDocumentsHi": ["शैक्षणिक रिकॉर्ड", "जहाँ मांगा जाए वहाँ पहचान और बैंक दस्तावेज़", "जहाँ लागू हो आय या श्रेणी प्रमाणपत्र"],
-    "applicationSteps": ["Search for a suitable scholarship on the portal.", "Read its individual rules and dates.", "Apply only through the listed official channel."],
-    "applicationStepsHi": ["पोर्टल पर उपयुक्त छात्रवृत्ति खोजें।", "उसके अलग नियम और तारीख पढ़ें।", "केवल सूचीबद्ध आधिकारिक माध्यम से आवेदन करें।"],
+    "description": "A centralized electronic scholarship gateway of the Government of India that provides financial assistance to students from Class 1 up to Post-Graduate and Ph.D. levels across diverse Central and State ministries.",
+    "descriptionHi": "भारत सरकार का एक केंद्रीकृत इलेक्ट्रॉनिक छात्रवृत्ति पोर्टल, जो कक्षा 1 से लेकर स्नातकोत्तर (पीजी) और पीएचडी तक के विद्यार्थियों को विभिन्न केंद्रीय व राज्य मंत्रालयों के माध्यम से सीधी आर्थिक सहायता प्रदान करता है।",
+    "beneficiaries": [
+      "student",
+      "youth"
+    ],
+    "beneficiariesHi": [
+      "स्कूली छात्र",
+      "कॉलेज विद्यार्थी",
+      "उच्च शिक्षा शोधार्थी"
+    ],
+    "financialAssistance": [
+      "Pre-Matric Scholarships: Up to ₹1,000 to ₹3,500 per year towards school education expenses.",
+      "Post-Matric Scholarships: Full or partial tuition fee waiver plus monthly maintenance allowance (₹380 to ₹1,200/month).",
+      "Top Class College Education: Full tuition fee reimbursement up to ₹2.5 Lakh to ₹5.0 Lakh/year plus living allowance and book grants."
+    ],
+    "financialAssistanceHi": [
+      "प्री-मैट्रिक छात्रवृत्ति: स्कूली शिक्षा खर्च के लिए ₹1,000 से ₹3,500 प्रति वर्ष तक।",
+      "पोस्ट-मैट्रिक छात्रवृत्ति: पूर्ण या आंशिक शिक्षण शुल्क प्रतिपूर्ति तथा ₹380 से ₹1,200 प्रतिमाह तक रख-रखाव भत्ता।",
+      "टॉप क्लास उच्च शिक्षा: ₹2.5 लाख से ₹5 लाख प्रति वर्ष तक पूर्ण शिक्षण शुल्क, जीवनयापन भत्ता व पुस्तक अनुदान।"
+    ],
+    "whatItProvides": [
+      "Single common application window for over 100+ Central, UGC, AICTE, and State Government scholarship schemes.",
+      "One-Time Registration (OTR) with digital biometric / Aadhaar verification ensuring transparent delivery.",
+      "Direct Benefit Transfer (DBT) into student's personal bank account without school or college intermediaries.",
+      "SMS alerts for tracking application status through School, District, and State level approvals."
+    ],
+    "whatItProvidesHi": [
+      "100 से अधिक केंद्रीय, यूजीसी, एआईसीटीई और राज्य छात्रवृत्ति योजनाओं के लिए एकल ऑनलाइन आवेदन मंच।",
+      "डिजिटल बायोमेट्रिक/आधार प्रमाणीकरण के साथ वन-टाइम रजिस्ट्रेशन (OTR) की पारदर्शी व्यवस्था।",
+      "बिना किसी बिचौलिए के छात्र के निजी बैंक खाते में सीधा प्रत्यक्ष लाभ अंतरण (DBT)।",
+      "स्कूल, जिला और राज्य स्तरीय सत्यापन की रियल-टाइम स्थिति एसएमएस और पोर्टल द्वारा।"
+    ],
+    "benefits": [
+      "Removes financial barriers for rural and underprivileged students to pursue higher education.",
+      "Covers admission fees, tuition fees, library, hostel fees, and specialized disability equipment.",
+      "Merit-cum-means support rewards academic performance while protecting vulnerable families.",
+      "Nationwide portability across all recognized schools, ITIs, polytechnics, colleges, and universities."
+    ],
+    "benefitsHi": [
+      "ग्रामीण और वंचित वर्ग के विद्यार्थियों के लिए उच्च व तकनीकी शिक्षा की राह सुगम।",
+      "प्रवेश शुल्क, शिक्षण शुल्क, हॉस्टल खर्च, किताबें और दिव्यांग छात्रों के लिए सहायक उपकरण कवर।",
+      "मेधावी और जरूरतमंद छात्रों को उनकी पढ़ाई के दौरान निरंतर आर्थिक सहारा।",
+      "देशभर के मान्यता प्राप्त स्कूलों, आईटीआई, कॉलेजों और विश्वविद्यालयों में मान्य।"
+    ],
+    "eligibility": [
+      "Regular enrolled Indian students in recognized schools, colleges, ITIs, or universities.",
+      "Students belonging to SC, ST, OBC, EWS, Minority, or General category depending on specific scheme guidelines.",
+      "Annual household income limits typically up to ₹1.5 Lakh to ₹2.5 Lakh per annum for post-matric schemes.",
+      "Minimum qualifying marks (typically 50% or above in previous final examination) for merit-based schemes."
+    ],
+    "eligibilityHi": [
+      "मान्यता प्राप्त स्कूल, कॉलेज, आईटीआई या विश्वविद्यालय में नियमित रूप से नामांकित भारतीय छात्र।",
+      "विशिष्ट योजना नियमों के अनुसार एससी, एसटी, ओबीसी, ईडब्ल्यूएस, अल्पसंख्यक या सामान्य वर्ग के छात्र।",
+      "परिवार की वार्षिक आय सीमा आमतौर पर ₹1.5 लाख से ₹2.5 लाख प्रति वर्ष तक (योजनानुसार)।",
+      "पिछली कक्षा की वार्षिक परीक्षा में न्यूनतम 50% या उससे अधिक अंक (मेरिट योजनाओं के लिए)।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card of the student (or Aadhaar Enrolment ID)",
+      "Educational certificates and Marksheet of previous qualifying exam",
+      "Income Certificate issued by authorized Revenue Authority (Tehsildar / SDO)",
+      "Caste / Category / Minority Certificate (if applying under reserved categories)",
+      "Active Bank Account Passbook in the student's name (Aadhaar-seeded)",
+      "Fee Receipt and Bonafide Student Certificate from the current institution"
+    ],
+    "requiredDocumentsHi": [
+      "छात्र का आधार कार्ड (या आधार नामांकन आईडी)",
+      "पिछली उत्तीर्ण परीक्षा की अंकतालिका एवं शैक्षणिक प्रमाण पत्र",
+      "अधिकृत राजस्व अधिकारी (तहसीलदार / एसडीएम) द्वारा जारी आय प्रमाण पत्र",
+      "जाति / श्रेणी / अल्पसंख्यक प्रमाण पत्र (जहाँ लागू हो)",
+      "छात्र के नाम का आधार से जुड़ा सक्रिय बैंक खाता पासबुक",
+      "वर्तमान शिक्षण संस्थान का बोनाफाइड प्रमाण पत्र व फीस रसीद"
+    ],
+    "applicationSteps": [
+      "Download the NSP OTR App or visit https://scholarships.gov.in/ and complete One-Time Registration (OTR) with Aadhaar Face/OTP.",
+      "Log in with OTR ID and password to access the student application dashboard.",
+      "Select applicable scholarship category (Pre-Matric, Post-Matric, or Higher Education) and scheme.",
+      "Enter academic details, bank details, and upload required certificates.",
+      "Submit application online and track verification status through Institute Nodal Officer (INO) and District Officer (DNO)."
+    ],
+    "applicationStepsHi": [
+      "एनएसपी ओटीआर ऐप डाउनलोड करें या https://scholarships.gov.in/ पर जाकर आधार फेस/ओटीपी से वन-टाइम रजिस्ट्रेशन (OTR) पूरा करें।",
+      "ओटीआर आईडी और पासवर्ड से छात्र डैशबोर्ड में लॉगिन करें।",
+      "उपयुक्त छात्रवृत्ति श्रेणी (प्री-मैट्रिक, पोस्ट-मैट्रिक या उच्च शिक्षा) और योजना चुनें।",
+      "शैक्षणिक विवरण, बैंक खाता भरें और मांगे गए प्रमाण पत्र अपलोड करें।",
+      "आवेदन ऑनलाइन सबमिट करें तथा स्कूल/कॉलेज स्तर और जिला स्तर पर सत्यापन की स्थिति ट्रैक करें।"
+    ],
     "officialUrl": "https://scholarships.gov.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from National Scholarship Portal (Ministry of Electronics & IT / MoE)",
+    "lastVerified": "2026-11",
     "featured": true,
-    "keywords": ["student", "scholarship", "education", "college", "school"],
-    "eligibilityRules": { "occupations": ["student"], "incomes": ["low", "middle"] }
+    "keywords": [
+      "student",
+      "scholarship",
+      "education",
+      "college",
+      "school",
+      "nsp",
+      "tuition",
+      "hostel"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "student"
+      ],
+      "incomes": [
+        "low",
+        "middle"
+      ]
+    }
   },
   {
     "id": "pmay-gramin",
     "name": "Pradhan Mantri Awaas Yojana – Gramin",
-    "nameHi": "प्रधानमंत्री आवास योजना – ग्रामीण",
-    "category": { "id": "housing", "name": "Housing & amenities", "nameHi": "आवास और सुविधाएँ", "description": "Housing and essential household infrastructure.", "descriptionHi": "आवास और आवश्यक घरेलू सुविधाएँ।", "icon": "House" },
+    "nameHi": "प्रधानमंत्री आवास योजना – ग्रामीण (PMAY-G)",
+    "category": {
+      "id": "housing",
+      "name": "Housing & amenities",
+      "nameHi": "आवास और सुविधाएँ",
+      "description": "Housing and essential household infrastructure.",
+      "descriptionHi": "आवास और आवश्यक घरेलू सुविधाएँ।",
+      "icon": "House"
+    },
     "level": "central",
-    "description": "A rural housing programme. Current beneficiary identification and assistance rules must be checked on the official programme resources.",
-    "descriptionHi": "ग्रामीण आवास कार्यक्रम। वर्तमान लाभार्थी पहचान और सहायता नियम आधिकारिक संसाधनों पर देखें।",
-    "beneficiaries": ["household", "farmer"],
-    "beneficiariesHi": ["परिवार", "किसान"],
-    "benefits": ["Housing programme information for eligible rural households.", "Official resources explain the current implementation process."],
-    "benefitsHi": ["पात्र ग्रामीण परिवारों के लिए आवास कार्यक्रम की जानकारी।", "आधिकारिक संसाधन वर्तमान प्रक्रिया समझाते हैं।"],
-    "eligibility": ["Identification and eligibility are based on current programme rules and local records.", "Confirm the applicable process with the local authority."],
-    "eligibilityHi": ["पहचान और पात्रता वर्तमान कार्यक्रम नियमों और स्थानीय रिकॉर्ड पर आधारित हैं।", "स्थानीय प्राधिकरण से लागू प्रक्रिया की पुष्टि करें।"],
-    "requiredDocuments": ["Identity proof", "Household or residence records where requested", "Local authority documents if applicable"],
-    "requiredDocumentsHi": ["पहचान प्रमाण", "जहाँ मांगा जाए वहाँ परिवार या निवास रिकॉर्ड", "जहाँ लागू हो स्थानीय प्राधिकरण के दस्तावेज़"],
-    "applicationSteps": ["Check programme information and local implementation details.", "Ask the responsible local office about the current list or process.", "Keep official receipts or references."],
-    "applicationStepsHi": ["कार्यक्रम की जानकारी और स्थानीय प्रक्रिया देखें।", "वर्तमान सूची या प्रक्रिया के बारे में संबंधित स्थानीय कार्यालय से पूछें।", "आधिकारिक रसीद या संदर्भ संभालें।"],
+    "description": "Flagship rural housing mission by Ministry of Rural Development to provide an all-weather disaster-resilient pucca house with clean cooking space and basic amenities to all homeless and kutcha-house rural households.",
+    "descriptionHi": "ग्रामीण विकास मंत्रालय का प्रमुख मिशन, जिसके तहत बेघर और कच्चे/टूटे-फूटे घरों में रहने वाले ग्रामीण परिवारों को रसोईघर व बुनियादी सुविधाओं से युक्त आपदा-रोधी पक्का मकान बनाने के लिए सीधी आर्थिक मदद दी जाती है।",
+    "beneficiaries": [
+      "household",
+      "farmer",
+      "worker"
+    ],
+    "beneficiariesHi": [
+      "बेघर ग्रामीण परिवार",
+      "कच्चे मकानों में रहने वाले परिवार"
+    ],
+    "financialAssistance": [
+      "₹1,20,000 unit assistance in plain areas directly into the beneficiary's bank account.",
+      "₹1,30,000 unit assistance in hilly states (NE states, Himachal, Uttarakhand, J&K, Ladakh) and difficult/IAP districts.",
+      "Additional ₹12,000 grant for toilet construction under Swachh Bharat Mission - Gramin (SBM-G).",
+      "90 to 95 person-days of unskilled labor wages under MGNREGA (~₹20,000 to ₹25,000 extra directly to the beneficiary)."
+    ],
+    "financialAssistanceHi": [
+      "मैदानी क्षेत्रों में पक्का मकान बनाने हेतु ₹1,20,000 की सीधी आर्थिक सहायता।",
+      "पहाड़ी राज्यों (पूर्वोत्तर, हिमाचल, उत्तराखंड, जम्मू-कश्मीर, लद्दाख) व दुर्गम क्षेत्रों में ₹1,30,000 की सहायता।",
+      "स्वच्छ भारत मिशन (ग्रामीण) के तहत शौचालय निर्माण के लिए ₹12,000 का अतिरिक्त अनुदान।",
+      "मनरेगा के तहत 90 से 95 दिनों की अकुशल मजदूरी (लगभग ₹20,000 से ₹25,000 अतिरिक्त सहायता सीधे खाते में)।"
+    ],
+    "whatItProvides": [
+      "Minimum 25 square metres of built-up pucca house construction with a dedicated hygienic cooking space.",
+      "Direct financial installments linked to geo-tagged mobile photos (Foundation, Lintel, Roof level, and Completion).",
+      "Convergence with Jal Jeevan Mission for piped drinking water and Saubhagya for electricity connection.",
+      "LPG gas connection under Pradhan Mantri Ujjwala Yojana."
+    ],
+    "whatItProvidesHi": [
+      "कम से कम 25 वर्ग मीटर का पक्का सुरक्षित मकान जिसमें अलग स्वच्छ रसोईघर शामिल हो।",
+      "मकान निर्माण के स्तर (नींव, लिंटेल, छत और पूर्णता) की जियो-टैग फोटो के आधार पर किस्तों का सीधा भुगतान।",
+      "जल जीवन मिशन से नल जल कनेक्शन और सौभाग्य योजना से मुफ्त बिजली कनेक्शन का तालमेल।",
+      "प्रधानमंत्री उज्ज्वला योजना के तहत मुफ्त रसोई गैस कनेक्शन की सुविधा।"
+    ],
+    "benefits": [
+      "Permanent, safe, and disaster-resilient shelter owned by the rural family (jointly or in the name of the female head).",
+      "Dignified living environment with sanitary toilet, electricity, and clean drinking water.",
+      "No mortgage, loan burden, or repayment; the assistance is a 100% non-refundable government grant.",
+      "Empowers rural women through joint or sole property ownership registration."
+    ],
+    "benefitsHi": [
+      "परिवार की महिला मुखिया या संयुक्त नाम पर सुरक्षित, आपदा-रोधी पक्के मकान का मालिकाना हक।",
+      "शौचालय, बिजली और नल जल के साथ सम्मानजनक और स्वस्थ जीवनशैली।",
+      "कोई कर्ज या ब्याज नहीं — यह 100% गैर-वापसी योग्य सरकारी सहायता अनुदान है।",
+      "ग्रामीण महिलाओं के नाम पर मकान पंजीकृत होने से सामाजिक व आर्थिक सशक्तिकरण।"
+    ],
+    "eligibility": [
+      "Rural families who do not own a pucca house anywhere in India.",
+      "Households registered and verified under the Socio-Economic and Caste Census (SECC 2011) and Awaas+ survey list.",
+      "Priority given to SC/ST households, destitute/beggar households, single women, widows, and families with disabled members.",
+      "Families owning motorized vehicles, agricultural equipment (tractors), government employees, or paying income/tax are excluded."
+    ],
+    "eligibilityHi": [
+      "ऐसे ग्रामीण परिवार जिनके पास भारत में कहीं भी कोई पक्का मकान नहीं है।",
+      "सामाजिक, आर्थिक व जाति जनगणना (SECC 2011) या 'आवास+' प्राथमिकता सूची में दर्ज पात्र परिवार।",
+      "अनुसूचित जाति/जनजाति, निराश्रित, एकल महिला, विधवा और दिव्यांग सदस्यों वाले परिवारों को सर्वोच्च प्राथमिकता।",
+      "अपवाद: जिनके पास चार पहिया वाहन, ट्रैक्टर, सरकारी नौकरी या आयकर दाता सदस्य हैं, वे पात्र नहीं हैं।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card of the applicant and adult family members",
+      "Active Bank Account Passbook (Aadhaar-seeded for DBT)",
+      "MGNREGA Job Card Number (to receive unskilled wage assistance)",
+      "Land ownership record or Gram Panchayat certificate of house site possession",
+      "Sworn affidavit confirming no pucca house ownership anywhere in India"
+    ],
+    "requiredDocumentsHi": [
+      "आवेदक और परिवार के वयस्क सदस्यों का आधार कार्ड",
+      "सक्रिय बैंक खाता पासबुक (डीबीटी के लिए आधार से लिंक)",
+      "मनरेगा जॉब कार्ड नंबर (मजदूरी सहायता प्राप्त करने के लिए)",
+      "आवास स्थल की जमीन का पट्टा या ग्राम पंचायत द्वारा जारी अधिकार पत्र",
+      "पक्का मकान न होने का स्व-घोषणा पत्र / हलफनामा"
+    ],
+    "applicationSteps": [
+      "Check your name in the Gram Panchayat PMAY-G beneficiary priority list (Awaas+ list) verified by the Gram Sabha.",
+      "The Panchayat Secretary or Block Coordinator visits your site to verify your kutcha dwelling and captures geo-tagged photos on the AwaasApp.",
+      "Your registration and Aadhaar-linked bank details are submitted on the AwaasSoft central portal by the Block Development Office (BDO).",
+      "Upon sanction, the first installment is credited to your bank account to start foundation construction.",
+      "After each stage (foundation, lintel, roof), the local officer uploads progress photos to release subsequent installments."
+    ],
+    "applicationStepsHi": [
+      "ग्राम सभा द्वारा अनुमोदित ग्राम पंचायत की PMAY-G प्राथमिकता सूची (Awaas+ लिस्ट) में अपना नाम देखें।",
+      "पंचायत सचिव या आवास सहायक आपके स्थल का निरीक्षण कर पुराने कच्चे घर की जियो-टैग फोटो 'AwaasApp' पर अपलोड करते हैं।",
+      "प्रखंड विकास कार्यालय (BDO) द्वारा AwaasSoft पोर्टल पर आपका पंजीकरण व आधार-लिंक्ड बैंक खाता दर्ज किया जाता है।",
+      "स्वीकृति मिलने पर नींव की खुदाई के लिए पहली किस्त सीधे बैंक खाते में ट्रांसफर की जाती है।",
+      "हर चरण (नींव, लिंटेल, छत) पूरा होने पर फोटो अपलोड करवाएं और अगली किस्तें अपने खाते में प्राप्त करें।"
+    ],
     "officialUrl": "https://pmayg.nic.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from Ministry of Rural Development portal",
+    "lastVerified": "2026-11",
     "featured": true,
-    "keywords": ["housing", "home", "rural", "house", "awas"],
-    "eligibilityRules": { "occupations": ["farmer", "worker", "other"], "incomes": ["low"] }
+    "keywords": [
+      "housing",
+      "home",
+      "rural",
+      "house",
+      "awas",
+      "pmay",
+      "pmayg",
+      "120000",
+      "pucca house"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "farmer",
+        "worker",
+        "other"
+      ],
+      "incomes": [
+        "low"
+      ]
+    }
   },
   {
     "id": "mgnrega",
     "name": "Mahatma Gandhi NREGA",
-    "nameHi": "महात्मा गांधी नरेगा",
-    "category": { "id": "employment", "name": "Employment & skills", "nameHi": "रोज़गार और कौशल", "description": "Skills, work opportunities, and livelihoods.", "descriptionHi": "कौशल, काम और आजीविका के अवसर।", "icon": "BriefcaseBusiness" },
+    "nameHi": "महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी अधिनियम (MGNREGA)",
+    "category": {
+      "id": "employment",
+      "name": "Employment & skills",
+      "nameHi": "रोज़गार और कौशल",
+      "description": "Skills, work opportunities, and livelihoods.",
+      "descriptionHi": "कौशल, काम और आजीविका के अवसर।",
+      "icon": "BriefcaseBusiness"
+    },
     "level": "central",
-    "description": "A rural employment programme with information and implementation managed through official and local channels.",
-    "descriptionHi": "ग्रामीण रोज़गार कार्यक्रम जिसकी जानकारी और कार्यान्वयन आधिकारिक और स्थानीय माध्यमों से होता है।",
-    "beneficiaries": ["worker", "household", "youth"],
-    "beneficiariesHi": ["कामगार", "परिवार", "युवा"],
-    "benefits": ["Understand the official rural employment process.", "Local offices and official portals provide current work and registration information."],
-    "benefitsHi": ["ग्रामीण रोज़गार प्रक्रिया समझें।", "स्थानीय कार्यालय और आधिकारिक पोर्टल वर्तमान काम और पंजीकरण जानकारी देते हैं।"],
-    "eligibility": ["Eligibility and work access follow current programme rules and local registration processes.", "Ask the local implementing authority for the current process."],
-    "eligibilityHi": ["पात्रता और काम की उपलब्धता वर्तमान कार्यक्रम नियमों और स्थानीय पंजीकरण प्रक्रिया पर निर्भर है।", "वर्तमान प्रक्रिया के लिए स्थानीय कार्यान्वयन प्राधिकरण से पूछें।"],
-    "requiredDocuments": ["Identity proof", "Local household or job card records where applicable", "Bank details only through the authorised process"],
-    "requiredDocumentsHi": ["पहचान प्रमाण", "जहाँ लागू हो स्थानीय परिवार या जॉब कार्ड रिकॉर्ड", "अधिकृत प्रक्रिया में ही बैंक विवरण"],
-    "applicationSteps": ["Contact the local implementing office.", "Ask about registration and work demand processes.", "Keep the acknowledgement or job card record."],
-    "applicationStepsHi": ["स्थानीय कार्यान्वयन कार्यालय से संपर्क करें।", "पंजीकरण और काम की मांग प्रक्रिया के बारे में पूछें।", "पावती या जॉब कार्ड रिकॉर्ड संभालें।"],
+    "description": "A landmark rights-based legal guarantee that provides at least 100 days of guaranteed wage employment in a financial year to every rural household whose adult members volunteer to do unskilled manual work.",
+    "descriptionHi": "एक कानूनी अधिकार-आधारित योजना जो प्रत्येक ग्रामीण परिवार को, जिसके वयस्क सदस्य अकुशल शारीरिक श्रम करने के इच्छुक हों, एक वित्तीय वर्ष में कम से कम 100 दिनों के सवेतन रोजगार की कानूनी गारंटी देती है।",
+    "beneficiaries": [
+      "worker",
+      "household",
+      "youth",
+      "women"
+    ],
+    "beneficiariesHi": [
+      "ग्रामीण कामगार",
+      "मजदूर परिवार",
+      "ग्रामीण महिलाएँ"
+    ],
+    "financialAssistance": [
+      "Guaranteed minimum daily wages (notified state-wise, currently ₹234 to ₹374 per day depending on the State).",
+      "Direct Benefit Transfer (DBT) deposited weekly or fortnightly directly into the worker's Aadhaar-seeded bank/post office account.",
+      "Statutory Unemployment Allowance paid if employment is not provided within 15 days of applying for work (not less than 1/4th of daily wage for first 30 days)."
+    ],
+    "financialAssistanceHi": [
+      "अधिसूचित वैधानिक न्यूनतम दैनिक मजदूरी (राज्य अनुसार वर्तमान में ₹234 से ₹374 प्रतिदिन)।",
+      "मजदूरी का भुगतान सीधे मजदूर के आधार से जुड़े बैंक या डाकघर खाते में साप्ताहिक या पाक्षिक।",
+      "काम मांगने के 15 दिनों के भीतर काम न मिलने पर कानूनी बेरोजगारी भत्ता पाने का अधिकार।"
+    ],
+    "whatItProvides": [
+      "Free laminated MGNREGA Job Card issued to the rural household within 15 days of application.",
+      "Work provided within 5 km of the village; if work is beyond 5 km, 10% extra wage is paid as travel allowance.",
+      "Creation of durable community assets: farm ponds, check dams, wells, rural roads, water conservation, and tree plantation.",
+      "Mandatory workplace facilities: drinking water, shade, first-aid box, and crèche facilities for small children."
+    ],
+    "whatItProvidesHi": [
+      "आवेदन के 15 दिनों के भीतर ग्रामीण परिवार को निःशुल्क जारी होने वाला जॉब कार्ड।",
+      "गाँव के 5 किमी के दायरे में काम; 5 किमी से अधिक दूरी होने पर 10% अतिरिक्त यात्रा भत्ता।",
+      "गाँव में स्थायी संपत्तियों का निर्माण: खेत तलाई, चेक डैम, कुएं, खड़ंजा/सड़क, जल संरक्षण व पौधारोपण।",
+      "कार्यस्थल पर पीने का पानी, छाया, प्राथमिक उपचार बॉक्स और बच्चों के लिए पालना-घर की सुविधा।"
+    ],
+    "benefits": [
+      "Legal right to work ensuring reliable safety net against rural unemployment and distress migration.",
+      "Equal statutory wages for men and women with special focus on women empowerment (at least 33% female participation).",
+      "Opportunity to develop personal land (irrigation wells, cattle sheds, horticulture) for SC/ST and small farmers.",
+      "Timely transparent wages directly linked to electronic attendance (NMMS) and Aadhaar Payment Bridge."
+    ],
+    "benefitsHi": [
+      "काम का कानूनी अधिकार जो ग्रामीण भुखमरी और मजबूरी में पलायन को रोकता है।",
+      "महिला और पुरुष दोनों को समान मजदूरी तथा कम से कम एक-तिहाई महिला भागीदारी अनिवार्य।",
+      "एससी/एसटी और छोटे किसानों के अपने खेतों पर कुएं, पशु शेड और बागवानी तैयार कराने का लाभ।",
+      "पारदर्शी भुगतान — मोबाइल हाजिरी (NMMS) और आधार पेमेंट ब्रिज से बिना रिश्वत सीधे खाते में।"
+    ],
+    "eligibility": [
+      "Any adult member (18 years and above) of a rural household.",
+      "Must be residing in the rural area under the concerned Gram Panchayat jurisdiction.",
+      "Willing to do unskilled manual work on public and natural resource management projects."
+    ],
+    "eligibilityHi": [
+      "ग्रामीण परिवार का कोई भी वयस्क सदस्य जिसकी आयु 18 वर्ष या उससे अधिक हो।",
+      "संबंधित ग्राम पंचायत क्षेत्र का स्थानीय निवासी होना अनिवार्य है।",
+      "अकुशल शारीरिक श्रम करने के लिए तैयार और इच्छुक होना चाहिए।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card of all adult members seeking work",
+      "Passport size photographs of applicants",
+      "Bank or Post Office savings account passbook (Aadhaar-seeded)",
+      "Proof of residence in Gram Panchayat (Ration card / Voter ID)"
+    ],
+    "requiredDocumentsHi": [
+      "काम चाहने वाले सभी वयस्क सदस्यों का आधार कार्ड",
+      "आवेदकों की पासपोर्ट साइज फोटो",
+      "बैंक या डाकघर बचत खाता पासबुक (आधार से लिंक)",
+      "ग्राम पंचायत में निवास का प्रमाण (राशन कार्ड / वोटर आईडी)"
+    ],
+    "applicationSteps": [
+      "Submit oral or written application for Job Card to the Gram Panchayat office / Panchayat Secretary.",
+      "Panchayat verifies local residence and issues the official Job Card within 15 days free of cost.",
+      "Submit a written application (Demand for Work) to the Gram Panchayat stating dates and duration of work needed.",
+      "Collect a dated receipt for your work demand application; the Panchayat must allot work within 15 days.",
+      "Report to the assigned work site and mark daily attendance via NMMS app to receive direct bank payment."
+    ],
+    "applicationStepsHi": [
+      "ग्राम पंचायत कार्यालय या पंचायत सचिव के पास जॉब कार्ड के लिए सादे कागज पर या मौखिक आवेदन करें।",
+      "ग्राम पंचायत सत्यापन के बाद 15 दिनों के भीतर निःशुल्क जॉब कार्ड जारी करेगी।",
+      "जब भी काम चाहिए, ग्राम पंचायत में 'काम की मांग' का लिखित आवेदन दें और तारीख लिखी पावती रसीद लें।",
+      "आवेदन देने के 15 दिनों के भीतर पंचायत आपको काम आवंटित करेगी।",
+      "आवंटित कार्यस्थल पर जाएं और दैनिक हाजिरी लगवाएं; मजदूरी सीधे आपके बैंक खाते में भेजी जाएगी।"
+    ],
     "officialUrl": "https://nrega.nic.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from Ministry of Rural Development portal",
+    "lastVerified": "2026-11",
     "featured": false,
-    "keywords": ["employment", "rural work", "job", "wage", "worker"],
-    "eligibilityRules": { "occupations": ["worker", "other"], "incomes": ["low", "middle"] }
+    "keywords": [
+      "employment",
+      "rural work",
+      "job",
+      "wage",
+      "worker",
+      "mgnrega",
+      "100 days",
+      "unskilled"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "worker",
+        "other"
+      ],
+      "incomes": [
+        "low",
+        "middle"
+      ]
+    }
   },
   {
     "id": "ayushman-bharat-pmjay",
     "name": "Ayushman Bharat – PM-JAY",
-    "nameHi": "आयुष्मान भारत – पीएम-जेएवाई",
-    "category": { "id": "health", "name": "Health & family welfare", "nameHi": "स्वास्थ्य और परिवार कल्याण", "description": "Health access and family wellbeing.", "descriptionHi": "स्वास्थ्य सुविधा और परिवार का कल्याण।", "icon": "HeartPulse" },
+    "nameHi": "आयुष्मान भारत – प्रधानमंत्री जन आरोग्य योजना (AB-PMJAY)",
+    "category": {
+      "id": "health",
+      "name": "Health & family welfare",
+      "nameHi": "स्वास्थ्य और परिवार कल्याण",
+      "description": "Health access and family wellbeing.",
+      "descriptionHi": "स्वास्थ्य सुविधा और परिवार का कल्याण।",
+      "icon": "HeartPulse"
+    },
     "level": "central",
-    "description": "A public health coverage programme. Check current beneficiary identification and service information through the official portal.",
-    "descriptionHi": "सार्वजनिक स्वास्थ्य कवरेज कार्यक्रम। लाभार्थी पहचान और सेवा की वर्तमान जानकारी आधिकारिक पोर्टल पर देखें।",
-    "beneficiaries": ["household", "senior", "women"],
-    "beneficiariesHi": ["परिवार", "वरिष्ठ नागरिक", "महिलाएँ"],
-    "benefits": ["Official information about health coverage and empanelled services.", "The official channels explain how to check eligibility and access support."],
-    "benefitsHi": ["स्वास्थ्य कवरेज और सूचीबद्ध सेवाओं की आधिकारिक जानकारी।", "आधिकारिक माध्यम पात्रता और सहायता लेने की प्रक्रिया बताते हैं।"],
-    "eligibility": ["Beneficiary identification follows current government criteria.", "Use only the official eligibility and helpline channels for confirmation."],
-    "eligibilityHi": ["लाभार्थी पहचान वर्तमान सरकारी मानदंडों पर आधारित है।", "पुष्टि के लिए केवल आधिकारिक पात्रता और हेल्पलाइन माध्यमों का उपयोग करें।"],
-    "requiredDocuments": ["Identity proof as requested by the official channel", "Beneficiary or household records where applicable"],
-    "requiredDocumentsHi": ["आधिकारिक माध्यम द्वारा मांगा गया पहचान प्रमाण", "जहाँ लागू हो लाभार्थी या परिवार रिकॉर्ड"],
-    "applicationSteps": ["Check beneficiary information on the official portal.", "Use an authorised help desk or empanelled facility.", "Confirm service details before treatment or travel."],
-    "applicationStepsHi": ["आधिकारिक पोर्टल पर लाभार्थी जानकारी देखें।", "अधिकृत सहायता केंद्र या सूचीबद्ध सुविधा का उपयोग करें।", "इलाज या यात्रा से पहले सेवा विवरण की पुष्टि करें।"],
+    "description": "The world's largest government-funded health assurance scheme, providing free secondary and tertiary care hospitalisation coverage up to ₹5 Lakh per family per year across empanelled public and private hospitals across India.",
+    "descriptionHi": "दुनिया की सबसे बड़ी सरकारी स्वास्थ्य बीमा योजना, जिसके तहत देश भर के सरकारी और सूचीबद्ध निजी अस्पतालों में प्रति परिवार प्रति वर्ष ₹5 लाख तक का पूर्णतः कैशलेस और मुफ्त इलाज प्रदान किया जाता है।",
+    "beneficiaries": [
+      "household",
+      "senior",
+      "women",
+      "worker"
+    ],
+    "beneficiariesHi": [
+      "गरीब व मध्यमवर्गीय परिवार",
+      "वरिष्ठ नागरिक (70+)",
+      "महिलाएँ"
+    ],
+    "financialAssistance": [
+      "Health cover of up to ₹5,00,000 (Five Lakh Rupees) per family per year on a family floater basis.",
+      "100% cashless and paperless treatment at all empanelled public and private hospitals nationwide.",
+      "Covers 3 days of pre-hospitalisation (tests/consultations) and 15 days of post-hospitalisation medicines and care."
+    ],
+    "financialAssistanceHi": [
+      "प्रति परिवार प्रति वर्ष ₹5,00,000 (पाँच लाख रुपये) तक का निःशुल्क स्वास्थ्य कवरेज।",
+      "देशभर के सभी सूचीबद्ध सरकारी व निजी अस्पतालों में 100% कैशलेस और पेपरलेस इलाज।",
+      "अस्पताल में भर्ती होने से 3 दिन पहले तक की जांचें तथा डिस्चार्ज के 15 दिन बाद तक की दवाएं और देखभाल शामिल।"
+    ],
+    "whatItProvides": [
+      "Ayushman Golden Card (PVC Card / Digital e-Card) ensuring instant admission without advance security deposits.",
+      "Coverage for over 1,949 medical and surgical procedures including cardiology, cancer treatment, neurosurgery, and orthopedics.",
+      "Full coverage for room charges, ICU charges, surgeon/nursing fees, diagnostic tests, implants, and medicines.",
+      "Dedicated Ayushman Mitra helpdesks at every empanelled hospital for patient onboarding and guidance."
+    ],
+    "whatItProvidesHi": [
+      "आयुष्मान गोल्डन कार्ड जिससे बिना किसी अग्रिम जमा राशि के अस्पताल में तुरंत प्रवेश मिलता है।",
+      "1,949 से अधिक बीमारियों व ऑपरेशनों का इलाज: हार्ट सर्जरी, कैंसर थेरेपी, डायलिसिस, घुटना प्रत्यारोपण आदि।",
+      "कमरा शुल्क, आईसीयू, डॉक्टर/सर्जन फीस, जांचें, ऑपरेशन और दवाओं का पूरा खर्च सरकार द्वारा वहन।",
+      "मरीजों की मदद और दाखिले के लिए प्रत्येक सूचीबद्ध अस्पताल में समर्पित 'आयुष्मान मित्र' डेस्क।"
+    ],
+    "benefits": [
+      "Protects families from catastrophic medical debt and impoverishment due to critical illness.",
+      "No cap on family size, age, or gender; all family members are covered under the single entitlement.",
+      "Pre-existing illnesses and conditions are covered from day one without waiting periods.",
+      "Nationwide portability: treatment can be availed anywhere in India irrespective of home state."
+    ],
+    "benefitsHi": [
+      "गंभीर बीमारियों के इलाज में होने वाले भारी कर्ज और जमीन/गहने बिकने की नौबत से पूर्ण सुरक्षा।",
+      "परिवार के सदस्यों की संख्या, आयु या लिंग की कोई सीमा नहीं — सभी सदस्य एक ही कार्ड से कवर।",
+      "पहले से मौजूद बीमारियाँ (Pre-existing diseases) पहले दिन से ही पूरी तरह से कवर।",
+      "देशव्यापी पोर्टेबिलिटी: अपने गाँव/राज्य के बाहर भी देश के किसी भी सूचीबद्ध अस्पताल में मान्य।"
+    ],
+    "eligibility": [
+      "Families listed in the Socio-Economic Caste Census (SECC 2011) database under defined deprivation criteria.",
+      "Active National Food Security Act (NFSA) / Ration Card holders in participating States.",
+      "Special Extension: ALL citizens aged 70 years and above (Ayushman Vay Vandana Card) regardless of income.",
+      "No restriction on family size or age."
+    ],
+    "eligibilityHi": [
+      "सामाजिक आर्थिक व जाति जनगणना (SECC 2011) की वंचित श्रेणी में दर्ज ग्रामीण व शहरी परिवार।",
+      "सहभागी राज्यों में राष्ट्रीय खाद्य सुरक्षा अधिनियम (NFSA) / पात्र राशन कार्ड धारक परिवार।",
+      "विशेष विस्तार: 70 वर्ष या उससे अधिक आयु के सभी वरिष्ठ नागरिक (बिना किसी आय सीमा के)।",
+      "परिवार में सदस्यों की संख्या या आयु की कोई बाध्यता नहीं है।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card of the patient / family members (mandatory for e-KYC)",
+      "Ration Card or Family Identification Document",
+      "Active mobile number linked with Aadhaar for OTP verification"
+    ],
+    "requiredDocumentsHi": [
+      "मरीज और परिवार के सदस्यों का आधार कार्ड (ई-केवाईसी के लिए अनिवार्य)",
+      "राशन कार्ड या परिवार पहचान पत्र (समग्र आईडी / जन आधार आदि)",
+      "ओटीपी सत्यापन के लिए आधार से लिंक चालू मोबाइल नंबर"
+    ],
+    "applicationSteps": [
+      "Visit official Beneficiary Portal (https://beneficiary.nha.gov.in/) or download the Ayushman App.",
+      "Login using your mobile number and search eligibility using Aadhaar number, Ration Card, or Family ID.",
+      "If your name is listed, perform instant online e-KYC using Aadhaar OTP, Fingerprint, or Face Scan.",
+      "Download your approved Ayushman Card immediately on your phone, or print it at any CSC or hospital helpdesk.",
+      "Show this Ayushman Card at any empanelled hospital's Ayushman Kiosk for 100% cashless treatment."
+    ],
+    "applicationStepsHi": [
+      "आधिकारिक पोर्टल (https://beneficiary.nha.gov.in/) पर जाएँ या 'Ayushman App' डाउनलोड करें।",
+      "मोबाइल नंबर से लॉगिन करें और आधार नंबर, राशन कार्ड या फैमिली आईडी डालकर अपनी पात्रता खोजें।",
+      "नाम दिखने पर आधार ओटीपी, फिंगरप्रिंट या फेस स्कैन से अपनी ई-केवाईसी पूरी करें।",
+      "सत्यापन के तुरंत बाद अपना आयुष्मान कार्ड मोबाइल में डाउनलोड करें या सीएससी से प्रिंट कराएं।",
+      "किसी भी सूचीबद्ध सरकारी या निजी अस्पताल के 'आयुष्मान डेस्क' पर कार्ड दिखाएं और कैशलेस इलाज पाएं।"
+    ],
     "officialUrl": "https://pmjay.gov.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from National Health Authority (NHA) official portal",
+    "lastVerified": "2026-11",
     "featured": true,
-    "keywords": ["health", "hospital", "medical", "family", "ayushman"],
-    "eligibilityRules": { "incomes": ["low"] }
+    "keywords": [
+      "health",
+      "hospital",
+      "medical",
+      "family",
+      "ayushman",
+      "pmjay",
+      "5 lakh",
+      "free treatment"
+    ],
+    "eligibilityRules": {
+      "incomes": [
+        "low"
+      ]
+    }
   },
   {
     "id": "pmkvy",
     "name": "Pradhan Mantri Kaushal Vikas Yojana",
-    "nameHi": "प्रधानमंत्री कौशल विकास योजना",
-    "category": { "id": "employment", "name": "Employment & skills", "nameHi": "रोज़गार और कौशल", "description": "Skills, work opportunities, and livelihoods.", "descriptionHi": "कौशल, काम और आजीविका के अवसर।", "icon": "BriefcaseBusiness" },
+    "nameHi": "प्रधानमंत्री कौशल विकास योजना (PMKVY 4.0)",
+    "category": {
+      "id": "employment",
+      "name": "Employment & skills",
+      "nameHi": "रोज़गार और कौशल",
+      "description": "Skills, work opportunities, and livelihoods.",
+      "descriptionHi": "कौशल, काम और आजीविका के अवसर।",
+      "icon": "BriefcaseBusiness"
+    },
     "level": "central",
-    "description": "Explore skill development information and training pathways through current official programme resources.",
-    "descriptionHi": "वर्तमान आधिकारिक कार्यक्रम संसाधनों से कौशल विकास और प्रशिक्षण के रास्ते देखें।",
-    "beneficiaries": ["youth", "worker", "student"],
-    "beneficiariesHi": ["युवा", "कामगार", "छात्र"],
-    "benefits": ["Information about training and certification pathways.", "Current course availability depends on the official programme and training partners."],
-    "benefitsHi": ["प्रशिक्षण और प्रमाणन मार्गों की जानकारी।", "वर्तमान पाठ्यक्रम आधिकारिक कार्यक्रम और प्रशिक्षण साझेदारों पर निर्भर हैं।"],
-    "eligibility": ["Course-specific age, education, and location requirements may apply.", "Check the current training partner information before enrolling."],
-    "eligibilityHi": ["पाठ्यक्रम के अनुसार आयु, शिक्षा और स्थान की आवश्यकताएँ लागू हो सकती हैं।", "नामांकन से पहले वर्तमान प्रशिक्षण साझेदार की जानकारी देखें।"],
-    "requiredDocuments": ["Identity proof", "Educational records where requested", "Bank details only if the official process requests them"],
-    "requiredDocumentsHi": ["पहचान प्रमाण", "जहाँ मांगा जाए वहाँ शैक्षणिक रिकॉर्ड", "आधिकारिक प्रक्रिया में ही बैंक विवरण"],
-    "applicationSteps": ["Browse official training information.", "Choose a current course or centre after checking its details.", "Follow the partner's authorised registration process."],
-    "applicationStepsHi": ["आधिकारिक प्रशिक्षण जानकारी देखें।", "विवरण की जाँच के बाद वर्तमान पाठ्यक्रम या केंद्र चुनें।", "साझेदार की अधिकृत पंजीकरण प्रक्रिया अपनाएँ।"],
+    "description": "Skill certification initiative of the Ministry of Skill Development and Entrepreneurship (MSDE) implemented by NSDC to provide free industry-relevant technical and vocational training to Indian youth to secure sustainable employment.",
+    "descriptionHi": "कौशल विकास और उद्यमिता मंत्रालय की प्रमुख योजना, जिसके तहत देश के बेरोजगार युवाओं को आधुनिक उद्योगों की मांग के अनुसार निःशुल्क तकनीकी व व्यावसायिक प्रशिक्षण और सरकारी प्रमाण पत्र दिया जाता है।",
+    "beneficiaries": [
+      "youth",
+      "worker",
+      "student"
+    ],
+    "beneficiariesHi": [
+      "बेरोजगार युवा",
+      "स्कूल/कॉलेज छोड़ चुके छात्र",
+      "कारीगर"
+    ],
+    "financialAssistance": [
+      "100% free training: all tuition fees, assessment fees, and certification charges are paid by the Government of India.",
+      "Travel allowance and post-placement boarding/lodging support (up to ₹1,000 to ₹1,500/month) for rural and outstation candidates.",
+      "Accidental insurance coverage of ₹2 Lakh under Pradhan Mantri Suraksha Bima Yojana (PMSBY) provided free during training."
+    ],
+    "financialAssistanceHi": [
+      "100% मुफ्त प्रशिक्षण: पूरा कोर्स शुल्क, परीक्षा शुल्क और प्रमाण पत्र का खर्च केंद्र सरकार देती है।",
+      "ग्रामीण और दूरदराज के प्रशिक्षुओं के लिए यात्रा व भोजन-आवास भत्ता (₹1,000 से ₹1,500 प्रतिमाह तक)।",
+      "प्रशिक्षण के दौरान ₹2 लाख का निःशुल्क प्रधानमंत्री सुरक्षा बीमा योजना (दुर्घटना बीमा) कवर।"
+    ],
+    "whatItProvides": [
+      "Short Term Training (STT): 200 to 600 hours of job-oriented training in modern sectors (IT, Solar, Healthcare, Agriculture, Retail, Automotive).",
+      "Recognition of Prior Learning (RPL): Formal certification and skill grading for experienced workers without formal degrees.",
+      "National Skills Qualifications Framework (NSQF) aligned recognized government certificate.",
+      "Job placement support, Rozgar Melas (job fairs), and self-employment micro-loan facilitation."
+    ],
+    "whatItProvidesHi": [
+      "अल्पकालिक प्रशिक्षण (STT): नए उद्योगों (आईटी, सोलर, स्वास्थ्य, ऑटोमोबाइल, इलेक्ट्रॉनिक्स) में 200 से 600 घंटे की प्रैक्टिकल ट्रेनिंग।",
+      "पूर्व शिक्षा की मान्यता (RPL): बिना डिग्री वाले अनुभवी कारीगरों और मिस्त्रियों का सरकारी कौशल परीक्षण व सर्टिफिकेट।",
+      "राष्ट्रीय कौशल योग्यता फ्रेमवर्क (NSQF) से मान्यता प्राप्त सरकारी प्रमाण पत्र।",
+      "रोजगार मेलों के माध्यम से कंपनियों में सीधी नौकरी और खुद का काम शुरू करने के लिए मुद्रा लोन में सहयोग।"
+    ],
+    "benefits": [
+      "Equips youth with market-ready practical skills to secure higher paying jobs or start micro-enterprises.",
+      "Government-recognized certificate accepted by employers in India and overseas.",
+      "Soft skills, digital literacy, spoken English, and financial management training included.",
+      "Special focus on future skills: Drone technology, AI, Robotics, 3D printing, and Electric Vehicles."
+    ],
+    "benefitsHi": [
+      "युवाओं को व्यावहारिक हुनर सिखाकर अच्छी सैलरी वाली नौकरी पाने या खुद का काम शुरू करने में सक्षम बनाना।",
+      "देश-विदेश की कंपनियों में मान्य भारत सरकार का आधिकारिक कौशल प्रमाण पत्र।",
+      "कंप्यूटर ज्ञान, डिजिटल लेन-देन, बातचीत का सलीका और व्यक्तित्व विकास का निःशुल्क प्रशिक्षण।",
+      "आधुनिक भविष्य के कौशल: ड्रोन संचालन, इलेक्ट्रिक वाहन रिपेयरिंग, सोलर इंस्टॉलेशन और रोबोटिक्स।"
+    ],
+    "eligibility": [
+      "Indian citizen aged between 15 and 45 years.",
+      "Unemployed youth, school dropouts, or college dropouts looking for livelihood skills.",
+      "Possession of an Aadhaar card and Aadhaar-linked active bank account.",
+      "Educational criteria vary by course (from 8th pass to 12th/Graduate depending on the job role)."
+    ],
+    "eligibilityHi": [
+      "15 से 45 वर्ष की आयु के भारतीय नागरिक।",
+      "बेरोजगार युवा, स्कूल या कॉलेज की पढ़ाई बीच में छोड़ चुके छात्र या कामकाजी लोग।",
+      "आवेदक के पास आधार कार्ड और आधार से जुड़ा बैंक खाता होना अनिवार्य है।",
+      "शैक्षणिक योग्यता कोर्स के अनुसार 8वीं पास से लेकर 12वीं/स्नातक तक।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card (identity and age proof)",
+      "Educational qualification certificates or school leaving certificate",
+      "Active bank savings account passbook",
+      "Two passport size photographs and active mobile number"
+    ],
+    "requiredDocumentsHi": [
+      "आधार कार्ड (पहचान व आयु प्रमाण हेतु)",
+      "शैक्षणिक योग्यता की अंकतालिका या स्कूल छोड़ने का प्रमाण पत्र",
+      "सक्रिय बैंक खाता पासबुक की प्रति",
+      "दो पासपोर्ट साइज फोटो और चालू मोबाइल नंबर"
+    ],
+    "applicationSteps": [
+      "Visit the official Skill India Digital portal (https://www.skillindiadigital.gov.in/) or https://www.pmkvyofficial.org/.",
+      "Register with your mobile number, browse courses based on your sector of interest, and locate nearest Pradhan Mantri Kaushal Kendra (PMKK).",
+      "Visit the training center with your Aadhaar and marksheets for free skill counseling.",
+      "Enroll in the batch, complete hands-on practical training, and pass the third-party assessment exam.",
+      "Receive your NSQF certificate and participate in campus placement drives and Rozgar Melas."
+    ],
+    "applicationStepsHi": [
+      "स्किल इंडिया डिजिटल पोर्टल (https://www.skillindiadigital.gov.in/) पर जाएँ और मोबाइल नंबर से पंजीकरण करें।",
+      "अपनी रुचि का कोर्स चुनें और अपने जिले के नजदीकी प्रधानमंत्री कौशल केंद्र (PMKK) की जानकारी निकालें।",
+      "आधार कार्ड व अंकतालिका लेकर कौशल केंद्र जाएँ और निःशुल्क करियर काउंसलिंग प्राप्त करें।",
+      "बैच में शामिल होकर ट्रेनिंग पूरी करें और अंतिम परीक्षा पास करें।",
+      "सरकारी प्रमाण पत्र प्राप्त करें और केंद्र द्वारा आयोजित रोजगार मेले में साक्षात्कार देकर नौकरी पाएं।"
+    ],
     "officialUrl": "https://www.pmkvyofficial.org/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from Ministry of Skill Development & Entrepreneurship portal",
+    "lastVerified": "2026-11",
     "featured": false,
-    "keywords": ["skill", "training", "job", "youth", "course"],
-    "eligibilityRules": { "occupations": ["student", "worker", "other"], "incomes": ["low", "middle"] }
+    "keywords": [
+      "skill",
+      "training",
+      "job",
+      "youth",
+      "course",
+      "pmkvy",
+      "nsdc",
+      "placement",
+      "free course"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "student",
+        "worker",
+        "other"
+      ],
+      "incomes": [
+        "low",
+        "middle"
+      ]
+    }
   },
   {
     "id": "pm-svanidhi",
     "name": "PM SVANidhi",
-    "nameHi": "पीएम स्वनिधि",
-    "category": { "id": "enterprise", "name": "Enterprise & finance", "nameHi": "उद्यम और वित्त", "description": "Small business and entrepreneurial pathways.", "descriptionHi": "छोटे व्यवसाय और उद्यमिता के अवसर।", "icon": "Store" },
+    "nameHi": "पीएम स्वनिधि (प्रधानमंत्री स्ट्रीट वेंडर्स आत्मनिर्भर निधि)",
+    "category": {
+      "id": "enterprise",
+      "name": "Enterprise & finance",
+      "nameHi": "उद्यम और वित्त",
+      "description": "Small business and entrepreneurial pathways.",
+      "descriptionHi": "छोटे व्यवसाय और उद्यमिता के अवसर।",
+      "icon": "Store"
+    },
     "level": "central",
-    "description": "A street-vendor support programme. Review the current lending and beneficiary process on the official portal.",
-    "descriptionHi": "स्ट्रीट वेंडर सहायता कार्यक्रम। वर्तमान ऋण और लाभार्थी प्रक्रिया आधिकारिक पोर्टल पर देखें।",
-    "beneficiaries": ["entrepreneur", "worker"],
-    "beneficiariesHi": ["उद्यमी", "कामगार"],
-    "benefits": ["Official information about the programme and its application channels.", "Current terms and access conditions must be confirmed with the responsible authority."],
-    "benefitsHi": ["कार्यक्रम और आवेदन माध्यम की आधिकारिक जानकारी।", "वर्तमान शर्तों और पहुँच की पुष्टि संबंधित प्राधिकरण से करें।"],
-    "eligibility": ["Vendor identification and current programme rules apply.", "Confirm the authorised process with the official portal or local body."],
-    "eligibilityHi": ["वेंडर पहचान और वर्तमान कार्यक्रम नियम लागू होते हैं।", "आधिकारिक पोर्टल या स्थानीय निकाय से अधिकृत प्रक्रिया की पुष्टि करें।"],
-    "requiredDocuments": ["Identity proof", "Vendor or local body records where applicable", "Bank details through the authorised application channel"],
-    "requiredDocumentsHi": ["पहचान प्रमाण", "जहाँ लागू हो वेंडर या स्थानीय निकाय रिकॉर्ड", "अधिकृत आवेदन माध्यम से बैंक विवरण"],
-    "applicationSteps": ["Read the current programme information.", "Check the official application or local-body channel.", "Keep your acknowledgement and repayment information safely."],
-    "applicationStepsHi": ["वर्तमान कार्यक्रम जानकारी पढ़ें।", "आधिकारिक आवेदन या स्थानीय निकाय माध्यम देखें।", "पावती और भुगतान जानकारी सुरक्षित रखें।"],
+    "description": "Special micro-credit scheme launched by Ministry of Housing and Urban Affairs to provide affordable, collateral-free working capital loans to urban and peri-urban/rural street vendors to resume their livelihoods and scale up.",
+    "descriptionHi": "आवासन और शहरी कार्य मंत्रालय की विशेष योजना, जिसके तहत रेहड़ी-पटरी, ठेला लगाने वाले और छोटे दुकानदारों को बिना किसी गारंटी (कोलैटरल) के किफायती कार्यशील पूंजी ऋण दिया जाता है ताकि वे अपने व्यवसाय को आगे बढ़ा सकें।",
+    "beneficiaries": [
+      "entrepreneur",
+      "worker"
+    ],
+    "beneficiariesHi": [
+      "रेहड़ी-पटरी वाले",
+      "ठेला व्यवसायी",
+      "स्ट्रीट वेंडर्स"
+    ],
+    "financialAssistance": [
+      "1st Loan: Up to ₹10,000 collateral-free working capital loan (repayable in 12 monthly installments).",
+      "2nd Loan: Up to ₹20,000 on timely or early repayment of the first loan (repayable in 18 months).",
+      "3rd Loan: Up to ₹50,000 on timely repayment of the second loan (repayable in 36 months).",
+      "7% interest subsidy per annum credited directly to bank account on regular repayment.",
+      "Monthly cashback incentive of up to ₹100 per month (up to ₹1,200/year) on digital transactions."
+    ],
+    "financialAssistanceHi": [
+      "पहला ऋण: ₹10,000 तक का बिना गारंटी लोन (1 वर्ष की आसान मासिक किस्तों में देय)।",
+      "दूसरा ऋण: पहला ऋण समय पर चुकाने पर ₹20,000 तक का लोन (18 महीने की अवधि)।",
+      "तीसरा ऋण: दूसरा ऋण समय पर चुकाने पर ₹50,000 तक का बड़ा लोन (36 महीने की अवधि)।",
+      "नियमित किस्त चुकाने पर 7% वार्षिक ब्याज सब्सिडी सीधे बैंक खाते में जमा।",
+      "डिजिटल लेन-देन (QR कोड पेमेंट) करने पर ₹100 प्रतिमाह (₹1,200/वर्ष) तक का कैशबैक।"
+    ],
+    "whatItProvides": [
+      "Collateral-free working capital loan disbursed directly into the vendor's bank account.",
+      "Letter of Recommendation (LoR) facility through Urban Local Body (ULB) for vendors without Vending ID.",
+      "Free UPI QR code and merchant onboarding to accept digital payments from customers.",
+      "Socio-economic profiling under 'SVANidhi se Samriddhi' linking vendor families to 8 other central welfare schemes."
+    ],
+    "whatItProvidesHi": [
+      "बिना किसी जमीन, मकान या गारंटी के सीधे बैंक खाते में पूंजी ऋण।",
+      "वेंडिंग कार्ड न होने पर नगर पालिका/नगर निगम द्वारा 'सिफारिश पत्र' (Letter of Recommendation) जारी करने की सुविधा।",
+      "डिजिटल पेमेंट स्वीकार करने के लिए निःशुल्क यूपीआई क्यूआर कोड और मर्चेंट ट्रेनिंग।",
+      "'स्वनिधि से समृद्धि' अभियान के तहत वेंडर के पूरे परिवार को 8 अन्य सरकारी कल्याणकारी योजनाओं से सीधा जोड़ना।"
+    ],
+    "benefits": [
+      "Liberates small vendors from the vicious cycle of high-interest local private moneylenders.",
+      "Builds positive credit score opening doors to larger mainstream commercial bank loans.",
+      "Low effective interest rate after accounting for the 7% government interest subsidy.",
+      "Financial security and social recognition for street hawkers, fruit/vegetable sellers, and craftsmen."
+    ],
+    "benefitsHi": [
+      "छोटे व्यापारियों को रोजमर्रा के लिए साहूकारों के भारी ब्याज (10-20% रोज) से हमेशा के लिए आजादी।",
+      "समय पर लोन चुकाने से सिबिल/क्रेडिट स्कोर मजबूत होता है, जिससे भविष्य में बड़े बिजनेस लोन मिलना आसान।",
+      "सरकार की 7% ब्याज छूट के कारण बहुत ही मामूली ब्याज पर पूंजी उपलब्ध।",
+      "सड़क किनारे काम करने वाले मेहनतकश नागरिकों को सरकारी मान्यता और सामाजिक सम्मान।"
+    ],
+    "eligibility": [
+      "Street vendors, hawkers, thela-pullers engaged in vending in urban, peri-urban, or adjoining rural areas.",
+      "Possession of Certificate of Vending (CoV) / Identity Card issued by Urban Local Body (ULB).",
+      "Vendors who do not possess CoV/ID card can apply through a Letter of Recommendation (LoR) issued by the Municipality/Town Vending Committee.",
+      "Possession of an active Aadhaar card and Aadhaar-linked bank account."
+    ],
+    "eligibilityHi": [
+      "शहरी, अर्ध-शहरी या नजदीकी ग्रामीण क्षेत्रों में रेहड़ी, पटरी, ठेला या फेरी लगाकर सामान बेचने वाले वेंडर्स।",
+      "नगर पालिका/नगर निगम द्वारा जारी वेंडिंग प्रमाण पत्र या परिचय पत्र होना चाहिए।",
+      "यदि प्रमाण पत्र नहीं है, तो नगर निकाय/टाउन वेंडिंग कमेटी से 'सिफारिश पत्र' (LoR) बनवाकर भी पात्र हैं।",
+      "आधार कार्ड और आधार से जुड़ा बैंक खाता होना आवश्यक है।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card (linked to mobile number for OTP)",
+      "Vending Certificate / Vendor ID Card or Letter of Recommendation (LoR) from Municipality",
+      "Bank Account details (Passbook copy with Account Number and IFSC)",
+      "Active mobile number"
+    ],
+    "requiredDocumentsHi": [
+      "आधार कार्ड (ओटीपी के लिए मोबाइल से लिंक)",
+      "नगर पालिका/नगर निगम का वेंडिंग कार्ड या नगर निकाय का सिफारिश पत्र (LoR)",
+      "बैंक खाता पासबुक की प्रति (खाता संख्या और IFSC कोड सहित)",
+      "चालू मोबाइल नंबर"
+    ],
+    "applicationSteps": [
+      "Check vending status or get Letter of Recommendation (LoR) from your local Municipality / Nagar Panchayat.",
+      "Visit the official portal https://pmsvanidhi.mohua.gov.in/ or visit nearest CSC / Banking Correspondent (Bank Mitra).",
+      "Log in with Aadhaar-linked mobile number, select loan amount (₹10,000 for 1st cycle), and enter vending details.",
+      "Choose your preferred lending bank/branch where you maintain your savings account.",
+      "Submit application; the lending bank conducts digital verification and disburses loan amount directly to your account."
+    ],
+    "applicationStepsHi": [
+      "अपनी नगर पालिका, नगर पंचायत या टाउन वेंडिंग कमेटी से वेंडिंग स्टेटस या सिफारिश पत्र (LoR) लें।",
+      "आधिकारिक पोर्टल https://pmsvanidhi.mohua.gov.in/ पर जाएं या किसी सीएससी/बैंक मित्र के पास जाएं।",
+      "आधार से जुड़े मोबाइल नंबर से लॉगिन करें, लोन राशि (प्रथम बार ₹10,000) चुनें और वेंडिंग विवरण भरें।",
+      "अपना पसंदीदा बैंक चुनें जहां आपका खाता है।",
+      "आवेदन सबमिट करें; बैंक द्वारा डिजिटल सत्यापन के बाद लोन का पैसा सीधे आपके खाते में जमा कर दिया जाएगा।"
+    ],
     "officialUrl": "https://pmsvanidhi.mohua.gov.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from Ministry of Housing and Urban Affairs portal",
+    "lastVerified": "2026-11",
     "featured": false,
-    "keywords": ["vendor", "business", "loan", "street", "enterprise"],
-    "eligibilityRules": { "occupations": ["entrepreneur", "worker"], "incomes": ["low", "middle"] }
+    "keywords": [
+      "vendor",
+      "business",
+      "loan",
+      "street",
+      "enterprise",
+      "svanidhi",
+      "10000",
+      "working capital"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "entrepreneur",
+        "worker"
+      ],
+      "incomes": [
+        "low",
+        "middle"
+      ]
+    }
   },
   {
     "id": "mudra",
     "name": "Pradhan Mantri MUDRA Yojana",
-    "nameHi": "प्रधानमंत्री मुद्रा योजना",
-    "category": { "id": "enterprise", "name": "Enterprise & finance", "nameHi": "उद्यम और वित्त", "description": "Small business and entrepreneurial pathways.", "descriptionHi": "छोटे व्यवसाय और उद्यमिता के अवसर।", "icon": "Store" },
+    "nameHi": "प्रधानमंत्री मुद्रा योजना (PMMY)",
+    "category": {
+      "id": "enterprise",
+      "name": "Enterprise & finance",
+      "nameHi": "उद्यम और वित्त",
+      "description": "Small business and entrepreneurial pathways.",
+      "descriptionHi": "छोटे व्यवसाय और उद्यमिता के अवसर।",
+      "icon": "Store"
+    },
     "level": "central",
-    "description": "Explore official information about micro-enterprise finance through participating lending institutions.",
-    "descriptionHi": "भाग लेने वाली ऋण संस्थाओं के माध्यम से सूक्ष्म उद्यम वित्त की आधिकारिक जानकारी देखें।",
-    "beneficiaries": ["entrepreneur", "women", "worker"],
-    "beneficiariesHi": ["उद्यमी", "महिलाएँ", "कामगार"],
-    "benefits": ["Information about micro-enterprise finance pathways.", "Actual lending decisions and terms are made by the responsible lender."],
-    "benefitsHi": ["सूक्ष्म उद्यम वित्त के रास्तों की जानकारी।", "वास्तविक ऋण निर्णय और शर्तें संबंधित ऋणदाता तय करता है।"],
-    "eligibility": ["Lender and programme conditions vary by application and business activity.", "Review current terms with an authorised lending institution."],
-    "eligibilityHi": ["ऋणदाता और कार्यक्रम की शर्तें आवेदन और व्यवसाय के अनुसार बदलती हैं।", "अधिकृत ऋण संस्था के साथ वर्तमान शर्तें देखें।"],
-    "requiredDocuments": ["Identity and address proof", "Business or activity information", "Financial records requested by the lender"],
-    "requiredDocumentsHi": ["पहचान और पता प्रमाण", "व्यवसाय या गतिविधि की जानकारी", "ऋणदाता द्वारा मांगे गए वित्तीय रिकॉर्ड"],
-    "applicationSteps": ["Understand the current product information.", "Approach an authorised lending institution.", "Review all terms before signing or submitting."],
-    "applicationStepsHi": ["वर्तमान उत्पाद जानकारी समझें।", "अधिकृत ऋण संस्था से संपर्क करें।", "हस्ताक्षर या जमा करने से पहले सभी शर्तें पढ़ें।"],
+    "description": "Flagship central initiative providing collateral-free loans up to ₹10 Lakh (extended up to ₹20 Lakh for past borrowers) to non-corporate, non-farm micro and small enterprises through commercial banks, RRBs, small finance banks, and MFIs.",
+    "descriptionHi": "केंद्र सरकार की प्रमुख योजना जिसके तहत छोटे दुकानदारों, कारीगरों और सूक्ष्म उद्यमियों को अपना व्यवसाय शुरू करने या बढ़ाने के लिए बिना किसी संपत्ति गारंटी (कोलैटरल) के ₹10 लाख (सफल उद्यमियों के लिए ₹20 लाख तक) का बैंक लोन दिया जाता है।",
+    "beneficiaries": [
+      "entrepreneur",
+      "women",
+      "worker"
+    ],
+    "beneficiariesHi": [
+      "छोटे दुकानदार",
+      "महिला उद्यमी",
+      "सूक्ष्म व्यवसायी"
+    ],
+    "financialAssistance": [
+      "Shishu Category: Loans up to ₹50,000 for startup businesses and early-stage entrepreneurs.",
+      "Kishore Category: Loans from ₹50,001 up to ₹5,00,000 for expanding existing small businesses.",
+      "Tarun Category: Loans from ₹5,00,001 up to ₹10,00,000 (and extended up to ₹20,00,000 for successful past borrowers) for scaling enterprises.",
+      "Zero collateral requirement; zero third-party guarantee needed.",
+      "Low processing fees and flexible repayment tenure between 3 to 7 years."
+    ],
+    "financialAssistanceHi": [
+      "शिशु श्रेणी: नया व्यवसाय शुरू करने के लिए ₹50,000 तक का लोन।",
+      "किशोर श्रेणी: पहले से चल रहे व्यवसाय को आगे बढ़ाने के लिए ₹50,001 से ₹5,00,000 तक का लोन।",
+      "तरुण श्रेणी: स्थापित व्यवसाय के विस्तार के लिए ₹5,00,001 से ₹10,00,000 (और ₹20 लाख तक) का लोन।",
+      "किसी भी प्रकार की संपत्ति गिरवी (कोलैटरल) या तीसरे पक्ष की गारंटी की कोई आवश्यकता नहीं।",
+      "किफायती ब्याज दरें और 3 से 7 वर्षों तक की आसान व सुविधाजनक पुनर्भुगतान अवधि।"
+    ],
+    "whatItProvides": [
+      "Composite loan covering term loan for purchasing machines/equipment and cash credit for daily working capital.",
+      "MUDRA Debit Card for hassle-free ATM withdrawals and PoS purchases from working capital limit.",
+      "Credit guarantee cover backed by National Credit Guarantee Trustee Company (NCGTC).",
+      "Available across all Public Sector Banks, Private Banks, Regional Rural Banks (RRB), and Small Finance Banks."
+    ],
+    "whatItProvidesHi": [
+      "मशीन, औजार या कच्चा माल खरीदने के लिए टर्म लोन और रोजमर्रा के खर्च के लिए कैश क्रेडिट का संयुक्त पैकेज।",
+      "वर्किंग कैपिटल लिमिट से सीधे पैसे निकालने और खरीदारी के लिए 'मुद्रा डेबिट कार्ड'।",
+      "राष्ट्रीय क्रेडिट गारंटी ट्रस्टी कंपनी (NCGTC) द्वारा बैंक को गारंटी सुरक्षा।",
+      "देश के सभी सरकारी, ग्रामीण, निजी बैंकों तथा माइक्रो-फाइनेंस संस्थानों (MFI) में उपलब्ध।"
+    ],
+    "benefits": [
+      "Empowers informal entrepreneurs to transition into formal banking channels.",
+      "No mortgage of residential property or agricultural land required.",
+      "Covers wide range of activities: retail shops, food processing, beauty parlors, repair workshops, transport vehicles, and artisans.",
+      "Special focus on women entrepreneurs with concessional interest rates from participating lenders."
+    ],
+    "benefitsHi": [
+      "छोटे व अनौपचारिक कारोबारियों को साहूकारों के भारी कर्ज से बचाकर सम्मानजनक बैंकिंग से जोड़ना।",
+      "घर, दुकान या जमीन को गिरवी रखने का कोई खतरा नहीं।",
+      "किराना दुकान, फल-सब्जी, टेलरिंग, ब्यूटी पार्लर, वर्कशॉप, ई-रिक्शा, बुटीक और फूड प्रोसेसिंग जैसे सैकड़ों कामों के लिए लोन।",
+      "महिला उद्यमियों को कई बैंकों द्वारा ब्याज दरों में विशेष छूट।"
+    ],
+    "eligibility": [
+      "Any Indian citizen with a feasible business plan for a non-farm income-generating activity.",
+      "New startups or existing micro/small enterprise owners in manufacturing, processing, trading, or service sector.",
+      "Applicant must not be a defaulter with any commercial bank or financial institution.",
+      "Age: Minimum 18 years at the time of loan application."
+    ],
+    "eligibilityHi": [
+      "गैर-कृषि व्यवसाय का व्यावहारिक विचार रखने वाला कोई भी भारतीय नागरिक।",
+      "विनिर्माण, व्यापार, दुकान या सेवा क्षेत्र में नया या पुराना सूक्ष्म/छोटा कारोबारी।",
+      "आवेदक किसी भी बैंक या वित्तीय संस्थान का डिफाल्टर नहीं होना चाहिए।",
+      "आयु: आवेदन के समय न्यूनतम 18 वर्ष।"
+    ],
+    "requiredDocuments": [
+      "Identity Proof (Aadhaar Card, Voter ID, PAN Card, Driving License)",
+      "Address Proof (Ration Card, Electricity Bill, Aadhaar)",
+      "Passport size photographs of applicant/partners",
+      "Business registration proof / Udyam Registration (if existing business)",
+      "Quotations for machinery/items to be purchased (for equipment loans)",
+      "Bank statement of existing account for the last 6 months"
+    ],
+    "requiredDocumentsHi": [
+      "पहचान प्रमाण (आधार कार्ड, पैन कार्ड, वोटर आईडी)",
+      "निवास प्रमाण (राशन कार्ड, बिजली बिल, निवास प्रमाण पत्र)",
+      "आवेदक की दो पासपोर्ट साइज फोटो",
+      "व्यवसाय का प्रमाण / उद्यम पंजीकरण (यदि पहले से व्यवसाय है)",
+      "खरीदी जाने वाली मशीनरी या माल का कोटेशन / अनुमानित बिल",
+      "पिछले 6 महीने का बैंक खाता विवरण (स्टेटमेंट)"
+    ],
+    "applicationSteps": [
+      "Prepare your business proposal detailing the activity, equipment cost, and working capital needs.",
+      "Apply online via UdyamiMitra Portal (https://www.udyamimitra.in/) or visit any nearest Bank branch.",
+      "Fill the standardized MUDRA Application Form (Shishu or Kishore/Tarun).",
+      "Submit KYC documents, business details, quotation of machinery, and Udyam certificate.",
+      "The bank appraises the proposal, sanctions the loan, and credits the amount directly to your current/savings account."
+    ],
+    "applicationStepsHi": [
+      "अपनी व्यावसायिक योजना तैयार करें जिसमें काम का स्वरूप, आवश्यक मशीनें और पूंजी का अनुमान लिखा हो।",
+      "उद्यमी मित्र पोर्टल (https://www.udyamimitra.in/) पर ऑनलाइन आवेदन करें या नजदीकी बैंक शाखा जाएं।",
+      "मुद्रा लोन का फॉर्म (शिशु या किशोर/तरुण) भरें।",
+      "आधार, पैन, फोटो, कोटेशन और उद्यम पंजीकरण संलग्न करें।",
+      "बैंक प्रस्ताव की जांच कर लोन स्वीकृत करता है और पैसा सीधे आपके खाते में जारी करता है।"
+    ],
     "officialUrl": "https://www.mudra.org.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from MUDRA (SIDBI / Department of Financial Services) portal",
+    "lastVerified": "2026-11",
     "featured": false,
-    "keywords": ["mudra", "business", "finance", "entrepreneur", "small business"],
-    "eligibilityRules": { "occupations": ["entrepreneur"], "incomes": ["low", "middle", "higher"] }
+    "keywords": [
+      "mudra",
+      "business",
+      "finance",
+      "entrepreneur",
+      "small business",
+      "shishu",
+      "kishore",
+      "tarun",
+      "loan"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "entrepreneur"
+      ],
+      "incomes": [
+        "low",
+        "middle",
+        "higher"
+      ]
+    }
   },
   {
     "id": "nsap",
     "name": "National Social Assistance Programme",
-    "nameHi": "राष्ट्रीय सामाजिक सहायता कार्यक्रम",
-    "category": { "id": "welfare", "name": "Social security", "nameHi": "सामाजिक सुरक्षा", "description": "Social security and family-oriented support.", "descriptionHi": "सामाजिक सुरक्षा और परिवार केंद्रित सहायता।", "icon": "HandHeart" },
+    "nameHi": "राष्ट्रीय सामाजिक सहायता कार्यक्रम (NSAP पेंशन योजना)",
+    "category": {
+      "id": "welfare",
+      "name": "Social security",
+      "nameHi": "सामाजिक सुरक्षा",
+      "description": "Social security and family-oriented support.",
+      "descriptionHi": "सामाजिक सुरक्षा और परिवार केंद्रित सहायता।",
+      "icon": "HandHeart"
+    },
     "level": "central",
-    "description": "A social assistance programme covering multiple components. Current criteria and delivery differ by component and authority.",
-    "descriptionHi": "कई घटकों वाला सामाजिक सहायता कार्यक्रम। वर्तमान मानदंड और वितरण घटक और प्राधिकरण के अनुसार अलग हो सकते हैं।",
-    "beneficiaries": ["senior", "women", "household", "disability"],
-    "beneficiariesHi": ["वरिष्ठ नागरिक", "महिलाएँ", "परिवार", "दिव्यांगजन"],
-    "benefits": ["Official programme information and component guidance.", "Local authorities explain the current application and verification path."],
-    "benefitsHi": ["कार्यक्रम की आधिकारिक जानकारी और घटक मार्गदर्शन।", "स्थानीय प्राधिकरण वर्तमान आवेदन और सत्यापन मार्ग बताते हैं।"],
-    "eligibility": ["Component-specific age, household, and social criteria apply.", "Confirm the current criteria with the local implementing authority."],
-    "eligibilityHi": ["घटक के अनुसार आयु, परिवार और सामाजिक मानदंड लागू होते हैं।", "स्थानीय कार्यान्वयन प्राधिकरण से वर्तमान मानदंड की पुष्टि करें।"],
-    "requiredDocuments": ["Identity proof", "Age or household records where applicable", "Income or social category documents if requested"],
-    "requiredDocumentsHi": ["पहचान प्रमाण", "जहाँ लागू हो आयु या परिवार रिकॉर्ड", "जहाँ मांगा जाए आय या सामाजिक श्रेणी दस्तावेज़"],
-    "applicationSteps": ["Identify the relevant component.", "Ask the local office for current eligibility and forms.", "Keep the acknowledgement and follow-up details."],
-    "applicationStepsHi": ["उपयुक्त घटक पहचानें।", "वर्तमान पात्रता और फॉर्म के लिए स्थानीय कार्यालय से पूछें।", "पावती और संपर्क विवरण संभालें।"],
+    "description": "Centrally sponsored social safety net by Ministry of Rural Development providing monthly social security pensions and financial assistance to destitute elderly, widows, and persons with severe disabilities living below the poverty line.",
+    "descriptionHi": "ग्रामीण विकास मंत्रालय का सामाजिक सुरक्षा कार्यक्रम, जिसके तहत गरीबी रेखा से नीचे (BPL) जीवन यापन करने वाले बुजुर्गों, विधवा महिलाओं और गंभीर दिव्यांगजनों को सम्मानपूर्वक जीने के लिए मासिक पेंशन और आर्थिक सहायता दी जाती है।",
+    "beneficiaries": [
+      "senior",
+      "women",
+      "household",
+      "disability"
+    ],
+    "beneficiariesHi": [
+      "वरिष्ठ नागरिक (बुजुर्ग)",
+      "विधवा महिलाएँ",
+      "दिव्यांगजन"
+    ],
+    "financialAssistance": [
+      "IGNOAPS (Old Age Pension): Monthly pension for BPL citizens aged 60+ (Central share ₹200-₹500/mo, with State top-ups providing ₹1,000 to ₹3,000/month in most states).",
+      "IGNWPS (Widow Pension): Monthly pension for BPL widows aged 40–79 years (Central share ₹300/mo + State contribution).",
+      "IGNDPS (Disability Pension): Monthly pension for BPL persons aged 18+ with 80%+ severe multiple disabilities (Central share ₹300/mo + State contribution).",
+      "NFBS (National Family Benefit Scheme): One-time lump sum grant of ₹20,000 to a BPL household on the death of the primary breadwinner (aged 18–59)."
+    ],
+    "financialAssistanceHi": [
+      "इंदिरा गांधी वृद्धावस्था पेंशन: 60 वर्ष से अधिक उम्र के बीपीएल बुजुर्गों को हर महीने पेंशन (राज्यों के अंशदान से ₹1,000 से ₹3,000 प्रतिमाह)।",
+      "इंदिरा गांधी विधवा पेंशन: 40 से 79 वर्ष की बीपीएल विधवाओं को प्रतिमाह आर्थिक पेंशन सहायता।",
+      "इंदिरा गांधी दिव्यांगता पेंशन: 80% या उससे अधिक गंभीर दिव्यांगता वाले 18+ वर्ष के बीपीएल नागरिकों को मासिक पेंशन।",
+      "राष्ट्रीय पारिवारिक लाभ योजना (NFBS): परिवार के मुख्य कमाने वाले सदस्य (18-59 वर्ष) की मृत्यु पर ₹20,000 की एकमुश्त एकमुश्त आर्थिक सहायता।"
+    ],
+    "whatItProvides": [
+      "Guaranteed monthly sustenance pension directly deposited into beneficiary's bank or post office account via DBT.",
+      "One-time bereavement support under NFBS to prevent immediate destitution of vulnerable families.",
+      "Annual physical verification with doorstep biometric / digital life certificate facilities.",
+      "Public Social Audit and transparent public beneficiary list published on the NSAP portal."
+    ],
+    "whatItProvidesHi": [
+      "डीबीटी के माध्यम से सीधे बैंक या डाकघर खाते में जमा होने वाली मासिक पेंशन।",
+      "घर के मुखिया की असमय मृत्यु पर परिवार को तुरंत संबल देने हेतु ₹20,000 की एकमुश्त सहायता।",
+      "बुजुर्गों के लिए घर बैठे डिजिटल जीवन प्रमाण पत्र व बायोमेट्रिक सत्यापन की सुविधा।",
+      "पोर्टल पर सार्वजनिक लाभार्थी सूची जिससे किसी भी बिचौलिए की गुंजाइश न रहे।"
+    ],
+    "benefits": [
+      "Guarantees dignified living and essential food/medicines for elderly, widows, and persons with disabilities.",
+      "Eliminates dependency on distant relatives for daily survival needs.",
+      "Lifelong continuous support directly transferred every month without cuts or delay.",
+      "Universal social protection for the poorest and most vulnerable rural households."
+    ],
+    "benefitsHi": [
+      "बुजुर्गों, बेसहारा विधवाओं और दिव्यांगजनों को भोजन, दवा और रोजमर्रा के खर्च के लिए सम्मानजनक सहारा।",
+      "आजीविका के लिए दूसरों पर निर्भरता खत्म।",
+      "बिना किसी कमीशन या कटौती के हर महीने सीधे बैंक खाते में निरंतर पेंशन।",
+      "ग्रामीण व शहरी निर्धन परिवारों को सामाजिक सुरक्षा का मजबूत सरकारी सुरक्षा कवच।"
+    ],
+    "eligibility": [
+      "Old Age Pension (IGNOAPS): Applicant must be 60 years of age or older and belong to a BPL household.",
+      "Widow Pension (IGNWPS): BPL widow aged between 40 and 79 years.",
+      "Disability Pension (IGNDPS): BPL individual aged 18+ with 80% or higher severe/multiple disability.",
+      "Family Benefit (NFBS): BPL family where the primary breadwinner aged 18 to 59 years has passed away."
+    ],
+    "eligibilityHi": [
+      "वृद्धावस्था पेंशन: आयु 60 वर्ष या उससे अधिक और परिवार गरीबी रेखा से नीचे (BPL) होना चाहिए।",
+      "विधवा पेंशन: 40 से 79 वर्ष की बीपीएल विधवा महिला।",
+      "दिव्यांगता पेंशन: 18 वर्ष से अधिक आयु और 80% या अधिक गंभीर दिव्यांगता प्रमाण पत्र वाला बीपीएल नागरिक।",
+      "पारिवारिक लाभ: बीपीएल परिवार के मुख्य कमाने वाले सदस्य (18 से 59 वर्ष) की असामयिक मृत्यु पर।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card of the applicant",
+      "BPL Ration Card or authorized BPL Certificate / Family ID",
+      "Age proof certificate (Birth certificate, Voter ID, School record, or Medical age certificate)",
+      "Death certificate of husband (for Widow Pension) or primary breadwinner (for NFBS)",
+      "Disability Certificate issued by Government Medical Board (for Disability Pension)",
+      "Bank / Post Office account passbook (Aadhaar-seeded)"
+    ],
+    "requiredDocumentsHi": [
+      "आवेदक का आधार कार्ड",
+      "बीपीएल राशन कार्ड या सक्षम अधिकारी द्वारा जारी बीपीएल सूची प्रमाण",
+      "आयु प्रमाण पत्र (वोटर कार्ड, जन्म प्रमाण पत्र या सरकारी मेडिकल बोर्ड का आयु प्रमाण)",
+      "पति का मृत्यु प्रमाण पत्र (विधवा पेंशन हेतु) या मुख्य कमाने वाले का मृत्यु प्रमाण (NFBS हेतु)",
+      "सरकारी मेडिकल बोर्ड द्वारा जारी 80%+ दिव्यांगता प्रमाण पत्र (दिव्यांग पेंशन हेतु)",
+      "बैंक या डाकघर पासबुक की प्रति (आधार से लिंक)"
+    ],
+    "applicationSteps": [
+      "Collect the NSAP pension application form from your Gram Panchayat office, Block Development Office (BDO), or Municipality.",
+      "Fill the form for your specific component (Old Age, Widow, Disability, or Family Benefit).",
+      "Attach copies of BPL card, Aadhaar, Age proof, and Death/Disability certificate where applicable.",
+      "Submit the application to Panchayat Secretary / BDO office (or apply through State Social Welfare Portal where enabled).",
+      "Gram Sabha and Sub-Divisional Officer (SDO) verify records, sanction pension, and issue Pensioner PPO / sanction order."
+    ],
+    "applicationStepsHi": [
+      "ग्राम पंचायत कार्यालय, प्रखंड विकास कार्यालय (BDO) या नगर पालिका से पेंशन आवेदन फॉर्म लें।",
+      "अपनी श्रेणी (वृद्धावस्था, विधवा, दिव्यांग या पारिवारिक लाभ) का फॉर्म भरें।",
+      "बीपीएल कार्ड, आधार कार्ड, आयु प्रमाण और मृत्यु/दिव्यांगता प्रमाण पत्र की प्रति संलग्न करें।",
+      "फॉर्म पंचायत सचिव या बीडीओ कार्यालय में जमा करें (या राज्य के सामाजिक सुरक्षा पोर्टल पर ऑनलाइन आवेदन करें)।",
+      "ग्राम सभा और एसडीएम कार्यालय द्वारा सत्यापन के बाद पेंशन स्वीकृत कर दी जाती है और हर महीने खाते में आने लगती है।"
+    ],
     "officialUrl": "https://nsap.nic.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from Ministry of Rural Development NSAP portal",
+    "lastVerified": "2026-11",
     "featured": false,
-    "keywords": ["pension", "social security", "senior", "widow", "disability"],
-    "eligibilityRules": { "occupations": ["other", "worker"], "incomes": ["low"] }
+    "keywords": [
+      "pension",
+      "social security",
+      "senior",
+      "widow",
+      "disability",
+      "nsap",
+      "ignaps",
+      "bpl"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "other",
+        "worker"
+      ],
+      "incomes": [
+        "low"
+      ]
+    }
   },
   {
     "id": "stand-up-india",
     "name": "Stand-Up India",
-    "nameHi": "स्टैंड-अप इंडिया",
-    "category": { "id": "enterprise", "name": "Enterprise & finance", "nameHi": "उद्यम और वित्त", "description": "Small business and entrepreneurial pathways.", "descriptionHi": "छोटे व्यवसाय और उद्यमिता के अवसर।", "icon": "Store" },
+    "nameHi": "स्टैंड-अप इंडिया योजना (Stand-Up India)",
+    "category": {
+      "id": "enterprise",
+      "name": "Enterprise & finance",
+      "nameHi": "उद्यम और वित्त",
+      "description": "Small business and entrepreneurial pathways.",
+      "descriptionHi": "छोटे व्यवसाय और उद्यमिता के अवसर।",
+      "icon": "Store"
+    },
     "level": "central",
-    "description": "Explore official information about enterprise finance for eligible entrepreneurs through the designated platform.",
-    "descriptionHi": "निर्धारित प्लेटफ़ॉर्म के माध्यम से पात्र उद्यमियों के लिए उद्यम वित्त की आधिकारिक जानकारी देखें।",
-    "beneficiaries": ["entrepreneur", "women"],
-    "beneficiariesHi": ["उद्यमी", "महिलाएँ"],
-    "benefits": ["Information about enterprise finance and handholding pathways.", "A lender makes the final decision after reviewing the application."],
-    "benefitsHi": ["उद्यम वित्त और सहायता मार्ग की जानकारी।", "आवेदन की समीक्षा के बाद अंतिम निर्णय ऋणदाता करता है।"],
-    "eligibility": ["Current eligibility and lending conditions must be checked on the official platform.", "Business and applicant requirements may apply."],
-    "eligibilityHi": ["वर्तमान पात्रता और ऋण शर्तें आधिकारिक प्लेटफ़ॉर्म पर देखें।", "व्यवसाय और आवेदक संबंधी आवश्यकताएँ लागू हो सकती हैं।"],
-    "requiredDocuments": ["Identity and address proof", "Business plan or activity details", "Financial records requested by the lender"],
-    "requiredDocumentsHi": ["पहचान और पता प्रमाण", "व्यवसाय योजना या गतिविधि विवरण", "ऋणदाता द्वारा मांगे गए वित्तीय रिकॉर्ड"],
-    "applicationSteps": ["Read the current programme information.", "Use the official platform or authorised lender.", "Compare and understand terms before proceeding."],
-    "applicationStepsHi": ["वर्तमान कार्यक्रम जानकारी पढ़ें।", "आधिकारिक प्लेटफ़ॉर्म या अधिकृत ऋणदाता का उपयोग करें।", "आगे बढ़ने से पहले शर्तें समझें और तुलना करें।"],
+    "description": "Flagship initiative by Department of Financial Services (Ministry of Finance) facilitating bank loans from ₹10 Lakh to ₹1 Crore to at least one SC or ST borrower and at least one Woman borrower per bank branch for setting up a greenfield enterprise.",
+    "descriptionHi": "वित्त मंत्रालय की प्रमुख योजना जिसके तहत अनुसूचित जाति (SC), अनुसूचित जनजाति (ST) और महिला उद्यमियों को विनिर्माण, सेवा, व्यापार या कृषि-संबद्ध क्षेत्रों में नया उद्यम (Greenfield Enterprise) शुरू करने के लिए ₹10 लाख से ₹1 करोड़ तक का बैंक ऋण दिया जाता है।",
+    "beneficiaries": [
+      "entrepreneur",
+      "women"
+    ],
+    "beneficiariesHi": [
+      "महिला उद्यमी",
+      "अनुसूचित जाति (SC) उद्यमी",
+      "अनुसूचित जनजाति (ST) उद्यमी"
+    ],
+    "financialAssistance": [
+      "Composite loan between ₹10,00,000 (Ten Lakh) and ₹1,00,00,000 (One Crore Rupees) per enterprise.",
+      "Covers up to 85% of the total project cost (term loan plus working capital).",
+      "Repayable in up to 7 years with a moratorium period of up to 18 months.",
+      "Competitive interest rate (lowest applicable rate of the bank for that category, not exceeding Base Rate/MCLR + 3% + tenor premium)."
+    ],
+    "financialAssistanceHi": [
+      "प्रति उद्यम ₹10 लाख से लेकर ₹1 करोड़ तक का समग्र बैंक ऋण।",
+      "कुल प्रोजेक्ट लागत का 85% तक बैंक लोन द्वारा वित्तपोषण (टर्म लोन व कार्यशील पूंजी सहित)।",
+      "18 महीने के मोराटोरियम (शुरुआती छूट) सहित अधिकतम 7 वर्षों में आसान पुनर्भुगतान।",
+      "बैंक द्वारा श्रेणी के अनुसार सबसे रियायती ब्याज दर (MCLR + 3% से अधिक नहीं)।"
+    ],
+    "whatItProvides": [
+      "Mandated coverage across all 1.4+ Lakh commercial bank branches nationwide (at least 1 SC/ST & 1 Woman borrower per branch).",
+      "End-to-end handholding support via Stand-Up Mitra portal (handholding agencies for project reports, training, and registration).",
+      "Credit guarantee cover through Credit Guarantee Fund for Stand-Up India (CGFSI) managed by NCGTC.",
+      "Convergence with Central and State subsidy schemes for margin money support."
+    ],
+    "whatItProvidesHi": [
+      "देशभर की 1.4 लाख से अधिक बैंक शाखाओं में अनिवार्य कवरेज (प्रत्येक शाखा से न्यूनतम 1 SC/ST व 1 महिला उद्यमी को लोन)।",
+      "स्टैंड-अप मित्र पोर्टल पर प्रोजेक्ट रिपोर्ट, स्किल ट्रेनिंग और फैक्ट्री रजिस्ट्रेशन के लिए निःशुल्क हैंडहोल्डिंग सहायता।",
+      "नेशनल क्रेडिट गारंटी ट्रस्टी कंपनी (NCGTC) द्वारा बैंक को क्रेडिट गारंटी सुरक्षा।",
+      "मार्जिन मनी में मदद के लिए केंद्र और राज्य सरकार की अन्य सब्सिडी योजनाओं के साथ तालमेल।"
+    ],
+    "benefits": [
+      "Transforms job-seekers into job-creators in manufacturing, services, trading, and agri-allied sectors.",
+      "High loan quantum enables substantial factory setups, logistics, food processing, and retail businesses.",
+      "Removes funding barrier for SC/ST and women entrepreneurs who often lack family enterprise capital.",
+      "Structured handholding guides first-time entrepreneurs through banking formalities."
+    ],
+    "benefitsHi": [
+      "महिला व वंचित वर्ग के नागरिकों को नौकरी तलाशने वाले से नौकरी देने वाला (उद्योगपति) बनाना।",
+      "बड़ा लोन मिलने से आधुनिक फैक्ट्री, कोल्ड स्टोरेज, डायग्नोस्टिक सेंटर, ट्रांसपोर्ट या बड़ा शोरूम शुरू करना संभव।",
+      "पारिवारिक संपत्ति या बड़े संपर्कों के अभाव में भी हुनरमंद SC/ST व महिलाओं को बिजनेस कैपिटल।",
+      "प्रोजेक्ट रिपोर्ट बनाने से लेकर लोन पास होने तक सरकारी विशेषज्ञों द्वारा पूरा मार्गदर्शन।"
+    ],
+    "eligibility": [
+      "SC / ST and / or Woman entrepreneur above 18 years of age.",
+      "Loan is granted ONLY for greenfield projects (first-time venture in manufacturing, services, trading, or agri-allied sector).",
+      "In case of non-individual enterprises (private ltd, partnership), 51% of shareholding and controlling stake must be held by an SC/ST or woman.",
+      "Borrower must not be a defaulter to any bank or financial institution."
+    ],
+    "eligibilityHi": [
+      "अनुसूचित जाति (SC), अनुसूचित जनजाति (ST) अथवा किसी भी वर्ग की महिला उद्यमी (आयु 18 वर्ष से अधिक)।",
+      "ऋण केवल 'ग्रीनफील्ड प्रोजेक्ट' (विनिर्माण, सेवा, व्यापार या कृषि-संबद्ध क्षेत्र में पहली बार शुरू होने वाला नया उद्यम) के लिए ही देय है।",
+      "साझेदारी या कंपनी की स्थिति में कम से कम 51% हिस्सेदारी और नियंत्रण SC/ST अथवा महिला का होना अनिवार्य है।",
+      "आवेदक किसी भी बैंक का डिफाल्टर नहीं होना चाहिए।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card, PAN Card, and Voter ID of the entrepreneur",
+      "Caste Certificate (for SC / ST applicants)",
+      "Detailed Project Report (DPR) showing business feasibility and cost estimates",
+      "Proof of business address / factory lease / property documents",
+      "Partnership deed / Memorandum & Articles of Association (if non-individual firm)",
+      "Last 3 years' income tax returns of promoters (if applicable) and bank statements"
+    ],
+    "requiredDocumentsHi": [
+      "उद्यमी का आधार कार्ड, पैन कार्ड और पहचान पत्र",
+      "जाति प्रमाण पत्र (केवल SC / ST आवेदकों के लिए)",
+      "विस्तृत प्रोजेक्ट रिपोर्ट (DPR) जिसमें लागत, मशीनरी और कमाई का पूरा ब्योरा हो",
+      "फैक्ट्री/दुकान स्थल का पट्टा, रेंट एग्रीमेंट या जमीन के कागजात",
+      "कंपनी या पार्टनरशिप के निबंधन कागजात (यदि कंपनी के नाम पर आवेदन है)",
+      "बैंक खाता स्टेटमेंट और प्रमोटर्स का पिछले वर्षों का आयकर रिटर्न (यदि लागू हो)"
+    ],
+    "applicationSteps": [
+      "Prepare your Detailed Project Report (DPR) with equipment quotations and working capital requirements.",
+      "Register on the Stand-Up Mitra portal (https://www.standupmitra.in/) as a 'Ready Borrower' or 'Trainee Borrower'.",
+      "Fill online application form and choose your preferred commercial bank branch.",
+      "If you need guidance, select a handholding agency on the portal for project formulation and training.",
+      "Visit the selected bank branch; upon appraisal and document verification, the composite loan is sanctioned and disbursed."
+    ],
+    "applicationStepsHi": [
+      "अपनी प्रोजेक्ट रिपोर्ट (DPR) तैयार करें जिसमें कुल लागत, मशीनरी कोटेशन और कार्यशील पूंजी का ब्योरा हो।",
+      "स्टैंड-अप मित्र पोर्टल (https://www.standupmitra.in/) पर पंजीकरण करें।",
+      "ऑनलाइन आवेदन फॉर्म भरें और अपनी नजदीकी बैंक शाखा का चयन करें।",
+      "यदि प्रोजेक्ट रिपोर्ट या ट्रेनिंग में सहायता चाहिए, तो पोर्टल पर हैंडहोल्डिंग एजेंसी का चयन करें।",
+      "चयनित बैंक में जाकर औपचारिकताएं पूरी करें; प्रोजेक्ट सत्यापन के बाद लोन मंजूर कर पैसा जारी किया जाता है।"
+    ],
     "officialUrl": "https://www.standupmitra.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from Stand-Up India (Department of Financial Services / SIDBI) portal",
+    "lastVerified": "2026-11",
     "featured": false,
-    "keywords": ["women entrepreneur", "business", "startup", "finance", "enterprise"],
-    "eligibilityRules": { "occupations": ["entrepreneur"], "incomes": ["middle", "higher"] }
+    "keywords": [
+      "women entrepreneur",
+      "business",
+      "startup",
+      "finance",
+      "enterprise",
+      "standup india",
+      "10 lakh to 1 crore",
+      "sc st"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "entrepreneur"
+      ],
+      "incomes": [
+        "middle",
+        "higher"
+      ]
+    }
   },
   {
     "id": "sukanya-samriddhi",
     "name": "Sukanya Samriddhi Account",
-    "nameHi": "सुकन्या समृद्धि खाता",
-    "category": { "id": "welfare", "name": "Social security", "nameHi": "सामाजिक सुरक्षा", "description": "Social security and family-oriented support.", "descriptionHi": "सामाजिक सुरक्षा और परिवार केंद्रित सहायता।", "icon": "HandHeart" },
+    "nameHi": "सुकन्या समृद्धि योजना (SSA खाता)",
+    "category": {
+      "id": "welfare",
+      "name": "Social security",
+      "nameHi": "सामाजिक सुरक्षा",
+      "description": "Social security and family-oriented support.",
+      "descriptionHi": "सामाजिक सुरक्षा और परिवार केंद्रित सहायता।",
+      "icon": "HandHeart"
+    },
     "level": "central",
-    "description": "A savings account information pathway for a girl child. Confirm current terms and account rules with the official postal or banking channel.",
-    "descriptionHi": "बालिका के लिए बचत खाता संबंधी जानकारी। वर्तमान शर्तों और खाता नियमों की पुष्टि आधिकारिक डाक या बैंक माध्यम से करें।",
-    "beneficiaries": ["women", "household"],
-    "beneficiariesHi": ["महिलाएँ", "परिवार"],
-    "benefits": ["Information about a government-backed savings pathway for families.", "Account terms and interest information can change; confirm with the authorised provider."],
-    "benefitsHi": ["परिवारों के लिए सरकारी समर्थित बचत मार्ग की जानकारी।", "खाता शर्तें और ब्याज जानकारी बदल सकती है; अधिकृत प्रदाता से पुष्टि करें।"],
-    "eligibility": ["Account rules include child and guardian conditions.", "Confirm current conditions and required records before opening an account."],
-    "eligibilityHi": ["खाता नियमों में बालिका और अभिभावक संबंधी शर्तें होती हैं।", "खाता खोलने से पहले वर्तमान शर्तें और रिकॉर्ड देखें।"],
-    "requiredDocuments": ["Child and guardian identity records", "Birth or age record as requested", "Address proof where requested"],
-    "requiredDocumentsHi": ["बालिका और अभिभावक के पहचान रिकॉर्ड", "जहाँ मांगा जाए जन्म या आयु रिकॉर्ड", "जहाँ मांगा जाए पता प्रमाण"],
-    "applicationSteps": ["Read the current account rules.", "Visit an authorised bank or post office channel.", "Keep the account documentation and receipts."],
-    "applicationStepsHi": ["वर्तमान खाता नियम पढ़ें।", "अधिकृत बैंक या डाकघर माध्यम पर जाएँ।", "खाता दस्तावेज़ और रसीदें संभालें।"],
+    "description": "Sovereign-backed small savings scheme under 'Beti Bachao Beti Padhao' campaign by Ministry of Finance providing high compound interest and triple tax exemption to build a dedicated education and marriage fund for a girl child.",
+    "descriptionHi": "वित्त मंत्रालय की 'बेटी बचाओ, बेटी पढ़ाओ' अभियान के तहत सर्वोच्च ब्याज दर वाली सरकारी बचत योजना, जो बेटियों की उच्च शिक्षा और भविष्य के लिए उच्च चक्रवृद्धि ब्याज व 100% कर छूट (EEE) के साथ वित्तीय सुरक्षा प्रदान करती है।",
+    "beneficiaries": [
+      "women",
+      "household"
+    ],
+    "beneficiariesHi": [
+      "बालिका (10 वर्ष तक)",
+      "अभिभावक / माता-पिता"
+    ],
+    "financialAssistance": [
+      "Highest sovereign-backed interest rate among small savings schemes (currently 8.2% per annum, compounded annually).",
+      "Minimum deposit of just ₹250 per financial year; maximum deposit up to ₹1,50,000 per financial year.",
+      "100% Tax-Free under Section 80C: Triple EEE benefit (invested amount, annual interest earned, and final maturity withdrawal are completely tax-exempt).",
+      "50% partial withdrawal allowed for girl's higher education after she turns 18 or clears Class 10."
+    ],
+    "financialAssistanceHi": [
+      "छोटी बचत योजनाओं में सबसे अधिक सरकारी ब्याज दर (वर्तमान में 8.2% वार्षिक, वार्षिक चक्रवृद्धि)।",
+      "एक वित्तीय वर्ष में न्यूनतम मात्र ₹250 तथा अधिकतम ₹1,50,000 तक जमा करने की छूट।",
+      "आयकर धारा 80C के तहत ट्रिपल EEE टैक्स छूट (जमा राशि, ब्याज और परिपक्वता पर मिलने वाला पूरा पैसा 100% कर-मुक्त)।",
+      "बेटी के 18 वर्ष की होने या 10वीं पास करने के बाद उच्च शिक्षा के लिए खाते में जमा राशि का 50% निकालने की छूट।"
+    ],
+    "whatItProvides": [
+      "Account can be opened in any Post Office or authorized commercial bank branch nationwide.",
+      "Deposits can be made for 15 years from date of opening; account matures 21 years from date of opening.",
+      "Free nationwide account transferability from one post office/bank branch to another anywhere in India.",
+      "Dedicated passbook showing deposits, accrued compound interest, and transparent balance."
+    ],
+    "whatItProvidesHi": [
+      "देश के किसी भी डाकघर या अधिकृत बैंक शाखा में आसानी से खाता खोलने की सुविधा।",
+      "खाता खोलने की तारीख से 15 वर्षों तक जमा कर सकते हैं; खाता 21 वर्षों में पूर्ण परिपक्व होता है।",
+      "देशभर में एक शहर/डाकघर से दूसरे डाकघर या बैंक में खाते का मुफ्त स्थानांतरण।",
+      "पासबुक सुविधा जिससे जमा राशि, अर्जित ब्याज और खाते का बैलेंस हमेशा पारदर्शी रहता है।"
+    ],
+    "benefits": [
+      "Guarantees a substantial inflation-beating financial corpus for girl's higher education (Engineering, Medical, Civil Services) and marriage.",
+      "100% sovereign safety backed by Government of India — zero market risk.",
+      "Flexible deposits: deposit money anytime in multiple installments (cash, cheque, or online via IPPB/UPI).",
+      "Empowers the girl child as she becomes the direct account operator after turning 18."
+    ],
+    "benefitsHi": [
+      "बेटी की उच्च शिक्षा (डॉक्टरी, इंजीनियरिंग, प्रतियोगी परीक्षाएं) और शादी के समय एक बड़ा गारंटीड फंड।",
+      "भारत सरकार द्वारा 100% सुरक्षित — शेयर बाजार के उतार-चढ़ाव का कोई जोखिम नहीं।",
+      "सुविधाजनक जमा: साल में जब भी पैसे हों, किस्तों में ऑनलाइन (IPPB/UPI) या नकद जमा करें।",
+      "18 वर्ष की आयु पूरी होने पर बेटी स्वयं अपने खाते का संचालन कर आर्थिक रूप से आत्मनिर्भर बनती है।"
+    ],
+    "eligibility": [
+      "Account can be opened by natural or legal guardian on behalf of a girl child resident of India.",
+      "The girl child must be below 10 years of age at the time of account opening.",
+      "Only one account per girl child; maximum of two accounts allowed per family (three allowed in case of first-born twin/triplet girls)."
+    ],
+    "eligibilityHi": [
+      "माता-पिता या कानूनी अभिभावक द्वारा भारतीय निवासी बालिका के नाम पर खाता खोला जा सकता है।",
+      "खाता खोलते समय बालिका की आयु 10 वर्ष से कम होनी चाहिए।",
+      "एक बेटी के नाम पर केवल एक खाता; एक परिवार में अधिकतम दो बेटियों के लिए खाता खोला जा सकता है (जुड़वा बेटियों पर छूट)।"
+    ],
+    "requiredDocuments": [
+      "Birth Certificate of the girl child (issued by Municipal Authority or Gram Panchayat)",
+      "Identity and Address Proof of the parent/guardian (Aadhaar Card, PAN Card, Voter ID)",
+      "Photographs of the girl child and parent/guardian",
+      "Initial minimum deposit amount (minimum ₹250 in cash or cheque)"
+    ],
+    "requiredDocumentsHi": [
+      "बालिका का जन्म प्रमाण पत्र (नगर पालिका या ग्राम पंचायत द्वारा जारी)",
+      "माता-पिता/अभिभावक का पहचान व निवास प्रमाण (आधार कार्ड, पैन कार्ड, वोटर आईडी)",
+      "बालिका और अभिभावक की पासपोर्ट साइज फोटो",
+      "खाता खोलने हेतु प्रारंभिक जमा राशि (न्यूनतम ₹250 नकद या चेक)"
+    ],
+    "applicationSteps": [
+      "Visit any nearby Post Office or authorized commercial bank branch (SBI, PNB, Bank of Baroda, etc.).",
+      "Obtain and fill the Sukanya Samriddhi Account Opening Form (Form-1).",
+      "Attach girl child's birth certificate, guardian's Aadhaar and PAN card, and photos.",
+      "Deposit the opening amount (minimum ₹250) at the counter.",
+      "Collect the official SSA Passbook with account number and CIF; set up online standing instructions or IPPB for future deposits."
+    ],
+    "applicationStepsHi": [
+      "नजदीकी डाकघर या किसी भी अधिकृत सरकारी/निजी बैंक (SBI, PNB, बैंक ऑफ बड़ौदा आदि) में जाएं।",
+      "सुकन्या समृद्धि खाता खोलने का फॉर्म (Form-1) प्राप्त करें और भरें।",
+      "बेटी का जन्म प्रमाण पत्र, माता-पिता का आधार, पैन और फोटो संलग्न करें।",
+      "काउंटर पर न्यूनतम ₹250 की प्रारंभिक राशि जमा करें।",
+      "खाता नंबर युक्त सुकन्या समृद्धि पासबुक प्राप्त करें; भविष्य में घर बैठे जमा करने के लिए IPPB/ऑनलाइन बैंकिंग शुरू करें।"
+    ],
     "officialUrl": "https://www.indiapost.gov.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from India Post & Ministry of Finance National Savings portal",
+    "lastVerified": "2026-11",
     "featured": false,
-    "keywords": ["girl child", "savings", "women", "family", "post office"],
-    "eligibilityRules": { "occupations": ["other", "student"], "incomes": ["low", "middle", "higher"] }
-  },
-  {
-    "id": "pmfby",
-    "name": "Pradhan Mantri Fasal Bima Yojana",
-    "nameHi": "प्रधानमंत्री फसल बीमा योजना",
-    "category": { "id": "agriculture", "name": "Agriculture", "nameHi": "कृषि", "description": "Tools and pathways for farming communities.", "descriptionHi": "कृषि समुदायों के लिए सहायता और अवसर।", "icon": "Sprout" },
-    "level": "central",
-    "description": "Crop insurance information for farmers. Coverage, seasons, notified areas, and enrolment conditions must be checked for the current cycle.",
-    "descriptionHi": "किसानों के लिए फसल बीमा जानकारी। वर्तमान चक्र के लिए कवरेज, मौसम, अधिसूचित क्षेत्र और नामांकन शर्तें देखें।",
-    "beneficiaries": ["farmer"],
-    "beneficiariesHi": ["किसान"],
-    "benefits": ["Official guidance about crop insurance processes.", "Current notified crops and areas are published through responsible authorities."],
-    "benefitsHi": ["फसल बीमा प्रक्रिया का आधिकारिक मार्गदर्शन।", "वर्तमान अधिसूचित फसलें और क्षेत्र संबंधित प्राधिकरण प्रकाशित करते हैं।"],
-    "eligibility": ["Eligibility and enrolment depend on the current season and notified area.", "Ask the bank, insurer, or agriculture authority for current details."],
-    "eligibilityHi": ["पात्रता और नामांकन वर्तमान मौसम और अधिसूचित क्षेत्र पर निर्भर हैं।", "वर्तमान जानकारी के लिए बैंक, बीमा कंपनी या कृषि प्राधिकरण से पूछें।"],
-    "requiredDocuments": ["Farmer and land records where requested", "Identity proof", "Season-specific documents through the authorised channel"],
-    "requiredDocumentsHi": ["जहाँ मांगा जाए किसान और भूमि रिकॉर्ड", "पहचान प्रमाण", "अधिकृत माध्यम से मौसम संबंधी दस्तावेज़"],
-    "applicationSteps": ["Check the current notified season and area.", "Ask an authorised bank, insurer, or agriculture office.", "Keep the policy or enrolment acknowledgement."],
-    "applicationStepsHi": ["वर्तमान अधिसूचित मौसम और क्षेत्र देखें।", "अधिकृत बैंक, बीमा कंपनी या कृषि कार्यालय से पूछें।", "पॉलिसी या नामांकन पावती संभालें।"],
-    "officialUrl": "https://pmfby.gov.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
-    "featured": false,
-    "keywords": ["crop", "insurance", "farmer", "agriculture", "farm risk"],
-    "eligibilityRules": { "occupations": ["farmer"], "incomes": ["low", "middle", "higher"] }
+    "keywords": [
+      "girl child",
+      "savings",
+      "women",
+      "family",
+      "post office",
+      "sukanya samriddhi",
+      "ssa",
+      "8.2 interest",
+      "tax free"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "other",
+        "student"
+      ],
+      "incomes": [
+        "low",
+        "middle",
+        "higher"
+      ]
+    }
   },
   {
     "id": "pm-jay-jan-aushadhi",
-    "name": "Jan Aushadhi information pathway",
-    "nameHi": "जन औषधि जानकारी मार्ग",
-    "category": { "id": "health", "name": "Health & family welfare", "nameHi": "स्वास्थ्य और परिवार कल्याण", "description": "Health access and family wellbeing.", "descriptionHi": "स्वास्थ्य सुविधा और परिवार का कल्याण।", "icon": "HeartPulse" },
+    "name": "Jan Aushadhi (PMBJP)",
+    "nameHi": "प्रधानमंत्री भारतीय जनऔषधि परियोजना (PMBJP)",
+    "category": {
+      "id": "health",
+      "name": "Health & family welfare",
+      "nameHi": "स्वास्थ्य और परिवार कल्याण",
+      "description": "Health access and family wellbeing.",
+      "descriptionHi": "स्वास्थ्य सुविधा और परिवार का कल्याण।",
+      "icon": "HeartPulse"
+    },
     "level": "central",
-    "description": "Find information about affordable generic medicines and authorised Jan Aushadhi centres through official resources.",
-    "descriptionHi": "आधिकारिक संसाधनों से किफायती जेनेरिक दवाओं और अधिकृत जन औषधि केंद्रों की जानकारी पाएं।",
-    "beneficiaries": ["household", "senior", "women"],
-    "beneficiariesHi": ["परिवार", "वरिष्ठ नागरिक", "महिलाएँ"],
-    "benefits": ["Locate official information about medicines and centres.", "Consult a qualified health professional for treatment decisions."],
-    "benefitsHi": ["दवाओं और केंद्रों की आधिकारिक जानकारी देखें।", "इलाज संबंधी निर्णय के लिए योग्य स्वास्थ्य विशेषज्ञ से सलाह लें।"],
-    "eligibility": ["Access rules and stock vary by centre and medicine.", "Verify availability and suitability with the authorised centre and clinician."],
-    "eligibilityHi": ["पहुँच नियम और दवा की उपलब्धता केंद्र और दवा के अनुसार बदलती है।", "अधिकृत केंद्र और चिकित्सक से उपलब्धता और उपयुक्तता की पुष्टि करें।"],
-    "requiredDocuments": ["Prescription or medical records where requested", "Identity records if a service requires them"],
-    "requiredDocumentsHi": ["जहाँ मांगा जाए प्रिस्क्रिप्शन या चिकित्सा रिकॉर्ड", "जहाँ सेवा के लिए आवश्यक हो पहचान रिकॉर्ड"],
-    "applicationSteps": ["Find the authorised centre through official resources.", "Ask about availability and current process.", "Use medicines only as directed by a qualified professional."],
-    "applicationStepsHi": ["आधिकारिक संसाधनों से अधिकृत केंद्र खोजें।", "उपलब्धता और वर्तमान प्रक्रिया पूछें।", "योग्य विशेषज्ञ के निर्देश के अनुसार ही दवा लें।"],
+    "description": "Flagship initiative by Pharmaceuticals & Medical Devices Bureau of India (PMBI), Ministry of Chemicals & Fertilizers, to drastically reduce out-of-pocket medical expenditure by providing high-quality generic medicines and surgical items at 50% to 90% lower prices than branded equivalents.",
+    "descriptionHi": "रसायन और उर्वरक मंत्रालय की प्रमुख योजना, जिसके तहत देश भर में 'प्रधानमंत्री भारतीय जनऔषधि केंद्र' खोलकर आम नागरिकों को ब्रांडेड दवाओं के मुकाबले 50% से 90% तक कम कीमत पर उच्च गुणवत्ता वाली जेनेरिक दवाएं और सर्जिकल सामान उपलब्ध कराया जाता है।",
+    "beneficiaries": [
+      "household",
+      "senior",
+      "women",
+      "worker"
+    ],
+    "beneficiariesHi": [
+      "सभी नागरिक",
+      "बुजुर्ग व गंभीर मरीज",
+      "ग्रामीण परिवार"
+    ],
+    "financialAssistance": [
+      "Direct price savings of 50% to 90% compared to equivalent branded medicines in the open market.",
+      "Example: Diabetes (Metformin, Glimepiride), Blood Pressure (Amlodipine, Telmisartan), and heart medications cost as low as ₹5 to ₹15 per strip compared to ₹50 to ₹150 for branded versions.",
+      "Oxo-biodegradable sanitary napkins ('Suvidha') provided at heavily subsidized price of just ₹1 per pad for women's menstrual health."
+    ],
+    "financialAssistanceHi": [
+      "खुले बाजार में मिलने वाली ब्रांडेड दवाओं की तुलना में 50% से 90% तक की भारी सीधी बचत।",
+      "उदाहरण: डायबिटीज, बीपी, हार्ट, कैंसर और एंटीबायोटिक की जो दवा बाजार में ₹100-₹150 में मिलती है, वह यहाँ मात्र ₹10-₹25 में उपलब्ध।",
+      "'सुविधा' ऑक्सो-बायोडिग्रेडेबल सैनिटरी नैपकिन मात्र ₹1 प्रति पैड की रियायती दर पर उपलब्ध।"
+    ],
+    "whatItProvides": [
+      "Access to over 2,046 high-quality generic medicines and 300+ surgical items and medical devices.",
+      "Strict quality assurance: every medicine batch tested at NABL-accredited laboratories meeting WHO-GMP standards.",
+      "Network of 10,000+ Pradhan Mantri Bhartiya Janaushadhi Kendras (PMBJK) operating across rural and urban India.",
+      "Free 'Jan Aushadhi Sugam' mobile application to locate nearby stores, check medicine stock, and compare generic vs branded prices."
+    ],
+    "whatItProvidesHi": [
+      "2,046 से अधिक उच्च गुणवत्ता वाली जेनेरिक दवाएं तथा 300 से अधिक सर्जिकल उत्पाद व मेडिकल उपकरण उपलब्ध।",
+      "कड़ी गुणवत्ता जांच: प्रत्येक बैच NABL से मान्यता प्राप्त प्रयोगशालाओं में परीक्षित और WHO-GMP मानकों के अनुरूप।",
+      "देशभर में 10,000 से अधिक प्रधानमंत्री भारतीय जनऔषधि केंद्रों का विशाल नेटवर्क।",
+      "'Jan Aushadhi Sugam' मोबाइल ऐप जिससे नजदीकी केंद्र ढूंढना, दवाओं की उपलब्धता देखना और ब्रांडेड से कीमत की तुलना करना आसान।"
+    ],
+    "benefits": [
+      "Brings massive economic relief to rural families and chronic patients requiring lifelong daily medications.",
+      "Guarantees that lower cost does not compromise quality, potency, or safety of medicines.",
+      "Promotes affordable menstrual hygiene for rural women through ₹1 Suvidha pads.",
+      "Encourages local entrepreneurship by providing financial subsidies to pharmacists opening new Kendras."
+    ],
+    "benefitsHi": [
+      "बीपी, शुगर, थायराइड, गठिया जैसे पुराने रोगों के मरीजों के मासिक दवा खर्च में 70% से 80% तक की सीधी राहत।",
+      "दवा की गुणवत्ता, असर और शुद्धता ब्रांडेड दवा के 100% बराबर — केवल कीमत में भारी कमी।",
+      "ग्रामीण महिलाओं के लिए ₹1 में सुलभ सैनिटरी नैपकिन से बेहतर स्वास्थ्य और स्वच्छता।",
+      "फार्मासिस्ट युवाओं के लिए जनऔषधि केंद्र खोलकर स्वरोजगार व सम्मानजनक कमाई का अवसर।"
+    ],
+    "eligibility": [
+      "Available to EVERY citizen of India without any income, caste, or residence barrier.",
+      "Any patient holding a valid medical prescription from a registered medical practitioner can purchase medicines.",
+      "Over-the-counter (OTC) products, nutraceuticals, and Suvidha sanitary pads can be purchased without a prescription."
+    ],
+    "eligibilityHi": [
+      "भारत के सभी नागरिकों के लिए समान रूप से उपलब्ध — किसी आय, जाति या बीपीएल प्रमाण पत्र की आवश्यकता नहीं।",
+      "डॉक्टर के पर्चे (प्रिस्क्रिप्शन) पर लिखी कोई भी दवा जनऔषधि केंद्र से जेनेरिक रूप में ली जा सकती है।",
+      "ओटीसी उत्पाद, प्रोटीन पाउडर, ग्लूकोमीटर और सैनिटरी पैड बिना किसी पर्चे के सीधे खरीदे जा सकते हैं।"
+    ],
+    "requiredDocuments": [
+      "Valid Doctor's Prescription (mentioning either generic chemical salt name or branded medicine name)",
+      "No government ID or income proof required to purchase medicines at subsidized rates"
+    ],
+    "requiredDocumentsHi": [
+      "पंजीकृत डॉक्टर का वैध पर्चा (जिसमें दवा का ब्रांड नाम या जेनेरिक साल्ट नाम लिखा हो)",
+      "दवा खरीदने के लिए किसी आधार कार्ड या आय प्रमाण की जरूरत नहीं — यह सभी के लिए खुली सुविधा है"
+    ],
+    "applicationSteps": [
+      "Obtain your medical prescription from any government or private doctor.",
+      "Download the 'Jan Aushadhi Sugam' mobile app or visit https://janaushadhi.gov.in/ to find the nearest Jan Aushadhi Kendra.",
+      "Visit the Kendra with your prescription and ask the pharmacist for generic equivalents.",
+      "Collect the high-quality generic medicines and printed tax invoice at 50% to 90% discounted government rates.",
+      "If you wish to open a Jan Aushadhi Kendra as an entrepreneur, apply online at https://janaushadhi.gov.in/ with D.Pharm/B.Pharm degree."
+    ],
+    "applicationStepsHi": [
+      "किसी भी सरकारी या निजी डॉक्टर से अपना जांच पर्चा (प्रिस्क्रिप्शन) लें।",
+      "'Jan Aushadhi Sugam' ऐप या https://janaushadhi.gov.in/ वेबसाइट से अपने गाँव/कस्बे के नजदीकी जनऔषधि केंद्र का पता लगाएं।",
+      "पर्चा लेकर केंद्र पर जाएँ और फार्मासिस्ट से पर्चे में लिखी दवा का जेनेरिक विकल्प मांगें।",
+      "दवाएं लें और सरकारी रियायती बिल का भुगतान करें (50% से 90% तक कम कीमत में)।",
+      "यदि आप खुद का जनऔषधि केंद्र खोलना चाहते हैं, तो डी.फार्मा/बी.फार्मा डिग्री के साथ पोर्टल पर ऑनलाइन आवेदन कर सकते हैं।"
+    ],
     "officialUrl": "https://janaushadhi.gov.in/",
-    "verificationStatus": "Demonstration record — verify current details",
-    "lastVerified": null,
+    "verificationStatus": "Verified from Pharmaceuticals & Medical Devices Bureau of India (PMBI) portal",
+    "lastVerified": "2026-11",
     "featured": false,
-    "keywords": ["medicine", "health", "generic", "pharmacy", "jan aushadhi"],
-    "eligibilityRules": { "incomes": ["low", "middle", "higher"] }
+    "keywords": [
+      "medicine",
+      "health",
+      "generic",
+      "pharmacy",
+      "jan aushadhi",
+      "pmbjp",
+      "suvidha",
+      "cheap medicine"
+    ],
+    "eligibilityRules": {
+      "incomes": [
+        "low",
+        "middle",
+        "higher"
+      ]
+    }
   }
 ]

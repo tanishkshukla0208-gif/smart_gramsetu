@@ -1,4 +1,4 @@
-import schemes from "../data/schemes.json";
+import schemes from "../data/schemes.json" with { type: "json" };
 
 export const DEMO_NOTICE = "Demonstration dataset — verify current details with the responsible authority.";
 
@@ -27,17 +27,19 @@ export function getCategories() {
 
 export function localizeScheme(scheme, language = "en") {
   if (!scheme) return null;
-  const hi = language === "hi";
+  const useHi = language === "hi" || (["mr", "mai", "sa", "kok", "ne", "brx"].includes(language) && Boolean(scheme.nameHi));
   return {
     ...scheme,
-    displayName: hi ? scheme.nameHi : scheme.name,
-    displayDescription: hi ? scheme.descriptionHi : scheme.description,
-    displayBenefits: hi ? scheme.benefitsHi : scheme.benefits,
-    displayEligibility: hi ? scheme.eligibilityHi : scheme.eligibility,
-    displayBeneficiaries: hi ? scheme.beneficiariesHi : scheme.beneficiaries,
-    displayDocuments: hi ? scheme.requiredDocumentsHi : scheme.requiredDocuments,
-    displaySteps: hi ? scheme.applicationStepsHi : scheme.applicationSteps,
-    displayCategory: hi ? scheme.category.nameHi : scheme.category.name,
+    displayName: (useHi && scheme.nameHi) ? scheme.nameHi : scheme.name,
+    displayDescription: (useHi && scheme.descriptionHi) ? scheme.descriptionHi : scheme.description,
+    displayWhatItProvides: (useHi && scheme.whatItProvidesHi?.length) ? scheme.whatItProvidesHi : (scheme.whatItProvides || []),
+    displayFinancialAssistance: (useHi && scheme.financialAssistanceHi?.length) ? scheme.financialAssistanceHi : (scheme.financialAssistance || []),
+    displayBenefits: (useHi && scheme.benefitsHi) ? scheme.benefitsHi : scheme.benefits,
+    displayEligibility: (useHi && scheme.eligibilityHi) ? scheme.eligibilityHi : scheme.eligibility,
+    displayBeneficiaries: (useHi && scheme.beneficiariesHi) ? scheme.beneficiariesHi : scheme.beneficiaries,
+    displayDocuments: (useHi && scheme.requiredDocumentsHi) ? scheme.requiredDocumentsHi : scheme.requiredDocuments,
+    displaySteps: (useHi && scheme.applicationStepsHi) ? scheme.applicationStepsHi : scheme.applicationSteps,
+    displayCategory: (useHi && scheme.category?.nameHi) ? scheme.category.nameHi : scheme.category?.name,
   };
 }
 

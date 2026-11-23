@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { INDIAN_LANGUAGES, isRtlLanguage } from "../i18n/languages.js";
 
 const STORAGE = {
   language: "gramsetu-language",
@@ -20,7 +21,10 @@ function readArray(key) {
 function readLanguage() {
   try {
     const value = localStorage.getItem(STORAGE.language);
-    return value === "hi" ? "hi" : "en";
+    if (value && INDIAN_LANGUAGES.some((l) => l.code === value)) {
+      return value;
+    }
+    return "en";
   } catch {
     return "en";
   }
@@ -45,10 +49,15 @@ export function AppProvider({ children }) {
   useEffect(() => { persist(STORAGE.documents, checkedDocuments); }, [checkedDocuments]);
   useEffect(() => {
     try { localStorage.setItem(STORAGE.language, language); } catch { /* local-only enhancement */ }
-    document.documentElement.lang = language === "hi" ? "hi" : "en";
+    document.documentElement.lang = language;
+    document.documentElement.dir = isRtlLanguage(language) ? "rtl" : "ltr";
   }, [language]);
 
-  const setLanguage = (value) => setLanguageState(value === "hi" ? "hi" : "en");
+  const setLanguage = (value) => {
+    if (INDIAN_LANGUAGES.some((l) => l.code === value)) {
+      setLanguageState(value);
+    }
+  };
   const toggleSaved = (id) => setSavedIds((items) => items.includes(id) ? items.filter((item) => item !== id) : [...items, id]);
   const addRecent = (id) => setRecentIds((items) => [id, ...items.filter((item) => item !== id)].slice(0, 6));
   const toggleCompare = (id) => setCompareIds((items) => items.includes(id) ? items.filter((item) => item !== id) : items.length >= 3 ? items : [...items, id]);

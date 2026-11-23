@@ -1,0 +1,334 @@
+/* ============================================================
+   GramSetu — Premium Institutional Footer System
+   Forest-Green & Soft-Green Public Service Identity
+   ============================================================ */
+
+.site-footer {
+  width: 100% !important;
+  background: #F4FAF5 !important;
+  background: linear-gradient(180deg, #FBFDFB 0%, #EDF6EE 100%) !important;
+  border-top: 1.5px solid #D6E8D8 !important;
+  color: #2D4C3A !important;
+  font-family: var(--font-body, Inter, sans-serif) !important;
+  padding: 64px 0 0 0 !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Subtle decorative top accent bar */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2E7D4E 0%, #4F9D69 45%, #28D7B0 75%, #F0A500 100%);
+  opacity: 0.9;
+}
+
+.footer-container {
+  width: min(1380px, calc(100% - 48px));
+  max-width: 1380px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* ───── 4-Column Footer Grid ───── */
+.footer-main-grid {
+  display: grid !important;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr !important;
+  gap: 48px !important;
+  padding-bottom: 52px !important;
+  align-items: start !important;
+}
+
+/* ───── Section A: Brand Identity ───── */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 20px;
+}
+
+.footer-brand-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+  color: #123020 !important;
+  font-family: var(--font-heading, Manrope, sans-serif) !important;
+  font-size: 23px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  transition: transform 0.2s ease;
+}
+
+.footer-brand-logo:hover {
+  transform: translateY(-1px);
+}
+
+.footer-brand-logo .brand-symbol {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 11px 11px 11px 4px !important;
+  background: linear-gradient(135deg, rgba(63, 143, 88, 0.22), rgba(36, 91, 58, 0.1)) !important;
+  border: 1.5px solid #2E7D4E !important;
+  box-shadow: 0 2px 8px rgba(46, 125, 78, 0.14) !important;
+  transform: rotate(-6deg) !important;
+  flex-shrink: 0 !important;
+}
+
+.footer-brand-logo .brand-symbol::before,
+.footer-brand-logo .brand-symbol::after,
+.footer-brand-logo .brand-symbol span {
+  content: "" !important;
+  position: absolute !important;
+  height: 2px !important;
+  border-radius: 2px !important;
+  background: #2E7D4E !important;
+  transform: rotate(6deg) !important;
+}
+
+.footer-brand-logo .brand-symbol::before {
+  top: 9px !important;
+  left: 9px !important;
+  width: 10px !important;
+}
+
+.footer-brand-logo .brand-symbol::after {
+  top: 17px !important;
+  left: 9px !important;
+  width: 16px !important;
+}
+
+.footer-brand-logo .brand-symbol span {
+  top: 25px !important;
+  left: 9px !important;
+  width: 12px !important;
+  background: #1B5633 !important;
+}
+
+.footer-brand-logo .brand-accent {
+  color: #2E7D4E !important;
+  background: linear-gradient(135deg, #2E7D4E, #1F5B37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.footer-description {
+  margin: 0 !important;
+  color: #406350 !important;
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  max-width: 38ch !important;
+}
+
+/* Subtle Institutional Badge */
+.footer-disclosure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  align-self: flex-start;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: rgba(46, 125, 78, 0.08);
+  border: 1px solid rgba(46, 125, 78, 0.2);
+  color: #1F5B37;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-disclosure-badge .disclosure-icon {
+  color: #2E7D4E;
+  flex-shrink: 0;
+}
+
+/* Official Portal Attribution Note */
+.footer-source-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: #557966;
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+.footer-source-note svg {
+  color: #3F8F58;
+  flex-shrink: 0;
+}
+
+.footer-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #1F5B37 !important;
+  font-weight: 700;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+.footer-source-link:hover {
+  color: #0E351F !important;
+}
+
+/* ───── Sections B, C, D: Navigation Columns ───── */
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-col-title {
+  position: relative;
+  margin: 0 0 4px 0 !important;
+  color: #143522 !important;
+  font-family: var(--font-heading, Manrope, sans-serif) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding-bottom: 8px;
+}
+
+.footer-col-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background: #3F8F58;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-link-item a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #385E49 !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+  text-decoration: none !important;
+  transition: all 0.18s ease !important;
+  padding: 2px 0 !important;
+}
+
+.footer-link-item a:hover {
+  color: #1F7A47 !important;
+  transform: translateX(3px) !important;
+}
+
+/* ───── Footer Bottom Bar ───── */
+.footer-bottom-bar {
+  border-top: 1px solid #D6E8D8 !important;
+  padding: 22px 0 28px !important;
+  box-sizing: border-box !important;
+}
+
+.footer-bottom-inner {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 18px !important;
+}
+
+.footer-copyright {
+  color: #557966 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.footer-legal-links {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 14px !important;
+}
+
+.footer-legal-links a {
+  color: #385E49 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: color 0.18s ease !important;
+}
+
+.footer-legal-links a:hover {
+  color: #1F7A47 !important;
+  text-decoration: underline !important;
+}
+
+.footer-legal-separator {
+  color: #97BAA6 !important;
+  font-size: 11px !important;
+}
+
+/* ───── Responsive Breakpoints ───── */
+@media (max-width: 1024px) {
+  .footer-main-grid {
+    grid-template-columns: 1.2fr 1fr !important;
+    gap: 40px !important;
+  }
+  
+  .footer-brand-col {
+    grid-column: 1 / -1;
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding-top: 48px !important;
+  }
+
+  .footer-container {
+    width: min(100% - 32px, 560px) !important;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .footer-brand-col {
+    padding-right: 0;
+  }
+
+  .footer-description {
+    max-width: 100% !important;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+
+  .footer-legal-links {
+    gap: 12px !important;
+  }
+}

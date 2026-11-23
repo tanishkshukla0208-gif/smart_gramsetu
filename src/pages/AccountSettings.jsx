@@ -105,7 +105,7 @@ export default function AccountSettings() {
       <h1 className="text-2xl font-semibold mb-6">Account Settings</h1>
       {/* Tabs */}
       <div className="mb-6">
-        <nav className="flex space-x-2" aria-label="Tabs">
+        <nav className="settings-tabs flex flex-wrap gap-2" aria-label="Tabs">
           {tabs.map((tab) => (
             <button
               key={tab}
