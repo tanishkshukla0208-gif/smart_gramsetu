@@ -1,4 +1,4 @@
-import schemes from "../data/schemes.json";
+import schemes from "../data/schemes.json" with { type: "json" };
 
 export const DEMO_NOTICE = "Demonstration dataset — verify current details with the responsible authority.";
 

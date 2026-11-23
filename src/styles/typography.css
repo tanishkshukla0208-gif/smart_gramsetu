@@ -11,7 +11,7 @@
   --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* Typography Scale Tokens (Responsive clamp) */
-  --text-hero: clamp(42px, 6vw, 64px);
+  --text-hero: clamp(30px, 4.2vw, 54px);
   --text-page: clamp(32px, 4.4vw, 44px);
   --text-section: clamp(26px, 3.2vw, 34px);
   --text-card: clamp(19px, 2vw, 22px);
@@ -338,6 +338,7 @@ button, input, select, textarea {
   transition: all 0.2s ease;
   white-space: nowrap;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
 }
 
 .lang-selector-trigger:hover {
@@ -398,6 +399,7 @@ button, input, select, textarea {
   transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 1px 3px rgba(63, 143, 88, 0.15);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .quick-reset-en-btn:hover {
@@ -847,11 +849,11 @@ button, input, select, textarea {
   font-family: var(--font-heading) !important;
   font-size: var(--text-hero) !important;
   font-weight: 800 !important;
-  line-height: var(--leading-tight) !important;
-  letter-spacing: -0.04em !important;
-  color: var(--heading) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.025em !important;
+  color: #FFFFFF !important;
   max-width: 860px !important;
-  margin: 18px auto 0 !important;
+  margin: 0 auto 16px !important;
 }
 
 .hero-copy {
@@ -1097,37 +1099,51 @@ button, input, select, textarea {
 .category-card {
   background: #FFFFFF !important;
   border: 1px solid var(--border-light) !important;
-  border-radius: 15px !important;
-  padding: 18px !important;
+  border-radius: 18px !important;
+  padding: 20px !important;
   box-shadow: 0 2px 10px rgba(31, 67, 45, 0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
 }
 
 .category-card:hover {
-  border-color: #B5DAC0 !important;
-  box-shadow: 0 10px 24px rgba(31, 67, 45, 0.08) !important;
+  border-color: #3F8F58 !important;
+  box-shadow: 0 12px 28px rgba(31, 67, 45, 0.09) !important;
 }
 
+.category-card .category-title,
 .category-card strong {
   font-family: var(--font-heading) !important;
-  font-size: 16px !important;
+  font-size: 16.5px !important;
   font-weight: 700 !important;
+  line-height: 1.35 !important;
   color: var(--heading) !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+  margin: 0 !important;
 }
 
+.category-card .category-desc,
 .category-card small {
   font-family: var(--font-body) !important;
-  font-size: 13.5px !important;
-  line-height: 1.5 !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
   color: var(--muted) !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
 }
 
 .category-card em {
   font-family: var(--font-mono) !important;
-  font-size: 12.5px !important;
-  font-weight: 600 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
   font-style: normal !important;
-  color: var(--cyan) !important;
+  color: #2E7D47 !important;
 }
+
 
 /* ───── 9. SCHEME DETAILS PAGE OVERHAUL (User Point 5 Polish) ───── */
 .details-card {
@@ -1224,36 +1240,77 @@ button, input, select, textarea {
   color: var(--muted) !important;
 }
 
+/* Information Tabs System — Professional Redesign */
+.scheme-info {
+  margin: 32px 0 16px !important;
+}
+
+.scheme-tab-intro span {
+  font-family: var(--font-mono) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
+}
+
 .scheme-tab-bar {
   display: flex !important;
   flex-wrap: wrap !important;
-  align-items: center !important;
-  gap: 10px !important;
-  padding: 10px !important;
+  gap: 8px !important;
+  padding: 8px !important;
   border-radius: 18px !important;
   background: #EEF7F0 !important;
   border: 1px solid rgba(63, 143, 88, 0.2) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
+@media (min-width: 640px) {
+  .scheme-tab-bar {
+    gap: 10px !important;
+    padding: 10px !important;
+  }
+}
+
+.scheme-tab-button,
 .scheme-tab-bar > button {
   display: inline-flex !important;
   align-items: center !important;
+  justify-content: center !important;
   gap: 8px !important;
-  padding: 10px 18px !important;
+  min-height: 44px !important;
+  padding: 10px 14px !important;
   border-radius: 12px !important;
   font-family: var(--font-body) !important;
-  font-size: 14.5px !important;
-  font-weight: 600 !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
   line-height: 1.3 !important;
-  border: 1px solid transparent !important;
+  border: 1.5px solid transparent !important;
   cursor: pointer !important;
   transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  text-align: center !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  flex: 1 1 160px !important;
+  min-width: 140px !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .scheme-tab-bar > button:hover {
-  transform: translateY(-1px) !important;
+  transform: translateY(-1.5px) !important;
 }
+
+.scheme-tab-button:focus-visible,
+.scheme-tab-bar > button:focus-visible {
+  outline: 2.5px solid #2E7D47 !important;
+  outline-offset: 2px !important;
+}
+
 
 .scheme-tab-panel {
   margin-top: 24px !important;
@@ -1262,10 +1319,11 @@ button, input, select, textarea {
 .scheme-tab-panel h2 {
   font-family: var(--font-heading) !important;
   font-size: clamp(20px, 2.2vw, 25px) !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   letter-spacing: -0.025em !important;
   color: var(--heading) !important;
-  margin-bottom: 12px !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
 }
 
 .scheme-tab-panel p {
@@ -1279,6 +1337,379 @@ button, input, select, textarea {
   font-family: var(--font-body) !important;
   font-size: 15px !important;
   line-height: 1.65 !important;
+}
+
+/* ==========================================================================
+   GRAM SETU — SCHEME DETAILS ENTERPRISE UI SPECIFICATION
+   Pixel-perfect, resilient layout for About Section, Cards & Portals
+   ========================================================================== */
+
+/* 1. Main Details Card Container */
+.scheme-details-card {
+  background: #FFFFFF !important;
+  border: 1px solid #DCE9DC !important;
+  border-radius: 24px !important;
+  padding: clamp(24px, 4vw, 44px) !important;
+  box-shadow: 0 4px 24px rgba(31, 67, 45, 0.05) !important;
+}
+
+/* 2. Top Header & Metadata Strip */
+.scheme-meta-strip {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 14px !important;
+  margin: 24px 0 !important;
+  padding: 16px 20px !important;
+  background: #F7FAF7 !important;
+  border: 1px solid #E1ECE2 !important;
+  border-radius: 16px !important;
+}
+
+.scheme-meta-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.scheme-meta-label {
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  color: #5E7767 !important;
+}
+
+.scheme-meta-value {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #1F432D !important;
+}
+
+/* 3. Tab Panels Standard Card System */
+.scheme-info-card {
+  background: #FFFFFF !important;
+  border-radius: 20px !important;
+  padding: clamp(24px, 4vw, 36px) !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 4px 20px rgba(31, 67, 45, 0.04) !important;
+  border: 1.5px solid #DCE9DC !important;
+}
+
+.scheme-info-card-green {
+  border-color: #D3EBD8 !important;
+  background: linear-gradient(180deg, #FAFCFA 0%, #FFFFFF 100%) !important;
+}
+
+.scheme-info-card-teal {
+  border-color: #CCEBE5 !important;
+  background: linear-gradient(180deg, #F8FCFB 0%, #FFFFFF 100%) !important;
+}
+
+.scheme-info-card-orange {
+  border-color: #F8E5CC !important;
+  background: linear-gradient(180deg, #FCFBF7 0%, #FFFFFF 100%) !important;
+}
+
+.scheme-info-card-purple {
+  border-color: #EBDCF5 !important;
+  background: linear-gradient(180deg, #FAF8FC 0%, #FFFFFF 100%) !important;
+}
+
+.scheme-info-card-blue {
+  border-color: #D3E5F8 !important;
+  background: linear-gradient(180deg, #F7FAFC 0%, #FFFFFF 100%) !important;
+}
+
+.scheme-info-card-rose {
+  border-color: #F8D8DC !important;
+  background: linear-gradient(180deg, #FCF7F8 0%, #FFFFFF 100%) !important;
+}
+
+/* 4. Header Section of each Tab Card: Icon Badge + Title + Subtitle */
+.scheme-card-header-row {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+  min-width: 0 !important;
+}
+
+.scheme-card-icon-badge {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 14px !important;
+  flex-shrink: 0 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.scheme-card-icon-badge.badge-green { background: #2E7D47 !important; }
+.scheme-card-icon-badge.badge-teal { background: #0E8575 !important; }
+.scheme-card-icon-badge.badge-orange { background: #D97706 !important; }
+.scheme-card-icon-badge.badge-purple { background: #7C3AED !important; }
+.scheme-card-icon-badge.badge-blue { background: #2563EB !important; }
+.scheme-card-icon-badge.badge-rose { background: #E11D48 !important; }
+
+.scheme-card-title-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  min-width: 0 !important;
+  flex: 1 !important;
+}
+
+.scheme-card-main-title {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(20px, 2.2vw, 24px) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.025em !important;
+  margin: 0 !important;
+  color: #1F432D !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+.scheme-card-sub-meta {
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  color: #557260 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.scheme-meta-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 3px 9px !important;
+  border-radius: 999px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+}
+
+/* 5. Description Text */
+.scheme-card-description {
+  font-family: var(--font-body) !important;
+  font-size: clamp(15.5px, 1.1vw, 17px) !important;
+  line-height: 1.75 !important;
+  color: #34483A !important;
+  margin: 0 0 24px 0 !important;
+  max-width: 85ch !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+}
+
+/* 6. Primary Scheme Objective Subsection Card */
+.scheme-objective-box {
+  background: #F7FCF8 !important;
+  border: 1.5px solid #CFE8D5 !important;
+  border-left: 5px solid #2E7D47 !important;
+  border-radius: 16px !important;
+  padding: 20px 24px !important;
+  margin-top: 24px !important;
+  box-shadow: 0 2px 8px rgba(31, 67, 45, 0.03) !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+
+.scheme-objective-header-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 12px !important;
+}
+
+.scheme-objective-icon-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 8px !important;
+  background: #E4F5E8 !important;
+  color: #2E7D47 !important;
+  flex-shrink: 0 !important;
+}
+
+.scheme-objective-title {
+  font-family: var(--font-heading) !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #164627 !important;
+  letter-spacing: -0.015em !important;
+  margin: 0 !important;
+}
+
+.scheme-objective-content {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  line-height: 1.72 !important;
+  color: #2D4736 !important;
+  margin: 0 !important;
+}
+
+/* 7. Official Government Portal Verification Card */
+.scheme-portal-official-card {
+  background: linear-gradient(135deg, #F5FAF6 0%, #FFFFFF 100%) !important;
+  border: 1.5px solid #CDE7D4 !important;
+  border-radius: 20px !important;
+  padding: 28px 32px !important;
+  margin: 32px 0 24px !important;
+  box-shadow: 0 6px 24px rgba(31, 67, 45, 0.06) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+@media (min-width: 768px) {
+  .scheme-portal-official-card {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+}
+
+.scheme-portal-info-side {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 18px !important;
+  max-width: 720px !important;
+}
+
+.scheme-portal-seal {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 16px !important;
+  background: #E6F5EB !important;
+  border: 1.5px solid #A8DDB7 !important;
+  color: #2E7D47 !important;
+  flex-shrink: 0 !important;
+}
+
+.scheme-portal-texts {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.scheme-portal-badge-verified {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 4px 10px !important;
+  border-radius: 999px !important;
+  background: #E8F7ED !important;
+  color: #1E6637 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  width: fit-content !important;
+}
+
+.scheme-portal-title {
+  font-family: var(--font-heading) !important;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: #1F432D !important;
+  margin: 0 !important;
+}
+
+.scheme-portal-desc {
+  font-family: var(--font-body) !important;
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+  color: #4D6657 !important;
+  margin: 0 !important;
+}
+
+.scheme-portal-action-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 14px 24px !important;
+  border-radius: 14px !important;
+  background: #2E7D47 !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-body) !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-shadow: 0 4px 14px rgba(46, 125, 71, 0.3) !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.scheme-portal-action-btn:hover {
+  background: #246539 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(46, 125, 71, 0.4) !important;
+}
+
+/* 8. List and Step Cards inside Tabs */
+.scheme-feature-list {
+  display: grid !important;
+  gap: 12px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 20px 0 !important;
+}
+
+.scheme-feature-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+  padding: 16px 20px !important;
+  border-radius: 14px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E1ECE2 !important;
+  box-shadow: 0 1px 4px rgba(31, 67, 45, 0.03) !important;
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  color: #34483A !important;
+}
+
+.scheme-bullet-dot {
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 50% !important;
+  margin-top: 7px !important;
+  flex-shrink: 0 !important;
+}
+
+.scheme-step-number-badge {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  font-family: var(--font-heading) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 .side-card {
@@ -1544,43 +1975,9 @@ button, input, select, textarea {
   color: var(--muted) !important;
 }
 
-/* ───── 11. Site Footer Typography ───── */
+/* ───── 11. Site Footer Typography (Styled in footer.css) ───── */
 .site-footer {
   font-family: var(--font-body) !important;
-  background: #0E2519 !important;
-  color: #D3E2D8 !important;
-  border-top: 1px solid rgba(63, 143, 88, 0.2) !important;
-}
-
-.footer-brand p {
-  font-size: 14px !important;
-  line-height: 1.65 !important;
-  color: #A3BCAE !important;
-}
-
-.footer-links b {
-  font-family: var(--font-mono) !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-  color: #8CE8A8 !important;
-}
-
-.footer-links a {
-  font-size: 14.5px !important;
-  color: #C0D6C8 !important;
-  text-decoration: none !important;
-  transition: color 0.15s ease !important;
-}
-
-.footer-links a:hover {
-  color: #FFFFFF !important;
-}
-
-.footer-bottom {
-  font-size: 13px !important;
-  color: #85A391 !important;
 }
 
 /* ───── 12. Responsive Scale & Accessibility Controls ───── */
@@ -1592,7 +1989,7 @@ button, input, select, textarea {
 @media (max-width: 700px) {
   body { font-size: 15px; }
   .page-header h1 { font-size: clamp(28px, 8vw, 38px) !important; }
-  .hero-content h1 { font-size: clamp(34px, 9vw, 48px) !important; }
+  .hero-content h1 { font-size: clamp(24px, 6.5vw, 32px) !important; line-height: 1.24 !important; }
   .hero-copy { font-size: 15px !important; }
   .scheme-tab-bar > button { font-size: 13.5px !important; padding: 8px 14px !important; }
   .details-card { padding: 20px !important; }

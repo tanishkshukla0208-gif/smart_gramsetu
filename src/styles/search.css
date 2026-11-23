@@ -1,0 +1,192 @@
+/* ============================================================
+   GramSetu — Premium Search System
+   Component & Layout Re-engineering
+   ============================================================ */
+
+.hero-search-wrap {
+  width: 100% !important;
+  max-width: 680px !important;
+  margin: 30px auto 0 !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Base search form */
+.search-field {
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(46, 125, 78, 0.28) !important;
+  border-radius: 14px !important;
+  padding: 4px 6px 4px 16px !important;
+  min-height: 48px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+  box-shadow: 0 4px 16px rgba(16, 38, 26, 0.06) !important;
+}
+
+.search-field:hover {
+  border-color: rgba(46, 125, 78, 0.45) !important;
+  box-shadow: 0 6px 22px rgba(16, 38, 26, 0.09) !important;
+}
+
+.search-field:focus-within {
+  border-color: #2E7D4E !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 0 3.5px rgba(46, 125, 78, 0.16), 0 8px 28px rgba(16, 38, 26, 0.1) !important;
+}
+
+/* Large variant (Homepage Hero) */
+.search-field-large {
+  min-height: 58px !important;
+  border-radius: 16px !important;
+  padding: 5px 6px 5px 18px !important;
+  border: 1.5px solid rgba(46, 125, 78, 0.3) !important;
+  box-shadow: 0 10px 32px rgba(16, 38, 26, 0.1) !important;
+}
+
+/* Leading search icon */
+.search-field .search-icon {
+  flex-shrink: 0 !important;
+  color: #2E7D4E !important;
+  margin-right: 12px !important;
+  opacity: 0.95 !important;
+  pointer-events: none !important;
+}
+
+/* Search input */
+.search-field input,
+.search-field input[type="search"] {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #102223 !important;
+  font-family: var(--font-body, Inter, sans-serif) !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  padding: 8px 8px !important;
+}
+
+.search-field-large input,
+.search-field-large input[type="search"] {
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+}
+
+.search-field input::placeholder {
+  color: #638673 !important;
+  font-family: var(--font-body, Inter, sans-serif) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* Clear button */
+.search-field .clear-search {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  width: 28px !important;
+  height: 28px !important;
+  border: none !important;
+  border-radius: 50% !important;
+  background: #E8F4EC !important;
+  color: #2E7D4E !important;
+  cursor: pointer !important;
+  margin-right: 8px !important;
+  padding: 0 !important;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease !important;
+}
+
+.search-field .clear-search:hover {
+  background: #D4ECD9 !important;
+  color: #164627 !important;
+  transform: scale(1.08) !important;
+}
+
+/* ───── Search Submit Button — Critical Flex & Wrap Protection ───── */
+.search-field .search-submit {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  white-space: nowrap !important;
+  min-width: 112px !important;
+  height: 46px !important;
+  padding: 0 22px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  background: #2E7D4E !important;
+  background: linear-gradient(135deg, #2E7D4E 0%, #1D5E37 100%) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-body, Inter, sans-serif) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(31, 91, 55, 0.22) !important;
+  transition: all 0.2s ease !important;
+}
+
+.search-field .search-submit:hover {
+  background: linear-gradient(135deg, #368D59 0%, #246B40 100%) !important;
+  box-shadow: 0 4px 14px rgba(31, 91, 55, 0.32) !important;
+  transform: translateY(-1px) !important;
+}
+
+.search-field .search-submit:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 1px 4px rgba(31, 91, 55, 0.2) !important;
+}
+
+.search-field .search-submit-icon {
+  flex-shrink: 0 !important;
+}
+
+/* ───── Mobile Responsiveness ───── */
+@media (max-width: 640px) {
+  .hero-search-wrap {
+    max-width: 100% !important;
+    margin-top: 24px !important;
+  }
+
+  .search-field-large {
+    min-height: 52px !important;
+    padding: 4px 4px 4px 12px !important;
+  }
+
+  .search-field .search-icon {
+    margin-right: 8px !important;
+  }
+
+  .search-field input,
+  .search-field input[type="search"] {
+    font-size: 14px !important;
+    padding: 6px 4px !important;
+  }
+
+  .search-field input::placeholder {
+    font-size: 13.5px !important;
+  }
+
+  .search-field .search-submit {
+    min-width: 90px !important;
+    height: 42px !important;
+    padding: 0 14px !important;
+    font-size: 14px !important;
+    gap: 6px !important;
+  }
+}

@@ -1,0 +1,822 @@
+/* ==========================================================================
+   GRAM SETU — MULTILINGUAL AI VOICE ASSISTANT STYLES
+   Designed for Indian rural citizens, farmers, students, women & all users
+   ========================================================================== */
+
+/* ───── 1. Floating Assistant Trigger Button (FAB) ───── */
+.voice-assistant-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1A4D2E 0%, #2E7D47 100%);
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 30px rgba(26, 77, 46, 0.35), 0 2px 8px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.voice-assistant-fab:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #164327 0%, #246539 100%);
+  box-shadow: 0 12px 38px rgba(26, 77, 46, 0.45), 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.voice-assistant-fab:focus-visible {
+  outline: 3px solid #FFB454;
+  outline-offset: 4px;
+}
+
+.voice-assistant-fab.is-active {
+  background: linear-gradient(135deg, #C2410C 0%, #E11D48 100%);
+  box-shadow: 0 8px 32px rgba(225, 29, 72, 0.4);
+}
+
+/* Pulsing ambient halo around the trigger button */
+.voice-fab-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.voice-fab-pulse-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  animation: fabPulse 2.2s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes fabPulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  60% { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.voice-fab-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.voice-fab-primary {
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.voice-fab-secondary {
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.88;
+  font-family: var(--font-mono, monospace);
+  text-transform: uppercase;
+}
+
+/* ───── 2. Voice Assistant Drawer / Panel Container ───── */
+.voice-panel-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 24px;
+  pointer-events: none; /* Allows free interaction with website on desktop */
+}
+
+.voice-panel-window {
+  position: relative;
+  width: 440px;
+  max-width: calc(100vw - 32px);
+  height: 640px;
+  max-height: calc(100vh - 80px);
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1.5px solid #D1EAD7;
+  box-shadow: 0 24px 70px rgba(18, 55, 32, 0.25), 0 4px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  pointer-events: auto; /* Modal window remains fully interactive */
+  animation: panelSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes panelSlideUp {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Minimized mode */
+.voice-panel-window.minimized {
+  height: 74px;
+  max-height: 74px;
+  border-radius: 20px;
+}
+
+/* ───── 3. Panel Header ───── */
+.voice-header {
+  background: linear-gradient(135deg, #163E26 0%, #286C3E 100%);
+  color: #FFFFFF;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.voice-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.voice-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.voice-saathi-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.voice-title-box h3 {
+  font-family: var(--font-heading, "Manrope", sans-serif) !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 !important;
+  color: #FFFFFF !important;
+  line-height: 1.2 !important;
+}
+
+.voice-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #D1F2DC;
+  font-family: var(--font-body, sans-serif);
+}
+
+.voice-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34D399;
+}
+
+.voice-status-dot.listening {
+  background: #FB7185;
+  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.4);
+  animation: dotPulse 1s infinite;
+}
+
+.voice-status-dot.speaking {
+  background: #38BDF8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4);
+  animation: dotPulse 1s infinite;
+}
+
+.voice-status-dot.processing {
+  background: #FBBF24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.4);
+  animation: dotPulse 0.8s infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.voice-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.voice-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.voice-tool-btn:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: scale(1.05);
+}
+
+/* Pinned Quick Language Bar */
+.voice-pinned-lang-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.voice-pinned-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.voice-lang-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.voice-lang-pill:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.voice-lang-pill.active {
+  background: #FFFFFF;
+  color: #1A4D2E;
+  border-color: #FFFFFF;
+  font-weight: 800;
+}
+
+.voice-lang-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.voice-lang-more-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ───── 4. Capability Status Strip (Transparent Support Reporting) ───── */
+.voice-capability-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 16px;
+  background: #F4FAF5;
+  border-bottom: 1px solid #E2EFE4;
+  font-size: 10.5px;
+  font-family: var(--font-mono, monospace);
+  color: #4D6855;
+}
+
+.voice-capability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.voice-capability-badge.supported {
+  color: #1E6637;
+}
+
+.voice-capability-badge.limited {
+  color: #B45309;
+}
+
+/* ───── 5. Message Thread Area ───── */
+.voice-messages-wrap {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #FCFDFC;
+  scroll-behavior: smooth;
+}
+
+.voice-msg-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 92%;
+}
+
+.voice-msg-row.user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.voice-msg-row.assistant {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.voice-bubble-user {
+  background: #E8F7ED;
+  color: #164627;
+  padding: 12px 16px;
+  border-radius: 18px 18px 4px 18px;
+  border: 1px solid #C8EBD2;
+  font-size: 14.5px;
+  line-height: 1.5;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(22, 70, 39, 0.05);
+}
+
+.voice-bubble-assistant {
+  background: #FFFFFF;
+  color: #2D4736;
+  padding: 16px 18px;
+  border-radius: 18px 18px 18px 4px;
+  border: 1.5px solid #D8EAD9;
+  box-shadow: 0 2px 12px rgba(31, 67, 45, 0.04);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.voice-bubble-assistant h3,
+.voice-bubble-assistant h4 {
+  font-family: var(--font-heading, "Manrope", sans-serif) !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #164627 !important;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.3 !important;
+}
+
+.voice-bubble-assistant p {
+  margin: 0 0 8px 0 !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: #34483A !important;
+}
+
+.voice-bubble-assistant ul,
+.voice-bubble-assistant ol {
+  margin: 6px 0 10px 0 !important;
+  padding-left: 20px !important;
+  display: grid !important;
+  gap: 6px !important;
+}
+
+.voice-bubble-assistant li {
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  color: #2D4736 !important;
+}
+
+/* Audio Controls on Assistant Messages */
+.voice-audio-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #EDF5EE;
+}
+
+.voice-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border: 1px solid #CFE6D4;
+  background: #F4FAF5;
+  color: #1E6637;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.voice-audio-btn:hover {
+  background: #E5F4E8;
+  color: #164627;
+}
+
+/* Embedded Action Chips (Deep Linking to Schemes & Routes) */
+.voice-action-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.voice-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #2E7D47;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 6px rgba(46, 125, 71, 0.2);
+}
+
+.voice-action-btn:hover {
+  background: #246539;
+  transform: translateY(-1px);
+}
+
+.voice-action-btn.secondary {
+  background: #EEF7EF;
+  color: #1E6637;
+  border: 1px solid #CCE7D1;
+  box-shadow: none;
+}
+
+.voice-action-btn.secondary:hover {
+  background: #E2F2E4;
+}
+
+/* Quick Suggestion Chips */
+.voice-suggestions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.voice-suggest-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  background: #F2F9F3;
+  color: #2D633E;
+  border: 1px solid #D5EBD8;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.voice-suggest-pill:hover {
+  background: #E2F2E5;
+  border-color: #2E7D47;
+  color: #164627;
+}
+
+/* ───── 6. Sound Wave Listening Animation Overlay ───── */
+.voice-listening-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, #FDF7F8 0%, #FFFFFF 100%);
+  border-top: 1.5px solid #FCD3D9;
+}
+
+.voice-soundwave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 36px;
+}
+
+.soundwave-bar {
+  width: 4px;
+  height: 8px;
+  border-radius: 4px;
+  background: #E11D48;
+  animation: waveBar 1.2s infinite ease-in-out;
+}
+
+.soundwave-bar:nth-child(1) { animation-delay: 0.1s; height: 14px; }
+.soundwave-bar:nth-child(2) { animation-delay: 0.3s; height: 26px; }
+.soundwave-bar:nth-child(3) { animation-delay: 0.2s; height: 34px; }
+.soundwave-bar:nth-child(4) { animation-delay: 0.4s; height: 22px; }
+.soundwave-bar:nth-child(5) { animation-delay: 0.15s; height: 12px; }
+
+@keyframes waveBar {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1.2); }
+}
+
+.voice-live-interim {
+  font-size: 13.5px;
+  font-style: italic;
+  color: #9F1239;
+  text-align: center;
+  max-width: 380px;
+  min-height: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* ───── 7. Input Controls Bar ───── */
+.voice-input-bar {
+  padding: 14px 20px 18px;
+  background: #FFFFFF;
+  border-top: 1px solid #E2EFE4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.voice-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Big Accessible Microphone Button (Designed for rural & first-time smartphone users) */
+.voice-mic-main-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #2E7D47;
+  color: #FFFFFF;
+  border: 3px solid #E8F5ED;
+  box-shadow: 0 4px 18px rgba(46, 125, 71, 0.35);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  outline: none;
+}
+
+.voice-mic-main-btn:hover {
+  background: #246539;
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(46, 125, 71, 0.45);
+}
+
+.voice-mic-main-btn.listening {
+  background: #E11D48;
+  border-color: #FEE2E2;
+  box-shadow: 0 0 0 6px rgba(225, 29, 72, 0.25), 0 4px 20px rgba(225, 29, 72, 0.4);
+  animation: micPulse 1.4s infinite;
+}
+
+@keyframes micPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+.voice-text-input-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.voice-text-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 48px 10px 16px;
+  border-radius: 14px;
+  border: 1.5px solid #CFE6D4;
+  background: #F8FCF9;
+  font-family: var(--font-body, sans-serif);
+  font-size: 14px;
+  color: #1F432D;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.voice-text-input:focus {
+  border-color: #2E7D47;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(46, 125, 71, 0.15);
+}
+
+.voice-send-btn {
+  position: absolute;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #2E7D47;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.voice-send-btn:hover {
+  background: #246539;
+}
+
+.voice-send-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Stop Audio Button */
+.voice-stop-audio-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: #E8F4FA;
+  border: 1px solid #BAE6FD;
+  color: #0369A1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.voice-stop-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #0284C7;
+  color: #FFFFFF;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ───── 8. Language Selector Modal ───── */
+.voice-lang-modal-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10005;
+  background: rgba(10, 30, 18, 0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.voice-lang-modal-sheet {
+  background: #FFFFFF;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: sheetUp 0.25s ease-out;
+}
+
+@keyframes sheetUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.voice-lang-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E2EFE4;
+  padding-bottom: 12px;
+}
+
+.voice-lang-sheet-header h4 {
+  font-family: var(--font-heading, "Manrope", sans-serif);
+  font-size: 16px;
+  font-weight: 800;
+  color: #164627;
+  margin: 0;
+}
+
+.voice-lang-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  overflow-y: auto;
+  padding-right: 4px;
+  max-height: 360px;
+}
+
+.voice-lang-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1.5px solid #D5EBD8;
+  background: #F9FCFA;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.voice-lang-card:hover {
+  background: #EEF8F1;
+  border-color: #2E7D47;
+}
+
+.voice-lang-card.active {
+  background: #E5F5E9;
+  border-color: #2E7D47;
+  box-shadow: 0 0 0 2px #2E7D47;
+}
+
+.voice-lang-card-native {
+  font-size: 14px;
+  font-weight: 800;
+  color: #164627;
+}
+
+.voice-lang-card-english {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #557260;
+}
+
+.voice-lang-card-cap {
+  font-size: 9.5px;
+  font-family: var(--font-mono, monospace);
+  color: #1E6637;
+  font-weight: 700;
+}
+
+/* ───── 9. Mobile Responsiveness ───── */
+@media (max-width: 640px) {
+  .voice-assistant-fab {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 14px 8px 10px;
+  }
+
+  .voice-panel-overlay {
+    padding: 0;
+  }
+
+  .voice-panel-window {
+    width: 100%;
+    max-width: 100vw;
+    height: 90vh;
+    max-height: 90vh;
+    border-radius: 24px 24px 0 0;
+    border-bottom: none;
+  }
+
+  .voice-lang-grid {
+    grid-template-columns: 1fr;
+  }
+}

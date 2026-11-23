@@ -16,21 +16,21 @@ export default function LanguageSelector() {
   const currentLang = useMemo(() => getLanguageByCode(language), [language]);
   const isEnglish = language === "en";
 
-  // Filter languages based on search query (excluding English from the regional list so it's not duplicate with pinned card)
-  const regionalLanguages = useMemo(() => {
-    return INDIAN_LANGUAGES.filter((item) => item.code !== "en");
-  }, []);
-
+  // Filter languages based on search query
+  // When no query is typed, show the 22 regional languages in the grid because English is permanently pinned at the top.
+  // When a search query is typed, search across all 23 languages (including English) so typing "English" or "en" finds it.
   const filteredLanguages = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    if (!q) return regionalLanguages;
-    return regionalLanguages.filter((item) =>
+    if (!q) {
+      return INDIAN_LANGUAGES.filter((item) => item.code !== "en");
+    }
+    return INDIAN_LANGUAGES.filter((item) =>
       item.name.toLowerCase().includes(q) ||
       item.nativeName.toLowerCase().includes(q) ||
       item.region.toLowerCase().includes(q) ||
       item.script.toLowerCase().includes(q)
     );
-  }, [regionalLanguages, searchQuery]);
+  }, [searchQuery]);
 
   // Handle escape key to close
   useEffect(() => {

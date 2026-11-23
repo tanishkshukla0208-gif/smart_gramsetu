@@ -18,9 +18,13 @@ export default function SchemeCard({ scheme, featured = false }) {
 
   return (
     <motion.article
-      className={featured ? "scheme-card featured-card" : "scheme-card"}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.2 }}
+      className={featured ? "scheme-card featured-card group" : "scheme-card group"}
+      initial={{ opacity: 0, y: 22 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -6, transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] } }}
+      whileTap={{ scale: 0.995 }}
     >
       <div className="card-topline flex items-center justify-between gap-2">
         <span className="category-label inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border-0">
@@ -34,11 +38,15 @@ export default function SchemeCard({ scheme, featured = false }) {
         )}
       </div>
 
-      <div className="card-icon my-3 w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center border-0 shadow-sm">
+      <motion.div
+        className="card-icon my-3 w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center border-0 shadow-sm transition-colors duration-200"
+        whileHover={{ scale: 1.08, rotate: 2 }}
+        transition={{ duration: 0.2 }}
+      >
         <Icon size={24} />
-      </div>
+      </motion.div>
 
-      <h3 className="text-xl font-bold text-slate-900 leading-snug mb-2">
+      <h3 className="text-xl font-bold text-slate-900 leading-snug mb-2 group-hover:text-emerald-800 transition-colors duration-200">
         {text.displayName}
       </h3>
 
@@ -64,11 +72,17 @@ export default function SchemeCard({ scheme, featured = false }) {
       </div>
 
       <div className="card-actions flex items-center justify-between gap-2 mt-4 pt-3 border-t border-slate-100">
-        <Link className="text-link text-sm font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1" to={`/schemes/${scheme.id}`}>
-          {t.details || "Details"} <ArrowUpRight size={15} />
+        <Link
+          className="text-link text-sm font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1 group/link"
+          to={`/schemes/${scheme.id}`}
+        >
+          {t.details || "Details"}{" "}
+          <ArrowUpRight size={15} className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
         </Link>
         <div className="card-tools flex gap-1.5">
-          <button
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.92 }}
             className={isCompared ? "mini-action active" : "mini-action"}
             type="button"
             onClick={() => toggleCompare(scheme.id)}
@@ -77,8 +91,10 @@ export default function SchemeCard({ scheme, featured = false }) {
           >
             <GitCompareArrows size={15} />
             {isCompared && <Check size={11} />}
-          </button>
-          <button
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.92 }}
             className={isSaved ? "mini-action active" : "mini-action"}
             type="button"
             onClick={() => toggleSaved(scheme.id)}
@@ -86,9 +102,10 @@ export default function SchemeCard({ scheme, featured = false }) {
             title={isSaved ? (t.remove || "Remove") : (t.save || "Save")}
           >
             <Bookmark size={15} fill={isSaved ? "currentColor" : "none"} />
-          </button>
+          </motion.button>
         </div>
       </div>
     </motion.article>
   );
+
 }

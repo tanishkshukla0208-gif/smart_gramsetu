@@ -18,9 +18,43 @@ import UserProfile from "./pages/UserProfile.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import AccountSettings from "./pages/AccountSettings.jsx";
 
+const pageMotionVariants = {
+  initial: {
+    opacity: 0,
+    y: 12,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.28,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -8,
+    transition: {
+      duration: 0.18,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 function PageFrame({ children }) {
-  return <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, ease: "easeOut" }}>{children}</motion.div>;
+  return (
+    <motion.div
+      variants={pageMotionVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      style={{ width: "100%" }}
+    >
+      {children}
+    </motion.div>
+  );
 }
+
 
 export default function App() {
   const location = useLocation();
@@ -41,6 +75,7 @@ export default function App() {
             <Route path="/documents" element={<Documents />} />
             <Route path="/application-guide" element={<ApplicationGuide />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<About />} />
             <Route path="/faq" element={<FAQ />} />
                         <Route path="/account/profile" element={<UserProfile />} />
             <Route path="/account/settings" element={<AccountSettings />} />
