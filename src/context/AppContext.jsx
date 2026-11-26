@@ -38,6 +38,8 @@ export function AppProvider({ children }) {
   const [recentIds, setRecentIds] = useState(() => readArray(STORAGE.recent));
   const [compareIds, setCompareIds] = useState(() => readArray(STORAGE.compare));
   const [checkedDocuments, setCheckedDocuments] = useState(() => readArray(STORAGE.documents));
+  const [compareNotice, setCompareNotice] = useState(null);
+  const clearCompareNotice = () => setCompareNotice(null);
 
   const persist = (key, value) => {
     try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* local-only enhancement */ }
@@ -60,15 +62,35 @@ export function AppProvider({ children }) {
   };
   const toggleSaved = (id) => setSavedIds((items) => items.includes(id) ? items.filter((item) => item !== id) : [...items, id]);
   const addRecent = (id) => setRecentIds((items) => [id, ...items.filter((item) => item !== id)].slice(0, 6));
-  const toggleCompare = (id) => setCompareIds((items) => items.includes(id) ? items.filter((item) => item !== id) : items.length >= 3 ? items : [...items, id]);
+  const toggleCompare = (id) => {
+    if (compareIds.includes(id)) {
+      setCompareIds((items) => items.filter((item) => item !== id));
+      setCompareNotice(null);
+      return;
+    }
+    if (compareIds.length >= 3) {
+      setCompareNotice({
+        id: Date.now(),
+        type: "limit_reached",
+        limit: 3,
+      });
+      return;
+    }
+    setCompareIds((items) => [...items, id]);
+    setCompareNotice(null);
+  };
   const toggleDocument = (id) => setCheckedDocuments((items) => items.includes(id) ? items.filter((item) => item !== id) : [...items, id]);
   const clearSaved = () => setSavedIds([]);
-  const clearCompare = () => setCompareIds([]);
+  const clearCompare = () => {
+    setCompareIds([]);
+    setCompareNotice(null);
+  };
 
   const value = useMemo(() => ({
     language, setLanguage, savedIds, toggleSaved, clearSaved, recentIds, addRecent,
     compareIds, toggleCompare, clearCompare, checkedDocuments, toggleDocument,
-  }), [language, savedIds, recentIds, compareIds, checkedDocuments]);
+    compareNotice, clearCompareNotice,
+  }), [language, savedIds, recentIds, compareIds, checkedDocuments, compareNotice]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

@@ -8,6 +8,43 @@ import { translations } from "../i18n/translations.js";
 const icons = { Sprout, GraduationCap, House, BriefcaseBusiness, HeartPulse, Store, HandHeart };
 const iconFor = (name) => icons[name] || Leaf;
 
+// Verified scheme photographs representing authentic Indian welfare contexts
+const SCHEME_IMAGES = {
+  "pm-kisan": "/scenes/scene-kisan.jpg",
+  "national-scholarship-portal": "/schemes/national-scholarship-portal.jpg",
+  "pmay-gramin": "/schemes/pmay-gramin.jpg",
+  "mgnrega": "/schemes/mgnrega.jpg",
+  "ayushman-bharat-pmjay": "/schemes/ayushman-bharat-pmjay.jpg",
+  "pmkvy": "/schemes/pmkvy.jpg",
+  "pm-svanidhi": "/schemes/pm-svanidhi.jpg",
+  "mudra": "/schemes/mudra.jpg",
+  "nsap": "/schemes/nsap.jpg",
+  "stand-up-india": "/schemes/stand-up-india.jpg",
+  "sukanya-samriddhi": "/schemes/sukanya-samriddhi.jpg",
+  "pm-jay-jan-aushadhi": "/schemes/pm-jay-jan-aushadhi.jpg",
+  "pm-fasal-bima": "/scenes/scene-bima.jpg",
+  "digital-india": "/schemes/digital-india.jpg",
+};
+
+const DEFAULT_SCHEME_IMAGE = "/scenes/scene-kisan.jpg";
+
+const SCHEME_IMAGE_ALTS = {
+  "pm-kisan": "Indian farmer in lush green agricultural field representing PM-KISAN",
+  "national-scholarship-portal": "Indian students learning in school classroom representing National Scholarship Portal",
+  "pmay-gramin": "Completed rural Indian house representing Pradhan Mantri Awaas Yojana Gramin",
+  "mgnrega": "Rural Indian community workers at water conservation site under MGNREGA",
+  "ayushman-bharat-pmjay": "Doctor examining a patient at a community health camp representing Ayushman Bharat PM-JAY",
+  "pmkvy": "Youth undergoing vocational and computer skills training under PMKVY",
+  "pm-svanidhi": "Indian street vendor at vibrant vegetable stall representing PM SVANidhi",
+  "mudra": "Rural Indian artisan potter shaping clay on pottery wheel representing PM MUDRA Yojana",
+  "nsap": "Elderly Indian rural citizen representing National Social Assistance Programme",
+  "stand-up-india": "Indian woman entrepreneur displaying traditional handicrafts representing Stand-Up India",
+  "sukanya-samriddhi": "Smiling Indian schoolgirls with school bags representing Sukanya Samriddhi Account",
+  "pm-jay-jan-aushadhi": "Indian medical store dispensing affordable medicines representing Jan Aushadhi PMBJP",
+  "pm-fasal-bima": "Indian farmers working agricultural field with tractor representing PM Fasal Bima Yojana",
+  "digital-india": "Common Services Centre kiosk for citizen e-governance representing Digital India",
+};
+
 export default function SchemeCard({ scheme, featured = false }) {
   const { language, savedIds, toggleSaved, compareIds, toggleCompare } = useApp();
   const t = translations[language] || translations.en;
@@ -15,6 +52,9 @@ export default function SchemeCard({ scheme, featured = false }) {
   const Icon = iconFor(scheme.category.icon);
   const isSaved = savedIds.includes(scheme.id);
   const isCompared = compareIds.includes(scheme.id);
+
+  const imageSrc = scheme.image || SCHEME_IMAGES[scheme.id] || DEFAULT_SCHEME_IMAGE;
+  const imageAlt = SCHEME_IMAGE_ALTS[scheme.id] || text.displayName;
 
   return (
     <motion.article
@@ -26,6 +66,22 @@ export default function SchemeCard({ scheme, featured = false }) {
       whileHover={{ y: -6, transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] } }}
       whileTap={{ scale: 0.995 }}
     >
+      {/* Photograph container at top of card */}
+      <div className="scheme-card-image-wrap relative w-full h-44 sm:h-48 rounded-xl overflow-hidden mb-3.5 bg-slate-100 shrink-0 border border-slate-100/80 shadow-xs">
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          loading="lazy"
+          className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+          onError={(e) => {
+            if (e.currentTarget.src !== DEFAULT_SCHEME_IMAGE) {
+              e.currentTarget.src = DEFAULT_SCHEME_IMAGE;
+            }
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
+      </div>
+
       <div className="card-topline flex items-center justify-between gap-2">
         <span className="category-label inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border-0">
           <Icon size={14} />
@@ -86,7 +142,8 @@ export default function SchemeCard({ scheme, featured = false }) {
             className={isCompared ? "mini-action active" : "mini-action"}
             type="button"
             onClick={() => toggleCompare(scheme.id)}
-            aria-label={isCompared ? (t.remove || "Remove") : (t.addCompare || "Add to compare")}
+            aria-label={isCompared ? `${t.remove || "Remove"} ${text.displayName}` : `${t.addCompare || "Add to compare"}: ${text.displayName}`}
+            aria-pressed={isCompared}
             title={isCompared ? (t.remove || "Remove") : (t.addCompare || "Add to compare")}
           >
             <GitCompareArrows size={15} />
@@ -98,7 +155,8 @@ export default function SchemeCard({ scheme, featured = false }) {
             className={isSaved ? "mini-action active" : "mini-action"}
             type="button"
             onClick={() => toggleSaved(scheme.id)}
-            aria-label={isSaved ? (t.remove || "Remove") : (t.save || "Save")}
+            aria-label={isSaved ? `${t.remove || "Remove"} ${text.displayName}` : `${t.save || "Save"}: ${text.displayName}`}
+            aria-pressed={isSaved}
             title={isSaved ? (t.remove || "Remove") : (t.save || "Save")}
           >
             <Bookmark size={15} fill={isSaved ? "currentColor" : "none"} />

@@ -36,10 +36,16 @@ const faqs = [
     aHi: "आपकी बुकमार्क की गई योजनाएं और चेकलिस्ट केवल इसी डिवाइस के ब्राउज़र में सुरक्षित रहती हैं। इसके लिए किसी क्लाउड खाते की आवश्यकता नहीं होती।",
   },
   {
-    q: "Can I use GramSetu in Indian languages?",
-    qHi: "क्या GramSetu भारतीय भाषाओं में उपलब्ध है?",
-    a: "Yes. GramSetu supports English and Hindi, with seamless switching from the top navigation bar.",
-    aHi: "हाँ। GramSetu हिंदी और अंग्रेजी दोनों भाषाओं का पूर्ण समर्थन करता है। आप ऊपर दिए गए भाषा बटन से आसानी से भाषा बदल सकते हैं।",
+    q: "Which Indian languages does GramSetu support?",
+    qHi: "GramSetu किन भारतीय भाषाओं का समर्थन करता है?",
+    a: "GramSetu provides access to 22 scheduled Indian regional languages alongside English in the top navigation selector. Currently, comprehensive interface and scheme data translations are provided in English and Hindi. Thirteen major languages (English, Hindi, Bengali, Telugu, Marathi, Tamil, Urdu, Gujarati, Kannada, Malayalam, Odia, Punjabi, and Assamese) have translated UI navigation and controls. Detailed scheme records are currently available in English and Hindi; Devanagari-script languages (such as Marathi, Nepali, and Konkani) display Hindi scheme details as a script-compatible fallback, while other regional languages display English scheme documentation.",
+    aHi: "GramSetu के शीर्ष भाषा चयनकर्ता में अंग्रेजी के साथ संविधान की 8वीं अनुसूची की 22 भारतीय भाषाएं उपलब्ध हैं। वर्तमान में अंग्रेजी और हिंदी में पूर्ण इंटरफेस और योजना डेटा अनुवाद उपलब्ध है। 13 प्रमुख भाषाओं (अंग्रेजी, हिंदी, बंगाली, तेलुगु, मराठी, तमिल, उर्दू, गुजराती, कन्नड़, मलयालम, उड़िया, पंजाबी और असमिया) में नेविगेशन और मुख्य इंटरफ़ेस अनुवादित है। योजनाओं का विस्तृत विवरण वर्तमान में हिंदी और अंग्रेजी में उपलब्ध है; देवनागरी लिपि वाली भाषाओं (जैसे मराठी, नेपाली, कोंकणी) में योजना विवरण हिंदी में और अन्य क्षेत्रीय भाषाओं में योजना विवरण अंग्रेजी में प्रदर्शित होता है।",
+  },
+  {
+    q: "How does the GramSetu Saathi voice assistant handle Indian languages?",
+    qHi: "ग्रामसेतु साथी वॉइस असिस्टेंट भारतीय भाषाओं में कैसे कार्य करता है?",
+    a: "GramSetu Saathi supports voice interaction across 13 major Indian languages (Hindi, English, Bengali, Telugu, Tamil, Marathi, Gujarati, Punjabi, Kannada, Malayalam, Odia, Assamese, and Urdu). Voice input (speech-to-text) uses your browser's native speech recognition engine with support for typed native-script queries. Spoken responses (text-to-speech) use compatible browser voice synthesis when available on your device, with clear on-screen textual cards and verified action links always provided as the primary source of truth.",
+    aHi: "ग्रामसेतु साथी 13 प्रमुख भाषाओं (हिंदी, अंग्रेजी, बंगाली, तेलुगु, तमिल, मराठी, गुजराती, पंजाबी, कन्नड़, मलयालम, उड़िया, असमिया और उर्दू) में बातचीत की सुविधा देता है। वॉइस इनपुट आपके ब्राउज़र के स्पीच रिकग्निशन पर आधारित है, साथ ही आप अपनी भाषा में टाइप करके भी पूछ सकते हैं। बोलकर उत्तर देने की सुविधा आपके डिवाइस पर उपलब्ध ब्राउज़र वॉइस इंजन पर निर्भर करती है, जबकि स्क्रीन पर सभी उत्तर और योजनाओं के सत्यापित लिंक हमेशा मुख्य रूप से प्रदर्शित होते हैं।",
   },
 ];
 
@@ -70,9 +76,11 @@ export default function FAQ() {
               >
                 <button
                   type="button"
+                  id={`faq-header-${index}`}
+                  aria-controls={`faq-answer-${index}`}
                   onClick={() => setOpen(isOpen ? -1 : index)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left cursor-pointer border-0 bg-transparent"
+                  className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left cursor-pointer border-0 bg-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50 rounded-2xl"
                 >
                   <span className="flex items-center gap-3.5 font-bold text-base sm:text-lg text-slate-900 leading-snug">
                     <span
@@ -95,7 +103,12 @@ export default function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-6 sm:px-6 sm:pb-6 pt-0 border-t border-emerald-100">
+                  <div 
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-header-${index}`}
+                    className="px-5 pb-6 sm:px-6 sm:pb-6 pt-0 border-t border-emerald-100"
+                  >
                     <p className="text-sm sm:text-base text-slate-700 leading-relaxed m-0 font-normal pl-11">
                       {answer}
                     </p>

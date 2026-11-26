@@ -116,7 +116,8 @@
         "low",
         "middle"
       ]
-    }
+    },
+    "image": "/scenes/scene-kisan.jpg"
   },
   {
     "id": "national-scholarship-portal",
@@ -240,7 +241,8 @@
         "low",
         "middle"
       ]
-    }
+    },
+    "image": "/schemes/national-scholarship-portal.jpg"
   },
   {
     "id": "pmay-gramin",
@@ -366,7 +368,8 @@
       "incomes": [
         "low"
       ]
-    }
+    },
+    "image": "/schemes/pmay-gramin.jpg"
   },
   {
     "id": "mgnrega",
@@ -487,7 +490,8 @@
         "low",
         "middle"
       ]
-    }
+    },
+    "image": "/schemes/mgnrega.jpg"
   },
   {
     "id": "ayushman-bharat-pmjay",
@@ -603,7 +607,8 @@
       "incomes": [
         "low"
       ]
-    }
+    },
+    "image": "/schemes/ayushman-bharat-pmjay.jpg"
   },
   {
     "id": "pmkvy",
@@ -727,7 +732,8 @@
         "low",
         "middle"
       ]
-    }
+    },
+    "image": "/schemes/pmkvy.jpg"
   },
   {
     "id": "pm-svanidhi",
@@ -852,7 +858,8 @@
         "low",
         "middle"
       ]
-    }
+    },
+    "image": "/schemes/pm-svanidhi.jpg"
   },
   {
     "id": "mudra",
@@ -983,7 +990,8 @@
         "middle",
         "higher"
       ]
-    }
+    },
+    "image": "/schemes/mudra.jpg"
   },
   {
     "id": "nsap",
@@ -1111,7 +1119,8 @@
       "incomes": [
         "low"
       ]
-    }
+    },
+    "image": "/schemes/nsap.jpg"
   },
   {
     "id": "stand-up-india",
@@ -1237,7 +1246,8 @@
         "middle",
         "higher"
       ]
-    }
+    },
+    "image": "/schemes/stand-up-india.jpg"
   },
   {
     "id": "sukanya-samriddhi",
@@ -1359,7 +1369,8 @@
         "middle",
         "higher"
       ]
-    }
+    },
+    "image": "/schemes/sukanya-samriddhi.jpg"
   },
   {
     "id": "pm-jay-jan-aushadhi",
@@ -1473,6 +1484,260 @@
         "middle",
         "higher"
       ]
-    }
+    },
+    "image": "/schemes/pm-jay-jan-aushadhi.jpg"
+  },
+  {
+    "id": "pm-fasal-bima",
+    "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "nameHi": "प्रधानमंत्री फसल बीमा योजना (PMFBY)",
+    "category": {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "nameHi": "कृषि",
+      "description": "Financial assistance, farming support, and agricultural empowerment.",
+      "descriptionHi": "कृषि समुदायों के लिए आर्थिक सहायता और सशक्तिकरण।",
+      "icon": "Sprout"
+    },
+    "level": "central",
+    "description": "Comprehensive crop insurance scheme providing complete financial security to farmers against yield loss, unseasonal rains, drought, pests, and post-harvest localized calamities at nominal subsidized premium rates.",
+    "descriptionHi": "प्राकृतिक आपदाओं, बेमौसम बारिश, सूखे, कीटों और ओलावृष्टि से फसलों के नुकसान पर किसानों को न्यूनतम प्रीमियम पर व्यापक बीमा सुरक्षा और त्वरित क्षतिपूर्ति देने वाली केंद्र सरकार की प्रमुख योजना।",
+    "beneficiaries": [
+      "farmer",
+      "household"
+    ],
+    "beneficiariesHi": [
+      "किसान",
+      "बटाईदार और काश्तकार किसान"
+    ],
+    "financialAssistance": [
+      "Maximum premium paid by farmers is capped at only 2.0% of sum insured for Kharif food-grain and oilseed crops.",
+      "Maximum premium paid by farmers is capped at only 1.5% of sum insured for Rabi food-grain and oilseed crops.",
+      "Maximum premium paid by farmers is capped at only 5.0% of sum insured for annual commercial and annual horticultural crops.",
+      "Remaining actuarial premium subsidy is shared 50:50 between the Central Government and State Governments for general States.",
+      "For North-Eastern Region (NER) States, the subsidy sharing ratio is 90:10 (90% by Centre, 10% by State); for Union Territories, 100% is centrally funded."
+    ],
+    "financialAssistanceHi": [
+      "खरीफ फसलों (खाद्यान्न व तिलहन) के लिए किसान द्वारा देय अधिकतम प्रीमियम बीमित राशि का केवल 2.0% निर्धारित है।",
+      "रबी फसलों (खाद्यान्न व तिलहन) के लिए किसान द्वारा देय अधिकतम प्रीमियम बीमित राशि का केवल 1.5% निर्धारित है।",
+      "वार्षिक वाणिज्यिक एवं बागवानी फसलों के लिए किसान द्वारा देय अधिकतम प्रीमियम बीमित राशि का केवल 5.0% है।",
+      "सामान्य राज्यों के लिए शेष वास्तविक प्रीमियम सब्सिडी केंद्र और राज्य सरकार द्वारा 50:50 के समान अनुपात में वहन की जाती है।",
+      "पूर्वोत्तर राज्यों (NER) के लिए सब्सिडी अनुपात 90:10 (90% केंद्र, 10% राज्य) है; केंद्र शासित प्रदेशों में 100% सब्सिडी केंद्र द्वारा दी जाती है।"
+    ],
+    "whatItProvides": [
+      "Comprehensive risk cover spanning pre-sowing to post-harvest losses due to non-preventable natural risks.",
+      "Direct claim settlement credited directly into the farmer's bank account via National Crop Insurance Portal (NCIP).",
+      "Use of satellites, drones, and smartphone crop-cutting experiments (CCE Agri App) for transparent loss assessment.",
+      "Mid-season adversity compensation up to 25% of sum insured for immediate relief in case of severe drought or floods."
+    ],
+    "whatItProvidesHi": [
+      "बुवाई से लेकर कटाई के बाद तक सभी गैर-रोकथाम योग्य प्राकृतिक जोखिमों से व्यापक फसल सुरक्षा।",
+      "राष्ट्रीय फसल बीमा पोर्टल (NCIP) द्वारा क्लेम का सीधा भुगतान किसान के आधार से जुड़े बैंक खाते में।",
+      "पारदर्शी नुकसान मूल्यांकन के लिए उपग्रह इमेजरी, ड्रोन और स्मार्टफोन आधारित क्रॉप कटिंग एक्सपेरिमेंट।",
+      "सूखे या बाढ़ जैसी गंभीर स्थिति में तत्काल राहत के लिए बीमा राशि का 25% तक मध्य-सत्र तात्कालिक भुगतान।"
+    ],
+    "benefits": [
+      "Complete income protection shielding farmers against crop failure and distress sales.",
+      "Nominal premium rates ensure financial affordability for small and marginal landholders.",
+      "Coverage for localized calamities including hailstorm, landslide, inundation, and cloudburst.",
+      "Post-harvest loss coverage available up to a maximum period of two weeks for unseasonal cyclone rains."
+    ],
+    "benefitsHi": [
+      "फसल बर्बादी की स्थिति में किसानों को कर्ज के बोझ और भारी आर्थिक संकट से सुरक्षा।",
+      "न्यूनतम प्रीमियम दरें ताकि छोटे और सीमांत किसान भी आसानी से बीमा सुरक्षा ले सकें।",
+      "ओलावृष्टि, भूस्खलन, जलभराव और बादल फटने जैसी स्थानीयकृत आपदाओं के लिए त्वरित व्यक्तिगत क्लेम।",
+      "कटाई के बाद खेत में सूखने के लिए रखी गई फसल पर चक्रवाती या बेमौसम बारिश के नुकसान पर 14 दिन तक का कवर।"
+    ],
+    "eligibility": [
+      "All farmers growing notified crops in notified areas including sharecroppers and tenant farmers.",
+      "Both loanee farmers (holding Kisan Credit Card / crop loans) and non-loanee farmers are eligible.",
+      "Farmer must have an insurable interest in the cultivated crop and submit valid sowing / land possession documents.",
+      "Enrollment must be completed before the cutoff date prescribed for the cropping season on the PMFBY portal or CSC."
+    ],
+    "eligibilityHi": [
+      "अधिसूचित क्षेत्रों में अधिसूचित फसलें उगाने वाले सभी किसान (बटाईदार और पट्टेदार किसान सहित)।",
+      "ऋणी किसान (किसान क्रेडिट कार्ड / फसली ऋण धारक) और गैर-ऋणी किसान दोनों ही समान रूप से पात्र हैं।",
+      "किसान का संबंधित भूमि पर वैध बुवाई प्रमाण या भू-अभिलेख होना अनिवार्य है।",
+      "संबंधित खरीफ या रबी सत्र की निर्धारित अंतिम तिथि से पहले पोर्टल या सीएससी पर पंजीकरण पूरा होना चाहिए।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card of the farmer",
+      "Land ownership document (RoR / Khatauni / Khasra / Patta) or Tenant Farmer Agreement Certificate",
+      "Sowing Certificate / Sowing declaration issued by Village Patwari, Panchayat Secretary, or Revenue Officer",
+      "Bank Account details (passbook copy with clear Account Number and IFSC code)",
+      "Active mobile number linked to Aadhaar for claim status updates"
+    ],
+    "requiredDocumentsHi": [
+      "किसान का आधार कार्ड",
+      "भूमि अभिलेख (खसरा / खतौनी / जमाबंदी पर्ची) अथवा बटाईदार/काश्तकार स्व-घोषणा पत्र",
+      "बुवाई प्रमाण पत्र (पटवारी, ग्राम पंचायत सचिव या कृषि अधिकारी द्वारा जारी बुवाई घोषणा)",
+      "सक्रिय बैंक खाता पासबुक की प्रति (खाता संख्या और IFSC कोड स्पष्ट दर्शित)",
+      "आधार से जुड़ा सक्रिय मोबाइल नंबर (क्लेम स्थिति और ट्रैकिंग एसएमएस हेतु)"
+    ],
+    "applicationSteps": [
+      "Visit the official National Crop Insurance Portal (https://pmfby.gov.in) and click on 'Farmer Corner', or visit your local CSC (Common Service Centre) or bank branch.",
+      "Log in or register with mobile number and verify via OTP.",
+      "Enter farmer details, state, district, sub-district, block, and village name.",
+      "Select notified crop, survey number/khasra number, insured acreage, and upload land sowing certificate.",
+      "Pay the subsidized farmer share of premium (1.5% - 2% for foodgrains, 5% for commercial) via Net Banking/UPI or CSC cash counter and download the official Policy Receipt."
+    ],
+    "applicationStepsHi": [
+      "राष्ट्रीय फसल बीमा पोर्टल (https://pmfby.gov.in) पर जाएं और 'Farmer Corner' पर क्लिक करें, या नजदीकी सीएससी केंद्र / बैंक शाखा जाएं।",
+      "मोबाइल नंबर दर्ज करें और ओटीपी के माध्यम से सत्यापन करके लॉगिन करें।",
+      "किसान का विवरण, राज्य, जिला, तहसील, ब्लॉक और गांव का चयन करें।",
+      "अधिसूचित फसल, खसरा नंबर, बीमित रकबा चुनें और बुवाई प्रमाण पत्र अपलोड करें।",
+      "रियायती प्रीमियम (खाद्यान्न हेतु 1.5% - 2%, वाणिज्यिक हेतु 5%) का भुगतान करें और अपनी आधिकारिक बीमा रसीद / पावती सुरक्षित डाउनलोड करें।"
+    ],
+    "officialUrl": "https://pmfby.gov.in/",
+    "verificationStatus": "Verified from Ministry of Agriculture & Farmers Welfare portal",
+    "lastVerified": "2026-11",
+    "featured": true,
+    "keywords": [
+      "fasal bima",
+      "pmfby",
+      "crop insurance",
+      "insurance",
+      "farmer",
+      "kisan",
+      "harvest",
+      "calamity",
+      "claim"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "farmer"
+      ],
+      "incomes": [
+        "low",
+        "middle"
+      ]
+    },
+    "image": "/scenes/scene-bima.jpg"
+  },
+  {
+    "id": "digital-india",
+    "name": "Digital India – e-Governance & Citizen Access (CSC Channel)",
+    "nameHi": "डिजिटल इंडिया - ई-शासन एवं नागरिक डिजिटल सेवा (सीएससी नेटवर्क)",
+    "category": {
+      "id": "employment",
+      "name": "Employment & skills",
+      "nameHi": "रोजगार एवं कौशल",
+      "description": "Livelihood creation, youth skill acquisition, and local enterprise opportunities.",
+      "descriptionHi": "आजीविका सृजन, युवा कौशल प्रशिक्षण और ग्रामीण उद्यमिता के नए अवसर।",
+      "icon": "BriefcaseBusiness"
+    },
+    "level": "central",
+    "description": "National flagship umbrella programme transforming India into a digitally empowered society. Under Digital India, Common Services Centres (CSCs) operate as assisted digital access points across Gram Panchayats, enabling citizens to access government welfare schemes, certificates, digital literacy, and banking at the village level.",
+    "descriptionHi": "भारत को डिजिटल रूप से सशक्त समाज और ज्ञान अर्थव्यवस्था में रूपांतरित करने का राष्ट्रीय प्रमुख कार्यक्रम। डिजिटल इंडिया के तहत, ग्राम पंचायतों में स्थापित कॉमन सर्विस सेंटर (CSC) नागरिकों के लिए सरकारी योजनाओं, प्रमाण पत्रों, डिजिटल साक्षरता और बैंकिंग सेवाओं के सहायक सेवा-प्रदाय केंद्र के रूप में कार्य करते हैं।",
+    "beneficiaries": [
+      "citizen",
+      "entrepreneur",
+      "youth"
+    ],
+    "beneficiariesHi": [
+      "ग्रामीण नागरिक",
+      "महिला स्वयं सहायता समूह",
+      "ग्रामीण युवा व उद्यमी"
+    ],
+    "financialAssistance": [
+      "Digital India is an overarching national digital infrastructure and service-delivery framework, not a direct cash handout scheme.",
+      "Government-to-citizen (G2C) public application services accessed through CSCs follow regulated nominal service fees prescribed by authorities.",
+      "Digital literacy training and certifications delivered under the affiliated PMGDISHA initiative (a completed national mission; past certifications remain verifiable via DigiLocker and CSC portals).",
+      "Village Level Entrepreneurs (VLEs) receive transaction commissions for authorized citizen service delivery."
+    ],
+    "financialAssistanceHi": [
+      "डिजिटल इंडिया एक राष्ट्रीय डिजिटल बुनियादी ढांचा एवं ई-शासन कार्यक्रम है, यह कोई प्रत्यक्ष नकद अनुदान योजना नहीं है।",
+      "सीएससी (CSC) केंद्रों के माध्यम से उपलब्ध सरकारी नागरिक (G2C) सेवाओं के लिए सरकार द्वारा निर्धारित न्यूनतम सेवा शुल्क लागू होता है।",
+      "पीएमजीदिशा (PMGDISHA) घटक के अंतर्गत पूर्व में प्रदान किया गया निःशुल्क बुनियादी डिजिटल प्रशिक्षण (संपन्न राष्ट्रीय कार्यक्रम; जारी प्रमाणपत्र डिजिलॉकर और सीएससी से सत्यापन योग्य)।",
+      "ग्राम स्तरीय उद्यमियों (VLE) को अधिकृत नागरिक सेवाओं के प्रदाय पर निर्धारित कमीशन प्राप्त होता है।"
+    ],
+    "whatItProvides": [
+      "Assisted digital access to Central and State Government welfare scheme applications and status inquiries via village CSCs.",
+      "DigiLocker cloud storage enabling citizens to access legally recognized digital copies of identity, education, and vehicle records.",
+      "Aadhaar-enabled Payment System (AePS) micro-ATM services allowing village-level cash withdrawals and DBT account transactions.",
+      "Digital services access for utility bill payments, land revenue records (Khasra/Khatauni), and government certifications."
+    ],
+    "whatItProvidesHi": [
+      "गांव के सीएससी (CSC) केंद्रों के माध्यम से केंद्र व राज्य सरकार की कल्याणकारी योजनाओं में ऑनलाइन आवेदन और स्थिति जांच की सुविधा।",
+      "डिजिलॉकर क्लाउड स्टोरेज जिसके माध्यम से नागरिक अपने पहचान पत्र, शैक्षणिक अंकसूची और ड्राइविंग लाइसेंस डिजिटल रूप से प्राप्त करते हैं।",
+      "आधार सक्षम भुगतान प्रणाली (AePS) माइक्रो-एटीएम से गांव में ही बैंक खाते से नकदी निकासी और डीबीटी सब्सिडी का लेन-देन।",
+      "बिजली, पानी व अन्य उपयोगिता बिल भुगतान, भू-राजस्व रिकॉर्ड (खसरा/खतौनी) और सरकारी प्रमाण पत्रों की डिजिटल प्राप्ति।"
+    ],
+    "benefits": [
+      "Brings government offices and digital services directly to village doorsteps, eliminating long travel and administrative delays.",
+      "Promotes transparency through computer-generated receipts and authorized fees, protecting rural citizens from informal intermediaries.",
+      "Fosters rural digital entrepreneurship through local Village Level Entrepreneurs (VLEs) managing CSC access points.",
+      "Ensures inclusive welfare delivery for citizens lacking private smartphones or high-speed connectivity."
+    ],
+    "benefitsHi": [
+      "सरकारी सेवाओं को सीधे ग्राम स्तर पर सुलभ बनाकर दूरस्थ सरकारी कार्यालयों के चक्कर और समय की बचत।",
+      "कंप्यूटर रसीद और निर्धारित सेवा शुल्क के माध्यम से पूरी पारदर्शिता, अनधिकृत बिचौलियों से राहत।",
+      "स्थानीय ग्राम स्तरीय उद्यमियों (VLE) के माध्यम से ग्रामीण युवाओं और महिलाओं के लिए स्थानीय स्तर पर स्वरोजगार का सृजन।",
+      "स्मार्टफोन या इंटरनेट से वंचित ग्रामीण नागरिकों के लिए समावेशी सरकारी सहायता सुनिश्चित करना।"
+    ],
+    "eligibility": [
+      "Any citizen residing in India can visit an authorized Common Services Centre (CSC) or official portal to access Digital India services.",
+      "Digital literacy records (PMGDISHA): Historical training component completed under national mission; verification accessible to certified rural beneficiaries.",
+      "For establishing a CSC Village Level Entrepreneur (VLE) kiosk: Applicant must be 18+ years, have completed 10th standard, and meet infrastructure guidelines."
+    ],
+    "eligibilityHi": [
+      "डिजिटल इंडिया सेवाओं और सरकारी योजनाओं में आवेदन के लिए कोई भी भारतीय नागरिक नजदीकी सीएससी केंद्र या आधिकारिक पोर्टल की सुविधा ले सकता है।",
+      "डिजिटल साक्षरता रिकॉर्ड (PMGDISHA): राष्ट्रीय लक्ष्य पूर्ण होने के साथ यह घटक संपन्न हो चुका है; पूर्व प्रमाणित ग्रामीण लाभार्थी रिकॉर्ड सत्यापन प्राप्त कर सकते हैं।",
+      "सीएससी संचालक (VLE) बनने हेतु: आवेदक की आयु न्यूनतम 18 वर्ष, 10वीं उत्तीर्ण और बुनियादी कंप्यूटर सुविधा होना आवश्यक है।"
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card (for identity authentication and biometric services)",
+      "Active mobile number linked to Aadhaar for OTP verification",
+      "Bank account details / passbook copy for financial and AePS services",
+      "Specific scheme-specific documents depending on the welfare application being filed"
+    ],
+    "requiredDocumentsHi": [
+      "आधार कार्ड (पहचान सत्यापन एवं बायोमेट्रिक सेवाओं हेतु)",
+      "ओटीपी सत्यापन के लिए आधार से लिंक चालू मोबाइल नंबर",
+      "वित्तीय और बैंकिंग सेवाओं के लिए बैंक पासबुक / खाता विवरण",
+      "संबंधित सरकारी योजना के लिए आवश्यक विशिष्ट दस्तावेज़"
+    ],
+    "applicationSteps": [
+      "Visit your nearest Common Services Centre (CSC) in your Gram Panchayat or visit https://digitalindia.gov.in.",
+      "Identify the specific government welfare scheme or certificate service you wish to apply for.",
+      "Provide required Aadhaar and supporting documents to the Village Level Entrepreneur (VLE) for online filing.",
+      "Review entered details on the screen, pay the prescribed official fee, and collect the computer-generated acknowledgment receipt.",
+      "Track application progress using the reference number provided on the receipt."
+    ],
+    "applicationStepsHi": [
+      "अपनी ग्राम पंचायत के निकटतम कॉमन सर्विस सेंटर (CSC) जाएं अथवा https://digitalindia.gov.in पोर्टल पर जाएं।",
+      "जिस सरकारी योजना या प्रमाण पत्र सेवा का लाभ लेना चाहते हैं, उसका चयन करें।",
+      "ऑनलाइन आवेदन हेतु संचालक (VLE) को अपना आधार कार्ड और जरूरी सहायक दस्तावेज़ प्रस्तुत करें।",
+      "कंप्यूटर स्क्रीन पर अपनी जानकारी जांचें, निर्धारित सरकारी शुल्क दें और पावती रसीद प्राप्त करें।",
+      "रसीद पर दिए गए संदर्भ / आवेदन संख्या के माध्यम से आवेदन की स्थिति ट्रैक करें।",
+      "जिला प्रबंधक सत्यापन के उपरांत आधिकारिक वीएलई आईडी प्राप्त करें और गांव में डिजिटल सेवाएं शुरू करें।"
+    ],
+    "officialUrl": "https://digitalindia.gov.in/",
+    "verificationStatus": "Verified from Ministry of Electronics & Information Technology (MeitY) and CSC e-Governance Services India portal",
+    "lastVerified": "2026-11",
+    "featured": true,
+    "keywords": [
+      "digital india",
+      "csc",
+      "e-governance",
+      "vle",
+      "pmgdisha",
+      "common service centre",
+      "aeps",
+      "banking",
+      "online services"
+    ],
+    "eligibilityRules": {
+      "occupations": [
+        "worker",
+        "entrepreneur",
+        "other"
+      ],
+      "incomes": [
+        "low",
+        "middle"
+      ]
+    },
+    "image": "/schemes/digital-india.jpg"
   }
 ]

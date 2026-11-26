@@ -60,7 +60,7 @@ export const CINEMATIC_SCENES = [
     fallbackUrl: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1920&q=80",
     themeColor: "#D69E2E", // Warm Golden Amber
     accentBg: "rgba(214, 158, 46, 0.25)",
-    link: "/schemes"
+    link: "/schemes/pm-fasal-bima"
   },
   {
     id: "ayushman-bharat",
@@ -148,38 +148,57 @@ export const CINEMATIC_SCENES = [
     fallbackUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80",
     themeColor: "#805AD5", // Vibrant Purple
     accentBg: "rgba(128, 90, 213, 0.25)",
-    link: "/schemes"
+    link: "/schemes/digital-india"
   }
 ];
 
 export default function CinematicBackground({ 
   children,
-  rotationInterval = 2000, 
+  rotationInterval = 6500, 
   showBanner = true,
   onSceneChange = null
 }) {
   const { language } = useApp();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(() => {
+    if (typeof window !== "undefined" && window.matchMedia) {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    return false;
+  });
+  const [isPaused, setIsPaused] = useState(() => {
+    if (typeof window !== "undefined" && window.matchMedia) {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    return false;
+  });
+  const [pausedByFocus, setPausedByFocus] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [reducedMotion, setReducedMotion] = useState(false);
 
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
   const timerRef = useRef(null);
 
-  // Check reduced motion preference
+  // Check reduced motion preference dynamically
   useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(mq.matches);
-    const handler = (e) => setReducedMotion(e.matches);
+    const handler = (e) => {
+      setReducedMotion(e.matches);
+      if (e.matches) {
+        setIsPaused(true);
+      }
+    };
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
   }, []);
 
-  // Automatic 2-second rotation loop (continuously loops without stopping)
+  // Automatic 6.5-second rotation loop
+  // Strictly respects prefers-reduced-motion, manual pause, keyboard focus pause, and pointer hover
   useEffect(() => {
-    if (isPaused) return;
+    // If reduced motion is requested or rotation is paused/hovered, do not run automatic slide timer
+    if (reducedMotion || isPaused || isHovered) return;
 
     timerRef.current = setInterval(() => {
       setCurrentIndex((prev) => {
@@ -190,7 +209,7 @@ export default function CinematicBackground({
     }, rotationInterval);
 
     return () => clearInterval(timerRef.current);
-  }, [isPaused, rotationInterval, onSceneChange]);
+  }, [isPaused, isHovered, reducedMotion, rotationInterval, onSceneChange]);
 
   // Subtle Mouse Parallax
   const handleMouseMove = useCallback((e) => {
@@ -304,6 +323,7 @@ export default function CinematicBackground({
       {/* ───── 1. Photographic Scenes with Ken Burns Zoom & Crossfade ───── */}
       <div 
         className="cinematic-slides-wrapper"
+        aria-live="off"
         style={{
           transform: reducedMotion ? "none" : `translate3d(${mousePos.x * -16}px, ${mousePos.y * -12}px, 0)`
         }}
@@ -358,10 +378,17 @@ export default function CinematicBackground({
 
         {/* ───── 6. Professionally Designed Scheme Banner ───── */}
         {showBanner && (
-          <div 
+          <section 
             className="cinematic-scheme-banner-wrap" 
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label={language === "hi" ? "योजना विशेष हिंडोला" : "Featured Schemes Spotlight Carousel"}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onFocusCapture={() => {
+              setIsPaused(true);
+              setPausedByFocus(true);
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="cinematic-scheme-banner">
@@ -430,10 +457,18 @@ export default function CinematicBackground({
                     {/* Play / Pause Toggle Button */}
                     <button
                       type="button"
-                      onClick={() => setIsPaused(!isPaused)}
+                      onClick={() => {
+                        if (isPaused) {
+                          setIsPaused(false);
+                          setPausedByFocus(false);
+                        } else {
+                          setIsPaused(true);
+                        }
+                      }}
                       className="banner-control-btn"
-                      title={isPaused ? (language === "hi" ? "चलाएं" : "Play Rotation") : (language === "hi" ? "रोकें" : "Pause Rotation")}
-                      aria-label={isPaused ? "Play" : "Pause"}
+                      title={isPaused ? (language === "hi" ? "स्लाइड घुमाव पुनः शुरू करें" : "Resume slide rotation") : (language === "hi" ? "स्लाइड घुमाव रोकें" : "Pause slide rotation")}
+                      aria-label={isPaused ? (language === "hi" ? "स्लाइड घुमाव पुनः शुरू करें" : "Resume slide rotation") : (language === "hi" ? "स्लाइड घुमाव रोकें" : "Pause slide rotation")}
+                      aria-pressed={isPaused}
                     >
                       {isPaused ? <Play size={14} fill="currentColor" /> : <Pause size={14} fill="currentColor" />}
                     </button>
@@ -443,8 +478,8 @@ export default function CinematicBackground({
                       type="button"
                       onClick={prevScene}
                       className="banner-control-btn"
-                      title={language === "hi" ? "पिछली योजना" : "Previous Scheme"}
-                      aria-label="Previous"
+                      title={language === "hi" ? "पिछली योजना पर जाएं" : "Previous Scheme"}
+                      aria-label={language === "hi" ? "पिछली योजना पर जाएं" : "Previous Scheme"}
                     >
                       <ChevronLeft size={16} />
                     </button>
@@ -452,8 +487,8 @@ export default function CinematicBackground({
                       type="button"
                       onClick={nextScene}
                       className="banner-control-btn"
-                      title={language === "hi" ? "अगली योजना" : "Next Scheme"}
-                      aria-label="Next"
+                      title={language === "hi" ? "अगली योजना पर जाएं" : "Next Scheme"}
+                      aria-label={language === "hi" ? "अगली योजना पर जाएं" : "Next Scheme"}
                     >
                       <ChevronRight size={16} />
                     </button>
@@ -461,23 +496,26 @@ export default function CinematicBackground({
                 </div>
               </div>
 
-              {/* Bottom 2-Second Countdown Progress Bar & 6 Scene Dots */}
+              {/* Bottom Countdown Progress Bar & 6 Scene Dots */}
               <div className="banner-progress-row">
-                <div className="scene-indicator-pills">
+                <div className="scene-indicator-pills" role="group" aria-label={language === "hi" ? "योजना स्लाइड चयन" : "Scheme slide navigation"}>
                   {CINEMATIC_SCENES.map((scene, i) => (
                     <button
                       key={scene.id}
                       type="button"
+                      aria-current={i === currentIndex ? "true" : undefined}
                       onClick={() => goToScene(i)}
                       className={`scene-dot-btn ${i === currentIndex ? "active" : ""}`}
                       title={language === "hi" ? scene.nameHi : scene.name}
-                      aria-label={`Go to scene ${i + 1}`}
+                      aria-label={language === "hi" 
+                        ? `स्लाइड ${i + 1}: ${scene.nameHi}${i === currentIndex ? " (वर्तमान स्लाइड)" : ""}` 
+                        : `Slide ${i + 1}: ${scene.name}${i === currentIndex ? " (Current slide)" : ""}`}
                     >
                       <span className="dot-index">0{i + 1}</span>
                       <span className="dot-name">
                         {scene.name.split(" ")[0]}
                       </span>
-                      {i === currentIndex && !isPaused && (
+                      {i === currentIndex && !isPaused && !isHovered && !reducedMotion && (
                         <span 
                           className="dot-progress-fill" 
                           style={{ animationDuration: `${rotationInterval}ms` }}
@@ -489,11 +527,15 @@ export default function CinematicBackground({
 
                 <div className="banner-speed-tag">
                   <Sparkles size={12} className="text-amber-400" />
-                  <span>{language === "hi" ? "स्वचालित परिभ्रमण: 2s" : "Auto-loop: 2s"}</span>
+                  <span>
+                    {language === "hi" 
+                      ? (isPaused ? "घुमाव रुका हुआ" : "स्वचालित परिभ्रमण: 6.5s") 
+                      : (isPaused ? "Rotation Paused" : "Auto-loop: 6.5s")}
+                  </span>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         )}
       </div>
     </div>
